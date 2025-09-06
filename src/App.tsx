@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X } from '@phosphor-icons/react'
+import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake } from '@phosphor-icons/react'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -72,38 +72,164 @@ function Navigation() {
   )
 }
 
+function FlowStage({ 
+  icon: Icon, 
+  title, 
+  description, 
+  isActive,
+  delay 
+}: { 
+  icon: any
+  title: string
+  description: string
+  isActive: boolean
+  delay: number
+}) {
+  return (
+    <div className={`relative transition-all duration-700 ${isActive ? 'scale-105' : 'scale-100'}`}>
+      <div className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transition-all duration-500 ${
+        isActive ? 'bg-white/20 border-white/40 shadow-lg shadow-white/10' : ''
+      }`}>
+        <div className={`w-12 h-12 bg-gradient-to-r from-white/20 to-white/30 rounded-lg flex items-center justify-center mb-4 transition-all duration-500 ${
+          isActive ? 'animate-pulse scale-110' : ''
+        }`}>
+          <Icon size={24} className="text-white" />
+        </div>
+        <h3 className="font-semibold text-white mb-2">{title}</h3>
+        <p className="text-white/80 text-sm leading-relaxed">{description}</p>
+      </div>
+    </div>
+  )
+}
+
+function FlowVisualization() {
+  const [activeStage, setActiveStage] = useState(0)
+  const stages = [
+    {
+      icon: Buildings,
+      title: "Brand Amplification",
+      description: "Your employer brand reaches the right audiences"
+    },
+    {
+      icon: Target,
+      title: "Targeted Reach", 
+      description: "Precise targeting finds qualified candidates"
+    },
+    {
+      icon: DeviceMobile,
+      title: "Seamless Application",
+      description: "Frictionless process converts interest to action"
+    },
+    {
+      icon: Lightning,
+      title: "Smart Automation",
+      description: "AI matches and engages top candidates"
+    },
+    {
+      icon: Handshake,
+      title: "Interview Ready",
+      description: "Qualified candidates scheduled and prepared"
+    }
+  ]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStage((prev) => (prev + 1) % stages.length)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [stages.length])
+
+  return (
+    <div className="relative space-y-8">
+      {stages.map((stage, index) => (
+        <div key={index} className="relative">
+          <FlowStage
+            icon={stage.icon}
+            title={stage.title}
+            description={stage.description}
+            isActive={activeStage === index}
+            delay={index * 0.2}
+          />
+          
+          {/* Connecting line with animated dots */}
+          {index < stages.length - 1 && (
+            <div className="absolute left-6 -bottom-4 w-0.5 h-8 bg-gradient-to-b from-white/40 to-white/20">
+              <div 
+                className={`absolute w-2 h-2 bg-white rounded-full -left-0.75 transition-all duration-1000 ${
+                  activeStage === index ? 'animate-bounce top-0' : 'top-4 opacity-50'
+                }`}
+              />
+            </div>
+          )}
+        </div>
+      ))}
+      
+      {/* Flowing background animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute w-full h-full">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white/30 rounded-full animate-pulse"
+              style={{
+                left: '24px',
+                top: `${20 + i * 15}%`,
+                animationDelay: `${i * 0.5}s`,
+                animationDuration: '2s'
+              }}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function HomePage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-background to-muted">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-8 tracking-tight">
-              Strategic Recruitment
-              <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Marketing Excellence
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
-              We transform how organizations attract, engage, and hire top talent through 
-              sophisticated marketing strategies and compelling employer brand experiences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-8 py-4 text-lg">
-                Transform Your Hiring
-              </Button>
-              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 text-lg">
-                View Our Work
-              </Button>
+      <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+            {/* Left Side - Content */}
+            <div className="text-left">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+                Connect the Right Talent with the Right Opportunity
+                <span className="block text-white/90 mt-4">
+                  at the Right Moment
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-2xl">
+                Transform your recruitment strategy with sophisticated marketing that attracts, 
+                engages, and converts top talent through every stage of their journey.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg">
+                  Discover Our Approach
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg">
+                  View Case Studies
+                </Button>
+              </div>
+            </div>
+
+            {/* Right Side - Flow Visualization */}
+            <div className="hidden lg:block">
+              <FlowVisualization />
             </div>
           </div>
         </div>
       </section>
 
       {/* Value Proposition Section */}
-      <section className="py-24 bg-card">
+      <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -116,7 +242,7 @@ function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors">
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
@@ -127,7 +253,7 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors">
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
@@ -138,7 +264,7 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors">
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
                 <div className="w-8 h-8 bg-white rounded-full"></div>
               </div>
