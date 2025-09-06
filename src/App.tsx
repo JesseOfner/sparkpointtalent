@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight } from '@phosphor-icons/react'
+import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle } from '@phosphor-icons/react'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -284,6 +284,100 @@ function CapabilityCard({ icon: Icon, title, description }: {
   )
 }
 
+function IndustrySolutionCard({ 
+  title, 
+  description, 
+  bulletPoints, 
+  icon: Icon, 
+  isReversed = false 
+}: {
+  title: string
+  description: string
+  bulletPoints: string[]
+  icon: any
+  isReversed?: boolean
+}) {
+  return (
+    <div className={`grid lg:grid-cols-2 gap-12 items-center ${isReversed ? 'lg:grid-flow-dense' : ''}`}>
+      {/* Content */}
+      <div className={isReversed ? 'lg:col-start-2' : ''}>
+        <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+          {title}
+        </h3>
+        <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+          {description}
+        </p>
+        <ul className="space-y-4">
+          {bulletPoints.map((point, index) => (
+            <li key={index} className="flex items-start">
+              <CheckCircle size={20} className="text-primary mt-1 mr-3 flex-shrink-0" />
+              <span className="text-foreground font-medium">{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      {/* Visual Element */}
+      <div className={`flex justify-center ${isReversed ? 'lg:col-start-1' : ''}`}>
+        <div className="relative">
+          <div className="w-64 h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl flex items-center justify-center">
+            <div className="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg">
+              <Icon size={64} className="text-white" />
+            </div>
+          </div>
+          {/* Decorative elements */}
+          <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
+          <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary/20 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function IndustrySolutionsSection() {
+  const industries = [
+    {
+      title: "Technology & Software",
+      description: "Attract top engineering and technical talent in competitive markets with specialized campaigns and technical assessment integration",
+      bulletPoints: [
+        "Developer-focused content marketing",
+        "Technical skills assessment workflows", 
+        "Startup to enterprise scaling strategies"
+      ],
+      icon: Code
+    }
+    // Additional industries can be added here
+  ]
+
+  return (
+    <section className="py-24 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Tailored Solutions Across Industries
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Deep expertise in the unique challenges facing different sectors
+          </p>
+        </div>
+        
+        <div className="space-y-24">
+          {industries.map((industry, index) => (
+            <IndustrySolutionCard
+              key={index}
+              title={industry.title}
+              description={industry.description}
+              bulletPoints={industry.bulletPoints}
+              icon={industry.icon}
+              isReversed={index % 2 === 1}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function CapabilitiesSection() {
   const capabilities = [
     {
@@ -309,7 +403,7 @@ function CapabilitiesSection() {
   ]
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -439,6 +533,9 @@ function HomePage() {
 
       {/* Capabilities Section */}
       <CapabilitiesSection />
+
+      {/* Industry Solutions Section */}
+      <IndustrySolutionsSection />
 
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
