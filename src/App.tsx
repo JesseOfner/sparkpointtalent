@@ -523,6 +523,7 @@ function IndustrySolutionsSection() {
     </section>
   )
 }
+}
 
 function CapabilitiesSection() {
   const capabilities = [
