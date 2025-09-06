@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake } from '@phosphor-icons/react'
 
@@ -185,6 +185,137 @@ function FlowVisualization() {
   )
 }
 
+function useCountUp(end: number, duration: number = 2000, start: boolean = false) {
+  const [count, setCount] = useState(0)
+  
+  useEffect(() => {
+    if (!start) return
+    
+    let startTime: number
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+      
+      setCount(Math.floor(progress * end))
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      }
+    }
+    
+    requestAnimationFrame(animate)
+  }, [end, duration, start])
+  
+  return count
+}
+
+function useInView() {
+  const [isInView, setIsInView] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isInView) {
+          setIsInView(true)
+        }
+      },
+      { threshold: 0.3 }
+    )
+    
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+    
+    return () => observer.disconnect()
+  }, [isInView])
+  
+  return [ref, isInView] as const
+}
+
+function MetricCard({ number, suffix, title, description }: {
+  number: number
+  suffix: string
+  title: string
+  description: string
+}) {
+  const [ref, isInView] = useInView()
+  const animatedNumber = useCountUp(number, 2000, isInView)
+  
+  return (
+    <div 
+      ref={ref}
+      className="bg-white rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+    >
+      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+        {animatedNumber}{suffix}
+      </div>
+      <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed">
+        {description}
+      </p>
+    </div>
+  )
+}
+
+function MetricsSection() {
+  const metrics = [
+    {
+      number: 73,
+      suffix: "%",
+      title: "Faster Time-to-Fill",
+      description: "Reduce hiring cycles with targeted candidate pipelines"
+    },
+    {
+      number: 2.8,
+      suffix: "X",
+      title: "Higher Quality of Hire", 
+      description: "Better candidate matching improves retention rates"
+    },
+    {
+      number: 45,
+      suffix: "%",
+      title: "Lower Cost-per-Hire",
+      description: "Efficient marketing reduces dependency on agencies"
+    },
+    {
+      number: 89,
+      suffix: "%",
+      title: "Candidate Satisfaction",
+      description: "Exceptional experience builds employer brand equity"
+    }
+  ]
+  
+  return (
+    <section className="py-24 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Metrics That Matter to Talent Acquisition Leaders
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            We focus on the KPIs that drive real business impact
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {metrics.map((metric, index) => (
+            <MetricCard 
+              key={index}
+              number={metric.number}
+              suffix={metric.suffix}
+              title={metric.title}
+              description={metric.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function HomePage() {
   return (
     <div className="pt-16">
@@ -227,6 +358,9 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Metrics Section */}
+      <MetricsSection />
 
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
