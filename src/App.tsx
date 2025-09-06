@@ -479,6 +479,8 @@ function ContactSection() {
     </section>
   )
 }
+
+function IndustrySolutionsSection() {
   const industries = [
     {
       title: "Technology & Software",
