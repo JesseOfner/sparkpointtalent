@@ -334,6 +334,8 @@ function CapabilitiesSection() {
     </section>
   )
 }
+
+function MetricsSection() {
   const metrics = [
     {
       number: 73,
