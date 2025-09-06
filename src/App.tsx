@@ -1,6 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle } from '@phosphor-icons/react'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Card } from '@/components/ui/card'
+import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -334,7 +338,147 @@ function IndustrySolutionCard({
   )
 }
 
-function IndustrySolutionsSection() {
+function ContactSection() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    workEmail: '',
+    company: '',
+    companySize: '',
+    message: ''
+  })
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission
+    console.log('Form submitted:', formData)
+  }
+
+  return (
+    <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Left Side - Content */}
+          <div className="text-white">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              Ready to Transform Your Recruitment Strategy?
+            </h2>
+            <p className="text-xl text-white/80 mb-12 leading-relaxed">
+              Let's discuss how we can help you build a talent acquisition engine that delivers measurable results
+            </p>
+            
+            {/* Contact Options */}
+            <div className="space-y-8">
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                  <Phone size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold mb-3">Schedule a Strategy Call</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Get personalized recommendations for your recruitment challenges
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                  <FileText size={24} className="text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold mb-3">Request a Custom Proposal</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    Tailored solutions based on your specific industry and goals
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Contact Form */}
+          <div>
+            <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Input
+                    placeholder="Full Name"
+                    value={formData.fullName}
+                    onChange={(e) => handleInputChange('fullName', e.target.value)}
+                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    type="email"
+                    placeholder="Work Email"
+                    value={formData.workEmail}
+                    onChange={(e) => handleInputChange('workEmail', e.target.value)}
+                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Input
+                    placeholder="Company"
+                    value={formData.company}
+                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Select value={formData.companySize} onValueChange={(value) => handleInputChange('companySize', value)}>
+                    <SelectTrigger className="bg-white/90 border-white/30 text-gray-900">
+                      <SelectValue placeholder="Company Size" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="1-10">1-10 employees</SelectItem>
+                      <SelectItem value="11-50">11-50 employees</SelectItem>
+                      <SelectItem value="51-200">51-200 employees</SelectItem>
+                      <SelectItem value="201-1000">201-1,000 employees</SelectItem>
+                      <SelectItem value="1000+">1,000+ employees</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div>
+                  <Textarea
+                    placeholder="Tell us about your recruitment challenges and goals..."
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900 min-h-[120px]"
+                    rows={5}
+                  />
+                </div>
+                
+                <Button 
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-4 text-lg"
+                >
+                  Get Started Today
+                </Button>
+              </form>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
   const industries = [
     {
       title: "Technology & Software",
@@ -536,6 +680,9 @@ function HomePage() {
 
       {/* Industry Solutions Section */}
       <IndustrySolutionsSection />
+
+      {/* Contact Section */}
+      <ContactSection />
 
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
