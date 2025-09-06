@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake } from '@phosphor-icons/react'
+import { Menu, X, Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight } from '@phosphor-icons/react'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -260,7 +260,80 @@ function MetricCard({ number, suffix, title, description }: {
   )
 }
 
-function MetricsSection() {
+function CapabilityCard({ icon: Icon, title, description }: {
+  icon: any
+  title: string
+  description: string
+}) {
+  return (
+    <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
+      <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+        <Icon size={32} className="text-white" />
+      </div>
+      <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
+        {title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed mb-6">
+        {description}
+      </p>
+      <div className="flex items-center text-primary font-medium group-hover:text-primary/80 transition-colors">
+        <span>Learn More</span>
+        <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+      </div>
+    </div>
+  )
+}
+
+function CapabilitiesSection() {
+  const capabilities = [
+    {
+      icon: Palette,
+      title: "Employer Brand Strategy",
+      description: "Develop compelling brand narratives that resonate with top talent across all touchpoints"
+    },
+    {
+      icon: Globe,
+      title: "Digital Recruitment Campaigns",
+      description: "Multi-channel campaigns that reach candidates where they are most engaged"
+    },
+    {
+      icon: Robot,
+      title: "Automation & AI Matching",
+      description: "Intelligent systems that streamline candidate engagement and interview scheduling"
+    },
+    {
+      icon: ChartLine,
+      title: "Performance Analytics",
+      description: "Real-time insights and optimization recommendations for continuous improvement"
+    }
+  ]
+
+  return (
+    <section className="py-24 bg-muted/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Full-Spectrum Recruitment Marketing
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            End-to-end solutions that transform how you attract, engage, and hire talent
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {capabilities.map((capability, index) => (
+            <CapabilityCard 
+              key={index}
+              icon={capability.icon}
+              title={capability.title}
+              description={capability.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
   const metrics = [
     {
       number: 73,
@@ -361,6 +434,9 @@ function HomePage() {
 
       {/* Metrics Section */}
       <MetricsSection />
+
+      {/* Capabilities Section */}
+      <CapabilitiesSection />
 
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
