@@ -491,8 +491,7 @@ function IndustrySolutionsSection() {
         "Startup to enterprise scaling strategies"
       ],
       icon: Code
-    },
-    // Additional industries can be added here
+    }
   ]
 
   return (
