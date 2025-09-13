@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card } from '@/components/ui/card'
+import { HubSpotFormModal } from '@/components/HubSpotFormModal'
 import { Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
 
 function FlowStage({ 
@@ -268,7 +269,7 @@ function IndustrySolutionCard({
   )
 }
 
-function ContactSection() {
+function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }) {
   const [formData, setFormData] = useState({
     fullName: '',
     workEmail: '',
@@ -395,8 +396,9 @@ function ContactSection() {
                 </div>
                 
                 <Button 
-                  type="submit"
+                  type="button"
                   size="lg"
+                  onClick={onGetStartedClick}
                   className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-4 text-lg"
                 >
                   Get Started Today
@@ -561,8 +563,24 @@ function MetricsSection() {
 }
 
 export function HomePage() {
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false)
+  
+  const handleGetStartedClick = () => {
+    setIsFormModalOpen(true)
+  }
+  
+  const handleCloseModal = () => {
+    setIsFormModalOpen(false)
+  }
+
   return (
     <div className="pt-16">
+      {/* HubSpot Form Modal */}
+      <HubSpotFormModal 
+        isOpen={isFormModalOpen}
+        onClose={handleCloseModal}
+        title="Get Started with Keloh"
+      />
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
         {/* Animated background elements */}
@@ -586,7 +604,11 @@ export function HomePage() {
                 engages, and converts top talent through every stage of their journey.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg">
+                <Button 
+                  size="lg" 
+                  onClick={handleGetStartedClick}
+                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
+                >
                   Discover Our Approach
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg">
@@ -613,7 +635,7 @@ export function HomePage() {
       <IndustrySolutionsSection />
 
       {/* Contact Section */}
-      <ContactSection />
+      <ContactSection onGetStartedClick={handleGetStartedClick} />
 
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
@@ -675,7 +697,11 @@ export function HomePage() {
             Join forward-thinking organizations who've partnered with Keloh to build 
             world-class recruitment marketing programs that deliver exceptional results.
           </p>
-          <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg">
+          <Button 
+            size="lg" 
+            onClick={handleGetStartedClick}
+            className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
+          >
             Schedule a Strategic Consultation
           </Button>
         </div>
