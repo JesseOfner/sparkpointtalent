@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button'
+
 export function CapabilitiesPage() {
   return (
     <div className="pt-16 min-h-screen bg-background">
@@ -953,6 +955,39 @@ export function CapabilitiesPage() {
             <button className="px-8 py-4 border border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Download Capabilities Overview
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/95 to-secondary/90"></div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Recruitment Capabilities?
+            </h2>
+            
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Let's discuss which capabilities will have the biggest impact on your talent acquisition goals. 
+              Our team will provide a custom recommendation based on your current challenges and objectives.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4 h-auto font-semibold shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
+                Schedule a Capability Assessment
+              </Button>
+              
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-lg px-8 py-4 h-auto font-semibold backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+              >
+                Download Our Capabilities Overview
+              </Button>
+            </div>
           </div>
         </div>
       </section>
