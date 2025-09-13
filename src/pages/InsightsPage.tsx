@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { TrendUp, ChartBar, Download, ArrowRight, Clock, FileText, Target, Heart } from "@phosphor-icons/react"
+import { TrendUp, ChartBar, Download, ArrowRight, Clock, FileText, Target, Heart, User, Trophy, Gear } from "@phosphor-icons/react"
 
 export function InsightsPage() {
   return (
@@ -176,6 +176,204 @@ export function InsightsPage() {
                   Read Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore by Topic Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+              Explore Insights by Topic
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Deep dive into the areas most relevant to your recruitment marketing challenges
+            </p>
+          </div>
+
+          {/* Topic Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Industry Trends & Research */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <TrendUp className="w-6 h-6 text-primary" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  24 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Industry Trends & Research
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Market analysis, hiring trends, and data-driven insights across industries
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">Q1 2025 Talent Market Update</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+              </div>
+            </div>
+
+            {/* Recruitment Marketing Strategy */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-secondary/10 rounded-lg">
+                  <Target className="w-6 h-6 text-secondary" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  31 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Recruitment Marketing Strategy
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Campaign best practices, channel optimization, and strategic frameworks
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">Multi-Channel Campaign Planning Guide</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+              </div>
+            </div>
+
+            {/* Technology & Automation */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Gear className="w-6 h-6 text-accent" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  18 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Technology & Automation
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Recruitment technology reviews, automation guides, and integration tips
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">AI-Powered Candidate Matching: A Practical Guide</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+              </div>
+            </div>
+
+            {/* Candidate Experience */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-primary/10 rounded-lg">
+                  <User className="w-6 h-6 text-primary" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  22 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Candidate Experience
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Application optimization, mobile trends, and candidate journey insights
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">Mobile-First Application Design Principles</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+              </div>
+            </div>
+
+            {/* Analytics & Performance */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-secondary/10 rounded-lg">
+                  <ChartBar className="w-6 h-6 text-secondary" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  19 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Analytics & Performance
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                KPI benchmarking, reporting frameworks, and performance optimization
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">Measuring Recruitment Marketing ROI</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
+              </div>
+            </div>
+
+            {/* Case Studies */}
+            <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <div className="flex items-start justify-between mb-4">
+                <div className="p-3 bg-accent/10 rounded-lg">
+                  <Trophy className="w-6 h-6 text-accent" />
+                </div>
+                <Badge variant="secondary" className="text-xs">
+                  15 articles
+                </Badge>
+              </div>
+              
+              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Case Studies
+              </h3>
+              
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Client success stories, campaign deep dives, and transformation narratives
+              </p>
+              
+              <div className="border-t pt-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-xs text-muted-foreground mb-1">Latest:</p>
+                    <p className="text-sm font-medium text-foreground">Tech Startup Scales from 50 to 200 Employees</p>
+                  </div>
+                  <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+                </div>
               </div>
             </div>
           </div>
