@@ -379,6 +379,66 @@ export function InsightsPage() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Signup Section */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-4">
+            Stay Ahead of Recruitment Marketing Trends
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Get our latest insights, research, and strategic guidance delivered to your inbox. 
+            Join 5,000+ talent acquisition leaders who rely on our weekly updates.
+          </p>
+
+          {/* Signup Form */}
+          <div className="bg-card p-8 rounded-lg shadow-sm max-w-lg mx-auto mb-12">
+            <form className="space-y-4">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Enter your work email"
+                  className="w-full px-4 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent text-foreground bg-background"
+                  required
+                />
+              </div>
+              <Button size="lg" className="w-full">
+                Subscribe to Insights
+              </Button>
+            </form>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm text-muted-foreground">Weekly insights, no spam</p>
+              <p className="text-xs text-muted-foreground">
+                We respect your privacy. Unsubscribe at any time.
+              </p>
+            </div>
+          </div>
+
+          {/* Social Proof */}
+          <div className="space-y-6">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              Trusted by talent leaders at:
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-8 text-muted-foreground">
+              <span className="font-medium">Microsoft</span>
+              <span className="font-medium">Adobe</span>
+              <span className="font-medium">Salesforce</span>
+              <span className="font-medium">HubSpot</span>
+              <span className="font-medium">Zoom</span>
+            </div>
+            
+            {/* Testimonial */}
+            <div className="bg-card p-6 rounded-lg max-w-2xl mx-auto mt-8">
+              <blockquote className="text-lg text-foreground mb-4">
+                "The weekly insights have transformed how we approach recruitment marketing."
+              </blockquote>
+              <cite className="text-sm text-muted-foreground font-medium">
+                Sarah Johnson, VP of Talent, TechCorp
+              </cite>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
