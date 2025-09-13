@@ -480,8 +480,8 @@ export function SolutionsPage() {
                     <Heart className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare Transformation</h3>
-                    <p className="text-sm text-muted-foreground">AFC Urgent Care & Baptist Health</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare Organizations</h3>
+                    <p className="text-sm text-muted-foreground">Urgent Care & Hospital Networks</p>
                   </div>
                 </div>
                 
@@ -490,7 +490,7 @@ export function SolutionsPage() {
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
                       25-35% annual turnover rates with physician positions costing $7,000-9,000 daily when unfilled. 
-                      Cost-per-hire reaching $6,125 (spiking to $19,000 for management).
+                      Cost-per-hire reaching $6,125 (spiking to $19,000 for management roles).
                     </p>
                   </div>
                   
@@ -499,8 +499,8 @@ export function SolutionsPage() {
                     <ul className="text-sm text-muted-foreground space-y-1">
                       <li>• Reduced cost-per-hire from $500-$5,000 to $200-$300</li>
                       <li>• 46% higher retention through employee referrals</li>
-                      <li>• Physician time-to-fill reduced from 125 days</li>
-                      <li>• Streamlined compliance for 79+ locations</li>
+                      <li>• Physician time-to-fill reduced from 125 days to 60 days</li>
+                      <li>• Streamlined compliance across multiple locations</li>
                     </ul>
                   </div>
                 </div>
@@ -515,8 +515,8 @@ export function SolutionsPage() {
                     <Truck className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Transportation Excellence</h3>
-                    <p className="text-sm text-muted-foreground">Western Flyer Xpress & Cheema Freightlines</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Transportation & Logistics</h3>
+                    <p className="text-sm text-muted-foreground">Freight Companies & Logistics Providers</p>
                   </div>
                 </div>
                 
@@ -525,15 +525,15 @@ export function SolutionsPage() {
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
                       Driver recruitment costs ranging $500-$20,000 per hire in a highly competitive market. 
-                      Need for consistent quality while managing costs across multiple routes.
+                      Need for consistent quality while managing costs across multiple routes and regions.
                     </p>
                   </div>
                   
                   <div className="p-4 bg-secondary/5 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Over 50% improvement in cost-per-hire</li>
-                      <li>• Maintained driver quality standards</li>
+                      <li>• 50%+ improvement in cost-per-hire efficiency</li>
+                      <li>• Maintained driver quality and safety standards</li>
                       <li>• 20-30% increase in qualified candidate flow</li>
                       <li>• Automated scheduling with 91% completion rates</li>
                     </ul>
@@ -550,8 +550,8 @@ export function SolutionsPage() {
                     <Buildings className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Enterprise Scale</h3>
-                    <p className="text-sm text-muted-foreground">Multi-site Operations & Staffing Agencies</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Multi-Location Enterprises</h3>
+                    <p className="text-sm text-muted-foreground">Construction & Staffing Organizations</p>
                   </div>
                 </div>
                 
@@ -559,18 +559,18 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Complex multi-location hiring for Patient First (79 locations), Power Design (120+ cities), 
-                      and staffing agencies needing internal recruitment optimization.
+                      Complex multi-location hiring across 70+ locations and 120+ cities, 
+                      with staffing agencies needing internal recruitment optimization and compliance management.
                     </p>
                   </div>
                   
                   <div className="p-4 bg-accent/5 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Valley Mountain: 60% decrease in internal costs</li>
+                      <li>• 60% decrease in internal recruitment costs</li>
                       <li>• 75% reduction in resume screening time</li>
-                      <li>• $30K investment → $150K in savings</li>
-                      <li>• 4:1 minimum ROI on recruitment spend</li>
+                      <li>• $30K investment generated $150K in savings</li>
+                      <li>• Achieved 4:1+ ROI on recruitment spend</li>
                     </ul>
                   </div>
                 </div>
