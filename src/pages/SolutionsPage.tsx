@@ -3,67 +3,102 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { 
   Code, 
-  Stethoscope, 
-  Building, 
-  GraduationCap, 
-  ShoppingCart, 
-  Factory,
+  Heart, 
+  CurrencyDollar, 
+  Gear, 
+  Briefcase, 
+  Storefront,
   CheckCircle,
   ArrowRight,
   Users,
   Target,
-  TrendUp
+  TrendUp,
+  Stethoscope,
+  Building,
+  GraduationCap,
+  ShoppingCart,
+  Factory
 } from '@phosphor-icons/react'
 
 export function SolutionsPage() {
   const industries = [
     {
-      title: 'Technology & Software',
+      title: "Technology & Software",
       icon: Code,
-      description: 'Attract top engineering and technical talent in competitive markets with specialized campaigns and technical assessment integration.',
-      challenges: ['High competition for developers', 'Technical skill validation', 'Remote work expectations'],
-      solutions: ['Developer-focused content marketing', 'Technical skills assessment workflows', 'GitHub and Stack Overflow recruiting'],
-      metrics: { timeToFill: '65%', qualityHire: '3.2x', satisfaction: '92%' }
+      challenge: "Attracting top engineering talent in highly competitive markets",
+      highlights: [
+        "Developer community engagement",
+        "Technical assessment integration", 
+        "Startup-to-enterprise scaling strategies",
+        "Remote-first recruitment approaches"
+      ],
+      stat: "65% faster technical hire times",
+      cta: "View Tech Solutions"
     },
     {
-      title: 'Healthcare & Life Sciences',
-      icon: Stethoscope,
-      description: 'Specialized recruitment for healthcare professionals with compliance-focused processes and credential verification.',
-      challenges: ['Credential verification complexity', 'Regulatory compliance', 'Shift scheduling requirements'],
-      solutions: ['Compliance-ready application workflows', 'Credential verification automation', 'Healthcare job board integrations'],
-      metrics: { timeToFill: '58%', qualityHire: '2.9x', satisfaction: '89%' }
+      title: "Healthcare & Life Sciences",
+      icon: Heart,
+      challenge: "Recruiting licensed professionals with specialized certifications",
+      highlights: [
+        "Compliance-focused messaging",
+        "Clinical talent pipelines",
+        "Telehealth recruitment strategies", 
+        "Continuing education partnerships"
+      ],
+      stat: "40% improvement in licensed professional hires",
+      cta: "View Healthcare Solutions"
     },
     {
-      title: 'Financial Services',
-      icon: Building,
-      description: 'Navigate complex compliance requirements while attracting top financial talent with security-focused recruitment processes.',
-      challenges: ['Strict background checks', 'Regulatory compliance', 'Confidential hiring processes'],
-      solutions: ['Secure application processes', 'Background check automation', 'Compliance documentation'],
-      metrics: { timeToFill: '52%', qualityHire: '2.7x', satisfaction: '87%' }
+      title: "Financial Services",
+      icon: CurrencyDollar,
+      challenge: "Navigating regulated environments while attracting top financial talent",
+      highlights: [
+        "Compliance-aware campaigns",
+        "Fintech vs traditional targeting",
+        "Risk management talent focus",
+        "Wealth management recruitment"
+      ],
+      stat: "50% reduction in compliance-related delays",
+      cta: "View Financial Solutions"
     },
     {
-      title: 'Education & Non-Profit',
-      icon: GraduationCap,
-      description: 'Mission-driven recruitment that attracts passionate educators and non-profit professionals aligned with your values.',
-      challenges: ['Budget constraints', 'Mission alignment', 'Seasonal hiring cycles'],
-      solutions: ['Mission-focused messaging', 'Community engagement campaigns', 'Budget-optimized strategies'],
-      metrics: { timeToFill: '48%', qualityHire: '2.5x', satisfaction: '94%' }
+      title: "Manufacturing & Industrial",
+      icon: Gear,
+      challenge: "Finding skilled trades and technical workers in tight labor markets",
+      highlights: [
+        "Blue-collar recruitment expertise",
+        "Safety-focused messaging",
+        "Geographic targeting",
+        "Multi-generational workforce strategies"
+      ],
+      stat: "45% increase in skilled trades applications",
+      cta: "View Manufacturing Solutions"
     },
     {
-      title: 'Retail & E-commerce',
-      icon: ShoppingCart,
-      description: 'Scale your workforce efficiently with solutions designed for high-volume hiring and seasonal fluctuations.',
-      challenges: ['High-volume hiring', 'Seasonal fluctuations', 'Customer service skills'],
-      solutions: ['Automated bulk hiring', 'Seasonal campaign optimization', 'Customer service assessments'],
-      metrics: { timeToFill: '71%', qualityHire: '2.4x', satisfaction: '85%' }
+      title: "Professional Services",
+      icon: Briefcase,
+      challenge: "Attracting consultants and advisors who represent your firm's reputation",
+      highlights: [
+        "High-touch candidate experience",
+        "Thought leadership integration",
+        "Client-facing role expertise",
+        "Partnership development focus"
+      ],
+      stat: "60% higher consultant retention rates",
+      cta: "View Professional Services Solutions"
     },
     {
-      title: 'Manufacturing & Industrial',
-      icon: Factory,
-      description: 'Attract skilled trades and manufacturing professionals with safety-focused messaging and skills-based assessments.',
-      challenges: ['Skills shortages', 'Safety requirements', 'Shift work coordination'],
-      solutions: ['Trade skills assessments', 'Safety-focused content', 'Shift scheduling integration'],
-      metrics: { timeToFill: '63%', qualityHire: '2.8x', satisfaction: '88%' }
+      title: "Retail & Hospitality",
+      icon: Storefront,
+      challenge: "High-volume hiring with consistent quality and cultural fit",
+      highlights: [
+        "Seasonal workforce planning",
+        "Multi-location coordination",
+        "Customer service excellence focus",
+        "Fast-track hiring processes"
+      ],
+      stat: "70% faster seasonal staffing completion",
+      cta: "View Retail Solutions"
     }
   ]
 
@@ -222,73 +257,67 @@ export function SolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Specialized Solutions by Industry
+              Industry Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Deep expertise in the unique challenges and opportunities facing different sectors
+              Specialized recruitment marketing strategies tailored to the unique challenges and opportunities in your sector
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <industry.icon className="w-6 h-6 text-primary" />
+            {industries.map((industry, index) => {
+              const IconComponent = industry.icon
+              return (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-border/50">
+                  <CardContent className="p-8">
+                    {/* Icon */}
+                    <div className="mb-6">
+                      <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <IconComponent size={32} className="text-white" />
+                      </div>
                     </div>
-                    <CardTitle className="text-xl">{industry.title}</CardTitle>
-                  </div>
-                  <CardDescription className="text-base leading-relaxed">
-                    {industry.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3">Key Challenges:</h4>
-                    <ul className="space-y-1">
-                      {industry.challenges.map((challenge, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                          {challenge}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-3">Our Solutions:</h4>
-                    <ul className="space-y-1">
-                      {industry.solutions.map((solution, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                          {solution}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-foreground mb-4">
+                      {industry.title}
+                    </h3>
 
-                  <div className="grid grid-cols-3 gap-4 pt-4 border-t">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-primary">{industry.metrics.timeToFill}</div>
-                      <div className="text-xs text-muted-foreground">Faster Fill</div>
+                    {/* Challenge */}
+                    <div className="mb-6">
+                      <p className="text-sm font-medium text-muted-foreground mb-2">Challenge:</p>
+                      <p className="text-foreground/80 text-sm leading-relaxed">
+                        {industry.challenge}
+                      </p>
                     </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-primary">{industry.metrics.qualityHire}</div>
-                      <div className="text-xs text-muted-foreground">Quality Hire</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-primary">{industry.metrics.satisfaction}</div>
-                      <div className="text-xs text-muted-foreground">Satisfaction</div>
-                    </div>
-                  </div>
 
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+                    {/* Solution Highlights */}
+                    <div className="mb-6">
+                      <p className="text-sm font-medium text-muted-foreground mb-3">Solution Highlights:</p>
+                      <ul className="space-y-2">
+                        {industry.highlights.map((highlight, highlightIndex) => (
+                          <li key={highlightIndex} className="text-sm text-foreground/80 flex items-start">
+                            <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            {highlight}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Key Stat */}
+                    <div className="mb-6 p-4 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-lg">
+                      <p className="text-lg font-semibold text-primary text-center">
+                        {industry.stat}
+                      </p>
+                    </div>
+
+                    {/* CTA */}
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                      {industry.cta}
+                    </Button>
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
