@@ -17,7 +17,10 @@ import {
   Building,
   GraduationCap,
   ShoppingCart,
-  Factory
+  Factory,
+  MagnifyingGlass,
+  Shield,
+  ChartLine
 } from '@phosphor-icons/react'
 
 export function SolutionsPage() {
@@ -99,6 +102,64 @@ export function SolutionsPage() {
       ],
       stat: "70% faster seasonal staffing completion",
       cta: "View Retail Solutions"
+    }
+  ]
+
+  const comprehensiveComponents = [
+    {
+      title: "Industry Research & Strategy",
+      icon: MagnifyingGlass,
+      description: "Deep market analysis, competitor benchmarking, and industry-specific talent mapping",
+      includes: [
+        "Market research",
+        "Competitor analysis", 
+        "Talent landscape mapping",
+        "Industry trend analysis"
+      ]
+    },
+    {
+      title: "Targeted Campaign Development", 
+      icon: Target,
+      description: "Multi-channel campaigns designed around industry-specific candidate behaviors and preferences",
+      includes: [
+        "Channel strategy",
+        "Creative development",
+        "Messaging optimization", 
+        "Audience segmentation"
+      ]
+    },
+    {
+      title: "Compliance & Best Practices",
+      icon: Shield, 
+      description: "Industry regulation awareness and recruitment best practices specific to your sector",
+      includes: [
+        "Regulatory compliance",
+        "Industry standards",
+        "Best practice implementation",
+        "Risk mitigation"
+      ]
+    },
+    {
+      title: "Technology Integration",
+      icon: Gear,
+      description: "Seamless integration with industry-standard tools and assessment platforms", 
+      includes: [
+        "ATS integration",
+        "Assessment tools",
+        "Industry platforms",
+        "Custom dashboards"
+      ]
+    },
+    {
+      title: "Performance Optimization",
+      icon: ChartLine,
+      description: "Continuous improvement based on industry benchmarks and performance data",
+      includes: [
+        "Performance tracking",
+        "Industry benchmarking", 
+        "Optimization recommendations",
+        "ROI analysis"
+      ]
     }
   ]
 
@@ -318,6 +379,72 @@ export function SolutionsPage() {
                 </Card>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive Solution Components */}
+      <section className="py-24 bg-muted/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Comprehensive Solutions Tailored to Your Industry
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Every industry solution includes these core components, customized for your specific market dynamics
+            </p>
+          </div>
+
+          {/* Horizontal layout with connected elements */}
+          <div className="relative">
+            {/* Connection line */}
+            <div className="hidden lg:block absolute top-32 left-0 right-0 h-px bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20"></div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+              {comprehensiveComponents.map((component, index) => {
+                const IconComponent = component.icon
+                return (
+                  <div key={index} className="relative">
+                    {/* Connection dot on line */}
+                    <div className="hidden lg:block absolute top-32 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-primary rounded-full"></div>
+                    
+                    <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                      <CardContent className="p-6 text-center">
+                        {/* Icon */}
+                        <div className="mb-6 flex justify-center">
+                          <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <IconComponent size={28} className="text-white" />
+                          </div>
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-lg font-semibold text-foreground mb-4">
+                          {component.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                          {component.description}
+                        </p>
+
+                        {/* Includes */}
+                        <div className="space-y-2">
+                          <p className="text-xs font-medium text-foreground/80 mb-3">Includes:</p>
+                          <ul className="space-y-1">
+                            {component.includes.map((item, itemIndex) => (
+                              <li key={itemIndex} className="text-xs text-muted-foreground flex items-center justify-center">
+                                <span className="w-1 h-1 bg-primary rounded-full mr-2 flex-shrink-0"></span>
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>
