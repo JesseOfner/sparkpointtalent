@@ -757,6 +757,156 @@ export function CapabilitiesPage() {
         </div>
       </section>
 
+      {/* Technology & Integrations */}
+      <section className="py-24 bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Powered by Best-in-Class Technology
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We integrate with your existing systems and leverage cutting-edge tools for maximum impact
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Advertising Platforms */}
+            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-6">Advertising Platforms</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-blue-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Google Ads & Display Network</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-blue-600/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-blue-600 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Facebook, LinkedIn, Instagram</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-orange-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-orange-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Indeed, ZipRecruiter, Glassdoor</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-purple-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-purple-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Programmatic job boards</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Automation & CRM */}
+            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-6">Automation & CRM</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-green-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-green-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">GEM, Phenom, Paradox</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-teal-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-teal-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Greenhouse, Workday, BambooHR</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-amber-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-amber-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Zapier integrations</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-indigo-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-indigo-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Custom API connections</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Analytics & Optimization */}
+            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-6">Analytics & Optimization</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-red-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-red-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Google Analytics & Tag Manager</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-pink-500/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-pink-500 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Hotjar</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-blue-700/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-blue-700 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Tableau, Visier</span>
+                </div>
+                
+                <div className="flex items-center gap-3 p-3 bg-background rounded-lg border border-border/50">
+                  <div className="w-8 h-8 bg-gray-600/10 rounded-lg flex items-center justify-center">
+                    <div className="w-4 h-4 bg-gray-600 rounded"></div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">Custom reporting dashboards</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Integration CTA */}
+          <div className="text-center mt-16">
+            <div className="bg-card rounded-2xl p-8 shadow-sm border border-border max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Seamless Integration</h3>
+              <p className="text-muted-foreground mb-6">
+                Our technology stack integrates seamlessly with your existing HR and recruitment tools, ensuring data flows smoothly and insights are actionable.
+              </p>
+              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors">
+                View Integration Guide
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
         <div className="absolute inset-0">
