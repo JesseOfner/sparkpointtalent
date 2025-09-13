@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card } from '@/components/ui/card'
-import { HubSpotFormModal } from '@/components/HubSpotFormModal'
 import { Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
 
 function FlowStage({ 
@@ -563,24 +563,14 @@ function MetricsSection() {
 }
 
 export function HomePage() {
-  const [isFormModalOpen, setIsFormModalOpen] = useState(false)
+  const navigate = useNavigate()
   
   const handleGetStartedClick = () => {
-    setIsFormModalOpen(true)
-  }
-  
-  const handleCloseModal = () => {
-    setIsFormModalOpen(false)
+    navigate('/contact')
   }
 
   return (
     <div className="pt-16">
-      {/* HubSpot Form Modal */}
-      <HubSpotFormModal 
-        isOpen={isFormModalOpen}
-        onClose={handleCloseModal}
-        title="Get Started with Keloh"
-      />
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
         {/* Animated background elements */}
@@ -609,7 +599,7 @@ export function HomePage() {
                   onClick={handleGetStartedClick}
                   className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
                 >
-                  Discover Our Approach
+                  Get Started
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg">
                   View Case Studies
