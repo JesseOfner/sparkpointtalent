@@ -441,4 +441,6 @@ export function InsightsPage() {
       </section>
     </div>
   )
+}    </div>
+  )
 }
