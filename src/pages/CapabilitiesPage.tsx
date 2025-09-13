@@ -104,7 +104,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Core Capabilities */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,7 +252,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Our Proven Process */}
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -408,7 +406,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Employer Brand Strategy */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -494,7 +491,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Digital Recruitment Campaigns */}
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -576,7 +572,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Automation & AI Matching */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -662,7 +657,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Performance Analytics */}
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -758,7 +752,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Technology & Integrations */}
       <section className="py-24 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -908,7 +901,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Call to Action */}
       <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
         <div className="absolute inset-0">
@@ -933,7 +925,6 @@ export function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
       {/* Call to Action Section */}
       <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
         {/* Background decoration */}
@@ -941,9 +932,7 @@ export function CapabilitiesPage() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Recruitment Capabilities?
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Recruitment Capabilities?</h2>
             
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
               Let's discuss which capabilities will have the biggest impact on your talent acquisition goals. 
@@ -958,14 +947,12 @@ export function CapabilitiesPage() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 text-lg px-8 py-4 h-auto font-semibold backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-              >
-                Download Our Capabilities Overview
-              </Button>
+                className="border-2 border-white/30 hover:bg-white/10 hover:border-white/50 text-lg px-8 py-4 h-auto font-semibold backdrop-blur-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-slate-950"
+              >Download Our Capabilities Overview</Button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
