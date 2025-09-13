@@ -472,16 +472,16 @@ export function SolutionsPage() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            {/* Healthcare Success Story */}
+            {/* Technology Company Case Study */}
             <Card className="shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                    <Heart className="w-6 h-6 text-primary" />
+                    <Code className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare Organizations</h3>
-                    <p className="text-sm text-muted-foreground">Urgent Care & Hospital Networks</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Technology Company</h3>
+                    <p className="text-sm text-muted-foreground">Series B SaaS company (200+ employees)</p>
                   </div>
                 </div>
                 
@@ -489,34 +489,39 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      25-35% annual turnover rates with physician positions costing $7,000-9,000 daily when unfilled. 
-                      Cost-per-hire reaching $6,125 (spiking to $19,000 for management roles).
+                      Scaling engineering team from 25 to 60 developers in 18 months while maintaining quality
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Developer community engagement strategy with technical assessment integration and referral program
                     </p>
                   </div>
                   
                   <div className="p-4 bg-primary/5 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Reduced cost-per-hire from $500-$5,000 to $200-$300</li>
-                      <li>• 46% higher retention through employee referrals</li>
-                      <li>• Physician time-to-fill reduced from 125 days to 60 days</li>
-                      <li>• Streamlined compliance across multiple locations</li>
+                      <li>• Senior engineer time-to-fill: 95 days → 60 days</li>
+                      <li>• Cost-per-hire reduction: 40%</li>
+                      <li>• Offer acceptance rate: 78%</li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Transportation Success Story */}
+            {/* Healthcare System Case Study */}
             <Card className="shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
-                    <Truck className="w-6 h-6 text-secondary" />
+                    <Heart className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Transportation & Logistics</h3>
-                    <p className="text-sm text-muted-foreground">Freight Companies & Logistics Providers</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare System</h3>
+                    <p className="text-sm text-muted-foreground">Regional healthcare network (5 hospitals)</p>
                   </div>
                 </div>
                 
@@ -524,34 +529,39 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Driver recruitment costs ranging $500-$20,000 per hire in a highly competitive market. 
-                      Need for consistent quality while managing costs across multiple routes and regions.
+                      Critical shortage of nurses and specialized technicians across multiple locations
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Multi-location digital campaigns with compliance-focused messaging and career progression highlighting
                     </p>
                   </div>
                   
                   <div className="p-4 bg-secondary/5 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 50%+ improvement in cost-per-hire efficiency</li>
-                      <li>• Maintained driver quality and safety standards</li>
-                      <li>• 20-30% increase in qualified candidate flow</li>
-                      <li>• Automated scheduling with 91% completion rates</li>
+                      <li>• RN time-to-fill: 90 days → 55 days</li>
+                      <li>• Cost-per-application: $30 → $15</li>
+                      <li>• Quality of hire scores: +35%</li>
                     </ul>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Multi-Industry Success Story */}
+            {/* Manufacturing Company Case Study */}
             <Card className="shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
-                    <Buildings className="w-6 h-6 text-accent" />
+                    <Gear className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Multi-Location Enterprises</h3>
-                    <p className="text-sm text-muted-foreground">Construction & Staffing Organizations</p>
+                    <h3 className="text-lg font-semibold text-card-foreground">Manufacturing Company</h3>
+                    <p className="text-sm text-muted-foreground">Automotive parts manufacturer (500+ employees)</p>
                   </div>
                 </div>
                 
@@ -559,18 +569,23 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Complex multi-location hiring across 70+ locations and 120+ cities, 
-                      with staffing agencies needing internal recruitment optimization and compliance management.
+                      Finding experienced machinists and quality control technicians in tight labor market
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Geographic targeting with safety-focused employer branding and apprenticeship program promotion
                     </p>
                   </div>
                   
                   <div className="p-4 bg-accent/5 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• 60% decrease in internal recruitment costs</li>
-                      <li>• 75% reduction in resume screening time</li>
-                      <li>• $30K investment generated $150K in savings</li>
-                      <li>• Achieved 4:1+ ROI on recruitment spend</li>
+                      <li>• Machinist applications: +60%</li>
+                      <li>• Time-to-fill: 75 days → 50 days</li>
+                      <li>• 90-day retention: 88%</li>
                     </ul>
                   </div>
                 </div>
