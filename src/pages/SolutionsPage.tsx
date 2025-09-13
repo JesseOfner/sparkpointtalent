@@ -20,7 +20,12 @@ import {
   Factory,
   MagnifyingGlass,
   Shield,
-  ChartLine
+  ChartLine,
+  Truck,
+  Buildings,
+  TrendDown,
+  Clock,
+  CurrencyCircleDollar
 } from '@phosphor-icons/react'
 
 export function SolutionsPage() {
@@ -187,30 +192,6 @@ export function SolutionsPage() {
     {
       title: 'Performance Analytics Dashboard',
       description: 'Industry-benchmarked KPIs and reporting that track performance against sector-specific recruitment metrics.'
-    }
-  ]
-
-  const caseStudies = [
-    {
-      industry: 'Technology',
-      company: 'Series B SaaS Company',
-      challenge: 'Needed to hire 50+ engineers in 6 months while competing with FAANG companies',
-      solution: 'Developer-focused content strategy + GitHub recruiting + technical interview automation',
-      results: '78% faster time-to-fill, 40% reduction in cost-per-hire, 95% offer acceptance rate'
-    },
-    {
-      industry: 'Healthcare',
-      company: 'Regional Hospital Network',
-      challenge: 'Critical nursing shortage with complex credentialing requirements',
-      solution: 'Healthcare job board network + automated credential verification + referral campaigns',
-      results: '65% improvement in qualified applicants, 50% faster credentialing process'
-    },
-    {
-      industry: 'Financial Services',
-      company: 'Investment Management Firm',
-      challenge: 'Confidential executive search with strict compliance requirements',
-      solution: 'Executive search automation + compliance-ready workflows + discrete sourcing',
-      results: '3 C-level hires in 4 months, 100% compliance audit success'
     }
   ]
 
@@ -478,54 +459,255 @@ export function SolutionsPage() {
         </div>
       </section>
 
-      {/* Case Study Highlights */}
-      <section className="py-24">
+      {/* Success Stories Section */}
+      <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Success Stories by Industry
+              Proven Results Across Industries
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Real results from companies who transformed their talent acquisition with our industry-specific solutions
+              Real outcomes from our industry-specific recruitment marketing solutions
             </p>
           </div>
 
-          <div className="space-y-8">
-            {caseStudies.map((study, index) => (
-              <Card key={index} className="overflow-hidden">
-                <CardContent className="p-8">
-                  <div className="flex flex-col lg:flex-row gap-8">
-                    <div className="lg:w-1/3">
-                      <Badge variant="secondary" className="mb-4">{study.industry}</Badge>
-                      <h3 className="text-xl font-bold text-foreground mb-2">{study.company}</h3>
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                            <Target className="w-4 h-4 text-red-500" />
-                            Challenge
-                          </h4>
-                          <p className="text-muted-foreground text-sm">{study.challenge}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                            <Users className="w-4 h-4 text-blue-500" />
-                            Solution
-                          </h4>
-                          <p className="text-muted-foreground text-sm">{study.solution}</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="lg:w-2/3 lg:pl-8 lg:border-l">
-                      <h4 className="font-semibold text-foreground mb-4 flex items-center gap-2">
-                        <TrendUp className="w-4 h-4 text-green-500" />
-                        Results Achieved
-                      </h4>
-                      <p className="text-lg text-foreground font-medium">{study.results}</p>
-                    </div>
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Healthcare Success Story */}
+            <Card className="shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                    <Heart className="w-6 h-6 text-primary" />
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare Transformation</h3>
+                    <p className="text-sm text-muted-foreground">AFC Urgent Care & Baptist Health</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
+                    <p className="text-sm text-muted-foreground">
+                      25-35% annual turnover rates with physician positions costing $7,000-9,000 daily when unfilled. 
+                      Cost-per-hire reaching $6,125 (spiking to $19,000 for management).
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-primary/5 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Reduced cost-per-hire from $500-$5,000 to $200-$300</li>
+                      <li>• 46% higher retention through employee referrals</li>
+                      <li>• Physician time-to-fill reduced from 125 days</li>
+                      <li>• Streamlined compliance for 79+ locations</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Transportation Success Story */}
+            <Card className="shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                    <Truck className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-card-foreground">Transportation Excellence</h3>
+                    <p className="text-sm text-muted-foreground">Western Flyer Xpress & Cheema Freightlines</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Driver recruitment costs ranging $500-$20,000 per hire in a highly competitive market. 
+                      Need for consistent quality while managing costs across multiple routes.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-secondary/5 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Over 50% improvement in cost-per-hire</li>
+                      <li>• Maintained driver quality standards</li>
+                      <li>• 20-30% increase in qualified candidate flow</li>
+                      <li>• Automated scheduling with 91% completion rates</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Multi-Industry Success Story */}
+            <Card className="shadow-sm hover:shadow-md transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                    <Buildings className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-card-foreground">Enterprise Scale</h3>
+                    <p className="text-sm text-muted-foreground">Multi-site Operations & Staffing Agencies</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="p-4 bg-muted/50 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Complex multi-location hiring for Patient First (79 locations), Power Design (120+ cities), 
+                      and staffing agencies needing internal recruitment optimization.
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-accent/5 rounded-lg">
+                    <h4 className="font-medium text-card-foreground mb-2">Results Achieved</h4>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Valley Mountain: 60% decrease in internal costs</li>
+                      <li>• 75% reduction in resume screening time</li>
+                      <li>• $30K investment → $150K in savings</li>
+                      <li>• 4:1 minimum ROI on recruitment spend</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Platform Performance Metrics */}
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-foreground mb-2">Platform Performance Benchmarks</h3>
+              <p className="text-muted-foreground">Consistent results across all client implementations</p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <TrendDown className="w-8 h-8 text-primary" />
+                </div>
+                <div className="text-2xl font-bold text-foreground">75%</div>
+                <div className="text-sm text-muted-foreground">Reduction in screening time</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Target className="w-8 h-8 text-secondary" />
+                </div>
+                <div className="text-2xl font-bold text-foreground">4:1</div>
+                <div className="text-sm text-muted-foreground">Minimum ROI guarantee</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Clock className="w-8 h-8 text-accent" />
+                </div>
+                <div className="text-2xl font-bold text-foreground">25%</div>
+                <div className="text-sm text-muted-foreground">Faster time-to-fill</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <CurrencyCircleDollar className="w-8 h-8 text-primary" />
+                </div>
+                <div className="text-2xl font-bold text-foreground">60%</div>
+                <div className="text-sm text-muted-foreground">Average cost reduction</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Detailed Impact Metrics */}
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Heart className="w-5 h-5 text-primary" />
+                  Healthcare Impact
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Physician time-to-fill</span>
+                    <span className="font-semibold">125 days → 60 days</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Nurse practitioners</span>
+                    <span className="font-semibold">60-90 days</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Medical assistants</span>
+                    <span className="font-semibold">45-60 days</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Daily revenue impact</span>
+                    <span className="font-semibold text-red-600">-$10,122</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <CurrencyCircleDollar className="w-5 h-5 text-secondary" />
+                  Cost Optimizations
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Cost-per-application</span>
+                    <span className="font-semibold">$25 → $10</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Programmatic savings</span>
+                    <span className="font-semibold text-green-600">$500 → $200</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">ROI achievement</span>
+                    <span className="font-semibold">$30K → $150K</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Strong employer brand</span>
+                    <span className="font-semibold">50% reduction</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <TrendUp className="w-5 h-5 text-accent" />
+                  Efficiency Gains
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Interview completion</span>
+                    <span className="font-semibold">91%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Time-to-fill reduction</span>
+                    <span className="font-semibold">15-25%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Qualified candidate flow</span>
+                    <span className="font-semibold">+20-30%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">Application rate increase</span>
+                    <span className="font-semibold">+25%</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
