@@ -1,11 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Card } from '@/components/ui/card'
 import { Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
+import getStartedIllustration from '@/assets/images/get-started-illustration.svg'
 
 function FlowStage({ 
   icon: Icon, 
@@ -270,24 +268,6 @@ function IndustrySolutionCard({
 }
 
 function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }) {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    workEmail: '',
-    company: '',
-    companySize: '',
-    message: ''
-  })
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-  }
-
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
       {/* Background elements */}
@@ -297,7 +277,7 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
           <div className="text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
@@ -335,75 +315,32 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
-          <div>
-            <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    placeholder="Full Name"
-                    value={formData.fullName}
-                    onChange={(e) => handleInputChange('fullName', e.target.value)}
-                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <Input
-                    type="email"
-                    placeholder="Work Email"
-                    value={formData.workEmail}
-                    onChange={(e) => handleInputChange('workEmail', e.target.value)}
-                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <Input
-                    placeholder="Company"
-                    value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
-                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <Select value={formData.companySize} onValueChange={(value) => handleInputChange('companySize', value)}>
-                    <SelectTrigger className="bg-white/90 border-white/30 text-gray-900">
-                      <SelectValue placeholder="Company Size" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1-10">1-10 employees</SelectItem>
-                      <SelectItem value="11-50">11-50 employees</SelectItem>
-                      <SelectItem value="51-200">51-200 employees</SelectItem>
-                      <SelectItem value="201-1000">201-1,000 employees</SelectItem>
-                      <SelectItem value="1000+">1,000+ employees</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                <div>
-                  <Textarea
-                    placeholder="Tell us about your recruitment challenges and goals..."
-                    value={formData.message}
-                    onChange={(e) => handleInputChange('message', e.target.value)}
-                    className="bg-white/90 border-white/30 placeholder:text-gray-500 text-gray-900 min-h-[120px]"
-                    rows={5}
-                  />
-                </div>
-                
-                <Button 
-                  type="button"
-                  size="lg"
-                  onClick={onGetStartedClick}
-                  className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-4 text-lg"
-                >
-                  Get Started Today
-                </Button>
-              </form>
+          {/* Right Side - Get Started Illustration */}
+          <div className="flex flex-col items-center">
+            <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center">
+              <div className="mb-8">
+                <img 
+                  src={getStartedIllustration} 
+                  alt="Get Started on Your Project" 
+                  className="w-full max-w-md mx-auto opacity-90 hover:opacity-100 transition-opacity"
+                />
+              </div>
+              
+              <h3 className="text-2xl font-semibold text-white mb-4">
+                Start Your Project Today
+              </h3>
+              <p className="text-white/80 mb-8 leading-relaxed">
+                Ready to transform how you attract and hire talent? Let's build something amazing together.
+              </p>
+              
+              <Button 
+                type="button"
+                size="lg"
+                onClick={onGetStartedClick}
+                className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-4 text-lg"
+              >
+                Get Started Today
+              </Button>
             </Card>
           </div>
         </div>
