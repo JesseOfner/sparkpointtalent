@@ -103,6 +103,155 @@ export function CapabilitiesPage() {
         </div>
       </section>
 
+      {/* Core Capabilities */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              Core Capabilities
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our comprehensive suite of services designed to transform every aspect of your recruitment marketing strategy
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Employer Brand Strategy */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Employer Brand Strategy</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Build compelling employer brands that resonate with top talent. We develop your EVP, messaging framework, and brand positioning to differentiate you in competitive markets.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Brand positioning</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">EVP development</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Competitive analysis</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Brand guidelines</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Digital Recruitment Campaigns */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Digital Recruitment Campaigns</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Multi-channel campaigns that reach candidates where they're most engaged. Programmatic advertising, social recruiting, and search marketing that drives qualified applicants.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Social media advertising</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Programmatic job ads</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">SEM/SEO</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Campaign optimization</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Content Marketing & Storytelling */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Content Marketing & Storytelling</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Authentic content that showcases your culture and opportunities. Employee stories, company videos, and optimized job content that converts passive candidates.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Employee testimonials</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Culture videos</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Job description optimization</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Multimedia content</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Candidate Experience Optimization */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Candidate Experience Optimization</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Streamlined application processes that convert interest into applications. Mobile-optimized experiences and journey mapping that reduces drop-off rates.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Application optimization</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Mobile career sites</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Journey mapping</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Conversion optimization</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Marketing Automation & CRM */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Marketing Automation & CRM</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Intelligent systems that nurture talent pipelines and engage candidates automatically. Seamless integration with your existing ATS and recruitment tools.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Pipeline nurturing</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Automated engagement</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Lead scoring</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">ATS integration</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Analytics & Performance Optimization */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Analytics & Performance Optimization</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Data-driven insights that continuously improve your recruitment marketing ROI. Real-time reporting, A/B testing, and predictive analytics for better decisions.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Performance tracking</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">ROI measurement</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">A/B testing</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Predictive analytics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Employer Brand Strategy */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
