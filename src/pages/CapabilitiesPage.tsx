@@ -252,6 +252,161 @@ export function CapabilitiesPage() {
         </div>
       </section>
 
+      {/* Our Proven Process */}
+      <section className="py-24 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              How We Deliver Results
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Our systematic approach ensures measurable improvements in your talent acquisition outcomes
+            </p>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Progress line - visible on larger screens */}
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-border transform -translate-y-1/2">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full"></div>
+            </div>
+
+            {/* Steps */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4">
+              {/* Step 1 */}
+              <div className="relative group">
+                <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border">
+                  {/* Step number and icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                      </svg>
+                    </div>
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                      1
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">Discovery & Strategy</h3>
+                  <div className="text-sm text-primary font-semibold mb-4">Week 1-2</div>
+                  <p className="text-muted-foreground mb-6">
+                    Audit current state, define goals, develop comprehensive strategy
+                  </p>
+
+                  {/* Progress indicator for mobile */}
+                  <div className="lg:hidden w-full h-1 bg-border rounded-full">
+                    <div className="w-1/4 h-1 bg-primary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="relative group">
+                <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border">
+                  {/* Step number and icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center group-hover:bg-secondary/20 transition-colors">
+                      <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                      </svg>
+                    </div>
+                    <div className="w-8 h-8 bg-secondary text-secondary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                      2
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">Implementation & Launch</h3>
+                  <div className="text-sm text-secondary font-semibold mb-4">Week 3-4</div>
+                  <p className="text-muted-foreground mb-6">
+                    Execute campaigns, deploy automation, optimize candidate experience
+                  </p>
+
+                  {/* Progress indicator for mobile */}
+                  <div className="lg:hidden w-full h-1 bg-border rounded-full">
+                    <div className="w-2/4 h-1 bg-secondary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="relative group">
+                <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border">
+                  {/* Step number and icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                      <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <div className="w-8 h-8 bg-accent text-accent-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                      3
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">Monitor & Optimize</h3>
+                  <div className="text-sm text-accent font-semibold mb-4">Ongoing</div>
+                  <p className="text-muted-foreground mb-6">
+                    Track performance, test improvements, refine targeting and messaging
+                  </p>
+
+                  {/* Progress indicator for mobile */}
+                  <div className="lg:hidden w-full h-1 bg-border rounded-full">
+                    <div className="w-3/4 h-1 bg-accent rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="relative group">
+                <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border">
+                  {/* Step number and icon */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                      </svg>
+                    </div>
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                      4
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-foreground mb-3">Scale & Expand</h3>
+                  <div className="text-sm text-primary font-semibold mb-4">Month 3+</div>
+                  <p className="text-muted-foreground mb-6">
+                    Expand successful campaigns, add new channels, increase investment in top performers
+                  </p>
+
+                  {/* Progress indicator for mobile */}
+                  <div className="lg:hidden w-full h-1 bg-border rounded-full">
+                    <div className="w-full h-1 bg-primary rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Connection dots for large screens */}
+            <div className="hidden lg:flex absolute top-1/2 left-0 right-0 justify-between transform -translate-y-1/2 px-8">
+              <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+              <div className="w-4 h-4 bg-secondary rounded-full border-4 border-background shadow-lg"></div>
+              <div className="w-4 h-4 bg-accent rounded-full border-4 border-background shadow-lg"></div>
+              <div className="w-4 h-4 bg-primary rounded-full border-4 border-background shadow-lg"></div>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="text-center mt-16">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2">
+              See Our Process in Action
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h6m2 5H7a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Employer Brand Strategy */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
