@@ -552,16 +552,16 @@ export function SolutionsPage() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-sm hover:shadow-md transition-shadow">
+            {/* Manufacturing Company Case Study */}
             <Card className="shadow-sm hover:shadow-md transition-shadow">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                    <Gear className="w-6 h-6 text-accent" />
                   </div>
-                  </div>
-                  <div>-semibold text-card-foreground">Manufacturing Company</h3>
+                  <div>
+                    <h3 className="font-semibold text-card-foreground">Manufacturing Company</h3>
                     <p className="text-sm text-muted-foreground">Automotive parts manufacturer (500+ employees)</p>
-                  </div>
                   </div>
                 </div>
                 
@@ -569,6 +569,7 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
+                      Finding experienced machinists and quality control technicians in tight labor market
                     </p>
                   </div>
                   
@@ -576,7 +577,6 @@ export function SolutionsPage() {
                     <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
                     <p className="text-sm text-muted-foreground">
                       Geographic targeting with safety-focused employer branding and apprenticeship program promotion
-                    </p>
                     </p>
                   </div>
                   
@@ -594,43 +594,42 @@ export function SolutionsPage() {
           </div>
 
           {/* Platform Performance Metrics */}
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-foreground mb-2">Platform Performance Benchmarks</h3>
-              <p className="text-muted-foreground">Consistent results across all client implementations</p>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-2">Platform Performance Benchmarks</h3>
+            <p className="text-muted-foreground">Consistent results across all client implementations</p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <TrendDown className="w-8 h-8 text-primary" />
+              </div>
+              <div className="text-2xl font-bold text-foreground">75%</div>
+              <div className="text-sm text-muted-foreground">Reduction in screening time</div>
             </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Target className="w-8 h-8 text-secondary" />
+              </div>
+              <div className="text-2xl font-bold text-foreground">4:1</div>
+              <div className="text-sm text-muted-foreground">Minimum ROI guarantee</div>
             </div>
-            <div className="grid md:grid-cols-4 gap-6">
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="text-center">to mb-3">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <TrendDown className="w-8 h-8 text-primary" />
-                <div className="text-2xl font-bold text-foreground">75%</div>
-                <div className="text-sm text-muted-foreground">Reduction in screening time</div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Clock className="w-8 h-8 text-accent" />
               </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Target className="w-8 h-8 text-secondary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">4:1</div>
-                <div className="text-sm text-muted-foreground">Minimum ROI guarantee</div>
+              <div className="text-2xl font-bold text-foreground">25%</div>
+              <div className="text-sm text-muted-foreground">Faster time-to-fill</div>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <CurrencyCircleDollar className="w-8 h-8 text-primary" />
               </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Clock className="w-8 h-8 text-accent" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">25%</div>
-                <div className="text-sm text-muted-foreground">Faster time-to-fill</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <CurrencyCircleDollar className="w-8 h-8 text-primary" />
-                </div>
-                <div className="text-2xl font-bold text-foreground">60%</div>
-                <div className="text-sm text-muted-foreground">Average cost reduction</div>
-              </div>
+              <div className="text-2xl font-bold text-foreground">60%</div>
+              <div className="text-sm text-muted-foreground">Average cost reduction</div>
             </div>
           </div>
 
