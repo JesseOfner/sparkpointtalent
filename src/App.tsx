@@ -3,6 +3,7 @@ import { Navigation } from '@/components/Navigation'
 import { HomePage } from '@/pages/HomePage'
 import { CapabilitiesPage } from '@/pages/CapabilitiesPage'
 import { SolutionsPage } from '@/pages/SolutionsPage'
+import { InsightsPage } from '@/pages/InsightsPage'
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/capabilities" element={<CapabilitiesPage />} />
           <Route path="/solutions" element={<SolutionsPage />} />
-          <Route path="/insights" element={<div className="pt-16 py-24 text-center"><p className="text-muted-foreground">Insights page coming soon...</p></div>} />
+          <Route path="/insights" element={<InsightsPage />} />
         </Routes>
       </div>
     </Router>
