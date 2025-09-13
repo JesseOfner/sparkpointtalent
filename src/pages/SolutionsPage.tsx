@@ -121,23 +121,97 @@ export function SolutionsPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary/5 to-secondary/5 py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Industry-Specific Recruitment Solutions
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Every industry has unique talent challenges. Our specialized solutions combine deep sector expertise 
-              with proven recruitment marketing strategies to deliver results that matter to your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Explore Your Industry Solution
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                View All Case Studies
-              </Button>
+      <section className="relative py-24 bg-gradient-to-br from-muted/30 to-background overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 border border-primary/20 rounded-full"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 border border-secondary/20 rounded-full"></div>
+          <div className="absolute bottom-20 left-1/4 w-20 h-20 border border-primary/20 rounded-full"></div>
+          <div className="absolute bottom-32 right-1/3 w-28 h-28 border border-secondary/20 rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-5xl">
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Left-aligned content */}
+              <div className="lg:w-2/3 space-y-8">
+                <div className="space-y-6">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                    Industry-Tailored Recruitment Marketing Solutions
+                  </h1>
+                  <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                    Deep expertise in the unique talent challenges facing your industry
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+                    Every industry has distinct talent acquisition challenges. Our solutions are specifically designed around the compliance requirements, candidate behaviors, and market dynamics that define success in your sector.
+                  </p>
+                </div>
+                
+                <div className="pt-4">
+                  <Button size="lg" className="text-lg px-8 py-6">
+                    Explore Your Industry Solution
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Right side - Abstract industry illustration */}
+              <div className="lg:w-1/3 flex justify-center">
+                <div className="relative w-80 h-80">
+                  {/* Central hub */}
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  {/* Industry icons arranged in circle */}
+                  <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <Code className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="absolute top-1/2 right-8 transform -translate-y-1/2 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <Stethoscope className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <Building className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="absolute top-1/2 left-8 transform -translate-y-1/2 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="absolute top-20 right-20 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <ShoppingCart className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="absolute bottom-20 left-20 w-12 h-12 bg-card rounded-full shadow-lg flex items-center justify-center">
+                    <Factory className="w-6 h-6 text-primary" />
+                  </div>
+                  
+                  {/* Connecting lines */}
+                  <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 320 320">
+                    <line x1="160" y1="160" x2="160" y2="40" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="160" y1="160" x2="280" y2="160" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="160" y1="160" x2="160" y2="280" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="160" y1="160" x2="40" y2="160" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="160" y1="160" x2="240" y2="80" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <line x1="160" y1="160" x2="80" y2="240" stroke="url(#gradient1)" strokeWidth="2" strokeDasharray="4,4">
+                      <animate attributeName="stroke-dashoffset" values="0;8" dur="2s" repeatCount="indefinite" />
+                    </line>
+                    <defs>
+                      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="oklch(0.573 0.142 258.4)" stopOpacity="0.3" />
+                        <stop offset="100%" stopColor="oklch(0.465 0.135 297.2)" stopOpacity="0.6" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
         </div>
