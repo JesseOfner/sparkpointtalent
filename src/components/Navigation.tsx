@@ -14,6 +14,14 @@ export function Navigation() {
     return location.pathname.startsWith(path)
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -65,7 +73,10 @@ export function Navigation() {
             >
               Insights
             </Link>
-            <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-6">
+            <Button 
+              onClick={() => scrollToSection('contact')}
+              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-6"
+            >
               Get Started
             </Button>
           </div>
@@ -129,7 +140,10 @@ export function Navigation() {
                 Insights
               </Link>
               <div className="px-3 py-2">
-                <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold">
+                <Button 
+                  onClick={() => scrollToSection('contact')}
+                  className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold"
+                >
                   Get Started
                 </Button>
               </div>

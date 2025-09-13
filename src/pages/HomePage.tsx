@@ -288,7 +288,7 @@ function ContactSection() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -425,7 +425,7 @@ function IndustrySolutionsSection() {
   ]
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section id="solutions" className="py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -478,7 +478,7 @@ function CapabilitiesSection() {
   ]
 
   return (
-    <section className="py-24 bg-background">
+    <section id="capabilities" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -564,7 +564,7 @@ export function HomePage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
+      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
