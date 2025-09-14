@@ -73,6 +73,16 @@ export function Navigation() {
             >
               Insights
             </Link>
+            <Link 
+              to="/case-studies" 
+              className={`transition-colors font-medium ${
+                isActive('/case-studies') 
+                  ? 'text-primary' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
+              Case Studies
+            </Link>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-6"
@@ -138,6 +148,17 @@ export function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Insights
+              </Link>
+              <Link 
+                to="/case-studies" 
+                className={`block px-3 py-2 transition-colors font-medium ${
+                  isActive('/case-studies') 
+                    ? 'text-primary' 
+                    : 'text-foreground hover:text-primary'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Case Studies
               </Link>
               <div className="px-3 py-2">
                 <Button 
