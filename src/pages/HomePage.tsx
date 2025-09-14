@@ -542,7 +542,7 @@ export function HomePage() {
                   size="lg" 
                   variant="outline" 
                   onClick={() => navigate('/case-studies')}
-                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-white"
+                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-slate-900"
                 >
                   View Case Studies
                 </Button>
