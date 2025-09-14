@@ -538,9 +538,7 @@ export function HomePage() {
                 >
                   Get Started
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white/40 text-white hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg">
-                  View Case Studies
-                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-sky-700">View Case Studies</Button>
               </div>
             </div>
 
@@ -551,19 +549,14 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Metrics Section */}
       <MetricsSection />
-
       {/* Capabilities Section */}
       <CapabilitiesSection />
-
       {/* Industry Solutions Section */}
       <IndustrySolutionsSection />
-
       {/* Contact Section */}
       <ContactSection onGetStartedClick={handleGetStartedClick} />
-
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -613,7 +606,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -634,5 +626,5 @@ export function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
