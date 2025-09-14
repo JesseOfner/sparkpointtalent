@@ -538,7 +538,14 @@ export function HomePage() {
                 >
                   Get Started
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-sky-700">View Case Studies</Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  onClick={() => navigate('/case-studies')}
+                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-white"
+                >
+                  View Case Studies
+                </Button>
               </div>
             </div>
 
