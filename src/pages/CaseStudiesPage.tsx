@@ -638,33 +638,4 @@ export function CaseStudiesPage() {
       </section>
     </div>
   )
-}      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Write Your Success Story?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results with a customized recruitment marketing strategy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
-            >
-              Schedule a Strategy Call
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
-            >
-              View More Case Studies
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
 }
