@@ -610,30 +610,34 @@ export function CaseStudiesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-primary to-secondary">
+      <section className="py-20 bg-muted/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you achieve similar results with a customized recruitment marketing strategy.
+          <p className="text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+            Every company's recruitment challenges are unique. Let's discuss how we can create a custom solution that delivers measurable results for your organization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8"
-            >
-              Schedule a Strategy Call
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
-            >
-              View More Case Studies
-            </Button>
-          </div>
+          <Button 
+            size="lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-12 py-6 text-lg"
+            onClick={() => {
+              const hubspotFormElement = document.querySelector('.hs-form-frame') as HTMLElement;
+              if (hubspotFormElement) {
+                hubspotFormElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
+            Schedule a Consultation
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
+        </div>
+      </section>
+
+      {/* HubSpot Form */}
+      <section className="py-16 bg-background">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="hs-form-frame" data-region="na1" data-form-id="b3c28533-e0cb-4b8b-a5d2-c0297d6066fa" data-portal-id="21212478"></div>
         </div>
       </section>
     </div>
