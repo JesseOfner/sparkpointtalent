@@ -614,21 +614,20 @@ export function HomePage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Talent Strategy?
+      <section className="py-24 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-3xl mx-auto">
-            Join forward-thinking organizations who've partnered with Keloh to build 
-            world-class recruitment marketing programs that deliver exceptional results.
+          <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+            Every company's recruitment challenges are unique. Let's discuss how we can create a custom solution that delivers measurable results for your organization.
           </p>
           <Button 
             size="lg" 
             onClick={handleGetStartedClick}
-            className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-4 text-lg"
           >
-            Schedule a Strategic Consultation
+            Schedule a Consultation
           </Button>
         </div>
       </section>
