@@ -99,7 +99,10 @@ export function InsightsPage() {
                   <span>Published March 2025</span>
                 </div>
                 
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group-hover:shadow-md transition-all">
+                <Button 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground group-hover:shadow-md transition-all"
+                  onClick={() => window.open('https://21212478.hs-sites.com/en-us/unlock-2024-recruitment-marketing-benchmarks-to-boost-hiring-success-1', '_blank')}
+                >
                   <Download className="w-4 h-4 mr-2" />
                   Download Full Report
                 </Button>
