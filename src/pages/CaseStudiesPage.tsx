@@ -6,16 +6,16 @@ export function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-b from-background to-muted/30">
+      <section className="pt-24 pb-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Real Results, Real Stories
+            Proven Results Across Industries
           </h1>
-          <p className="text-xl text-muted-foreground mb-4 max-w-3xl mx-auto">
-            See how leading organizations transform their talent acquisition with strategic recruitment marketing
+          <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
+            Real transformations from our recruitment marketing solutions
           </p>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From startups scaling rapidly to enterprise companies optimizing costs, discover proven strategies that deliver measurable outcomes across industries.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            See how we've helped companies like yours solve their biggest talent acquisition challenges. From reducing time-to-fill to improving candidate quality, these stories showcase the measurable impact of strategic recruitment marketing.
           </p>
         </div>
       </section>
