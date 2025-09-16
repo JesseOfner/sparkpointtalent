@@ -1,23 +1,76 @@
-# ✨ Welcome to Your Spark Template!
-You've just launched your brand-new Spark Template Codespace — everything’s fired up and ready for you to explore, build, and create with Spark!
+# Keloh - Strategic Recruitment Marketing Agency
 
-This template is your blank canvas. It comes with a minimal setup to help you get started quickly with Spark development.
+A professional website for Keloh, showcasing strategic recruitment marketing services with modern design and seamless user experience.
 
-🚀 What's Inside?
-- A clean, minimal Spark environment
-- Pre-configured for local development
-- Ready to scale with your ideas
-  
-🧠 What Can You Do?
+## 🚀 Quick Start
 
-Right now, this is just a starting point — the perfect place to begin building and testing your Spark applications.
+```bash
+# Install dependencies
+npm install
 
-🧹 Just Exploring?
-No problem! If you were just checking things out and don’t need to keep this code:
+# Start development server
+npm run dev
 
-- Simply delete your Spark.
-- Everything will be cleaned up — no traces left behind.
+# Build for production
+npm run build
+```
 
-📄 License For Spark Template Resources 
+## 📦 Deployment
 
-The Spark Template files and resources from GitHub are licensed under the terms of the MIT license, Copyright GitHub, Inc.
+Your Keloh website is ready to deploy! Choose from these options:
+
+### Option 1: Vercel (Recommended)
+```bash
+npm run deploy:vercel
+```
+
+### Option 2: Netlify
+```bash
+npm run deploy:netlify  
+```
+
+### Option 3: GitHub Pages
+```bash
+npm install --save-dev gh-pages
+npm run deploy:github
+```
+
+### Option 4: Manual Upload
+```bash
+npm run build
+# Upload the 'dist' folder to your hosting provider
+```
+
+For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+
+## 🌐 Live Site
+
+Once deployed, your Keloh website will showcase:
+- Professional homepage with clear value proposition
+- Comprehensive capabilities overview
+- Solutions tailored to client needs
+- Industry insights and thought leadership
+- Compelling case studies
+- Contact forms integrated with HubSpot
+
+## 🎨 Features
+
+- Modern, responsive design
+- Professional color scheme with purple and blue accents
+- Clean typography using Inter font
+- Smooth animations and interactions
+- Mobile-optimized experience
+- SEO-friendly structure
+
+## 🛠 Built With
+
+- React 19 + TypeScript
+- Vite for fast builds
+- Tailwind CSS for styling
+- Shadcn/ui components
+- Framer Motion for animations
+- HubSpot forms integration
+
+## 📄 License
+
+MIT License - see LICENSE file for details.
