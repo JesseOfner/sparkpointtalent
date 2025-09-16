@@ -116,68 +116,57 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <button 
-                onClick={() => handleNavigate('home')}
-                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
                   isActive('home') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-              >
-                Home
-              </button>
-              <button 
-                onClick={() => handleNavigate('capabilities')}
-                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
-                  isActive('capabilities') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
+                }`}
+              <button 
+                onClick={() => handleNavigate('capabilities')}
+              </button>xt-left px-3 py-2 transition-colors font-medium ${
+              <button 
                 }`}
               >
                 Capabilities
-              </button>
-              <button 
-                onClick={() => handleNavigate('solutions')}
-                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
-                  isActive('solutions') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('solutions') 
+              </button>
               >
                 Solutions
               </button>
               <button 
-                onClick={() => handleNavigate('insights')}
-                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
-                  isActive('insights') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-              >
-                Insights
+                    ? 'text-primary' 
+                    : 'text-foreground hover:text-primary'
+              </button>
               </button>
               <button 
                 onClick={() => handleNavigate('case-studies')}
                 className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
-                  isActive('case-studies') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
+                }`}
               >
-                Case Studies
               </button>
-              <div className="px-3 py-2">
-                <Button 
+              <button 
                   onClick={() => handleNavigate('contact')}
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold"
                 >
-                  Get Started
-                </Button>
-              </div>
+                    ? 'text-primary' 
+                    : 'text-foreground hover:text-primary'
+                }`}
             </div>
           </div>
-        )}
+              </button>
       </div>
     </nav>
-  )
-}
+                  onClick={() => handleNavigate('contact')}
+}                  Get Started
