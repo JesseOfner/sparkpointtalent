@@ -1,17 +1,25 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { List, X } from '@phosphor-icons/react'
 
-export function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const location = useLocation()
+interface NavigationProps {
+  currentPage: string
+  onNavigate: (page: string) => void
+}
 
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return location.pathname === '/'
+export function Navigation({ currentPage, onNavigate }: NavigationProps) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const isActive = (page: string) => {
+    if (page === 'home') {
+      return currentPage === 'home'
     }
-    return location.pathname.startsWith(path)
+    return currentPage === page
+  }
+
+  const handleNavigate = (page: string) => {
+    onNavigate(page)
+    setIsMenuOpen(false)
   }
 
   const scrollToSection = (sectionId: string) => {
@@ -27,64 +35,67 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => handleNavigate('home')} 
+              className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            >
               Keloh
-            </Link>
+            </button>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <button 
+              onClick={() => handleNavigate('home')}
               className={`transition-colors font-medium ${
-                isActive('/') 
+                isActive('home') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Home
-            </Link>
-            <Link 
-              to="/capabilities" 
+            </button>
+            <button 
+              onClick={() => handleNavigate('capabilities')}
               className={`transition-colors font-medium ${
-                isActive('/capabilities') 
+                isActive('capabilities') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Capabilities
-            </Link>
-            <Link 
-              to="/solutions" 
+            </button>
+            <button 
+              onClick={() => handleNavigate('solutions')}
               className={`transition-colors font-medium ${
-                isActive('/solutions') 
+                isActive('solutions') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Solutions
-            </Link>
-            <Link 
-              to="/insights" 
+            </button>
+            <button 
+              onClick={() => handleNavigate('insights')}
               className={`transition-colors font-medium ${
-                isActive('/insights') 
+                isActive('insights') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Insights
-            </Link>
-            <Link 
-              to="/case-studies" 
+            </button>
+            <button 
+              onClick={() => handleNavigate('case-studies')}
               className={`transition-colors font-medium ${
-                isActive('/case-studies') 
+                isActive('case-studies') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Case Studies
-            </Link>
+            </button>
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigate('contact')}
               className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-6"
             >
               Get Started
@@ -105,64 +116,59 @@ export function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border bg-white">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link 
-                to="/" 
-                className={`block px-3 py-2 transition-colors font-medium ${
-                  isActive('/') 
+              <button 
+                onClick={() => handleNavigate('home')}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('home') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </Link>
-              <Link 
-                to="/capabilities" 
-                className={`block px-3 py-2 transition-colors font-medium ${
-                  isActive('/capabilities') 
+              </button>
+              <button 
+                onClick={() => handleNavigate('capabilities')}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('capabilities') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
               >
                 Capabilities
-              </Link>
-              <Link 
-                to="/solutions" 
-                className={`block px-3 py-2 transition-colors font-medium ${
-                  isActive('/solutions') 
+              </button>
+              <button 
+                onClick={() => handleNavigate('solutions')}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('solutions') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
               >
                 Solutions
-              </Link>
-              <Link 
-                to="/insights" 
-                className={`block px-3 py-2 transition-colors font-medium ${
-                  isActive('/insights') 
+              </button>
+              <button 
+                onClick={() => handleNavigate('insights')}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('insights') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
               >
                 Insights
-              </Link>
-              <Link 
-                to="/case-studies" 
-                className={`block px-3 py-2 transition-colors font-medium ${
-                  isActive('/case-studies') 
+              </button>
+              <button 
+                onClick={() => handleNavigate('case-studies')}
+                className={`block w-full text-left px-3 py-2 transition-colors font-medium ${
+                  isActive('case-studies') 
                     ? 'text-primary' 
                     : 'text-foreground hover:text-primary'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
               >
                 Case Studies
-              </Link>
+              </button>
               <div className="px-3 py-2">
                 <Button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => handleNavigate('contact')}
                   className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold"
                 >
                   Get Started

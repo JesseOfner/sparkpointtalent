@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { HomePage } from '@/pages/HomePage'
 import { CapabilitiesPage } from '@/pages/CapabilitiesPage'
@@ -8,20 +8,30 @@ import { CaseStudiesPage } from '@/pages/CaseStudiesPage'
 import { ContactFormPage } from '@/pages/ContactFormPage'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home')
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'capabilities':
+        return <CapabilitiesPage />
+      case 'solutions':
+        return <SolutionsPage />
+      case 'insights':
+        return <InsightsPage />
+      case 'case-studies':
+        return <CaseStudiesPage />
+      case 'contact':
+        return <ContactFormPage />
+      default:
+        return <HomePage onNavigate={setCurrentPage} />
+    }
+  }
+
   return (
-    <Router>
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/capabilities" element={<CapabilitiesPage />} />
-          <Route path="/solutions" element={<SolutionsPage />} />
-          <Route path="/insights" element={<InsightsPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
-          <Route path="/contact" element={<ContactFormPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="min-h-screen bg-background">
+      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
+      {renderPage()}
+    </div>
   )
 }
 

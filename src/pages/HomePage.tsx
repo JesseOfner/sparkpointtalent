@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
@@ -499,11 +498,14 @@ function MetricsSection() {
   )
 }
 
-export function HomePage() {
-  const navigate = useNavigate()
+interface HomePageProps {
+  onNavigate?: (page: string) => void
+}
+
+export function HomePage({ onNavigate }: HomePageProps) {
   
   const handleGetStartedClick = () => {
-    navigate('/contact')
+    onNavigate?.('contact')
   }
 
   return (
@@ -541,7 +543,7 @@ export function HomePage() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  onClick={() => navigate('/case-studies')}
+                  onClick={() => onNavigate?.('case-studies')}
                   className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-slate-900"
                 >
                   View Case Studies
