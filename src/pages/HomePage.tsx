@@ -38,29 +38,29 @@ function FlowVisualization() {
   const [activeStage, setActiveStage] = useState(0)
   const stages = [
     {
-      icon: Buildings,
+      icon: Robot,
       title: "AI Candidate Discovery",
-      description: "Machine learning identifies and profiles ideal candidates from millions of data points"
+      description: "Advanced algorithms identify hidden talent pools"
     },
     {
       icon: Target,
-      title: "Intelligent Targeting", 
-      description: "AI algorithms precisely target and engage the most qualified passive candidates"
+      title: "Intelligent Matching", 
+      description: "Machine learning matches perfect-fit candidates"
     },
     {
       icon: DeviceMobile,
-      title: "Automated Outreach",
-      description: "Personalized messaging at scale through AI-powered engagement sequences"
+      title: "Automated Engagement",
+      description: "AI personalizes outreach at scale"
+    },
+    {
+      icon: ChartLine,
+      title: "Predictive Analytics",
+      description: "Data science optimizes your hiring strategy"
     },
     {
       icon: Lightning,
-      title: "Smart Matching",
-      description: "Advanced AI matches candidates to roles based on skills, culture, and career trajectory"
-    },
-    {
-      icon: Handshake,
-      title: "Predictive Hiring",
-      description: "AI analytics predict candidate success and optimize the entire hiring funnel"
+      title: "Smart Interviews",
+      description: "AI streamlines candidate evaluation and scheduling"
     }
   ]
 
@@ -523,14 +523,13 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Left Side - Content */}
             <div className="text-left">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                AI-Powered Talent Acquisition
-                <span className="block text-white/90 mt-4">
-                  That Finds and Engages Top Candidates
-                </span>
+                AI-Powered Talent Acquisition That Delivers Results
               </h1>
-              <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-2xl">
-                Transform your recruitment with intelligent AI solutions that automate candidate sourcing, 
-                optimize engagement, and deliver qualified talent faster than ever before.
+              <h2 className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed font-medium">
+                Transform your recruiting with cutting-edge AI technology that finds, engages, and converts top talent faster than ever before
+              </h2>
+              <p className="text-lg text-white/80 mb-12 leading-relaxed max-w-2xl">
+                From AI-driven candidate matching to predictive analytics and automated engagement, we help modern talent acquisition teams leverage artificial intelligence to hire smarter, faster, and more effectively.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -538,15 +537,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   onClick={handleGetStartedClick}
                   className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
                 >
-                  Get Started
+                  Discover AI Solutions
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
                   onClick={() => onNavigate?.('case-studies')}
-                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-slate-900"
+                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-white"
                 >
-                  View Case Studies
+                  See AI in Action
                 </Button>
               </div>
             </div>
