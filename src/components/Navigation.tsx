@@ -31,7 +31,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               onClick={() => handleNavigate('home')} 
               className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
             >
-              Keloh
+              SparkPoint Talent
             </button>
           </div>
 

@@ -33,137 +33,137 @@ export function SolutionsPage() {
     {
       title: "Technology & Software",
       icon: Code,
-      challenge: "Attracting top engineering talent in highly competitive markets",
+      challenge: "Finding top engineering talent with specific technical skills in highly competitive markets",
       highlights: [
-        "Developer community engagement",
-        "Technical assessment integration", 
-        "Startup-to-enterprise scaling strategies",
-        "Remote-first recruitment approaches"
+        "AI-powered technical skill matching from GitHub and coding platforms",
+        "Automated technical assessment scoring and ranking", 
+        "Machine learning candidate similarity analysis",
+        "Predictive modeling for developer career trajectories"
       ],
-      stat: "65% faster technical hire times",
-      cta: "View Tech Solutions"
+      stat: "75% faster technical talent identification",
+      cta: "View Tech AI Solutions"
     },
     {
       title: "Healthcare & Life Sciences",
       icon: Heart,
-      challenge: "Recruiting licensed professionals with specialized certifications",
+      challenge: "Identifying qualified healthcare professionals with valid certifications and specializations",
       highlights: [
-        "Compliance-focused messaging",
-        "Clinical talent pipelines",
-        "Telehealth recruitment strategies", 
-        "Continuing education partnerships"
+        "AI-powered license and certification verification",
+        "Clinical experience pattern recognition",
+        "Predictive modeling for healthcare career paths", 
+        "Automated compliance and credentialing workflows"
       ],
-      stat: "40% improvement in licensed professional hires",
-      cta: "View Healthcare Solutions"
+      stat: "50% reduction in credentialing time",
+      cta: "View Healthcare AI Solutions"
     },
     {
       title: "Financial Services",
       icon: CurrencyDollar,
-      challenge: "Navigating regulated environments while attracting top financial talent",
+      challenge: "Finding qualified financial professionals while maintaining strict regulatory compliance",
       highlights: [
-        "Compliance-aware campaigns",
-        "Fintech vs traditional targeting",
-        "Risk management talent focus",
-        "Wealth management recruitment"
+        "AI-powered regulatory compliance checking",
+        "Automated background verification workflows",
+        "Risk assessment and scoring algorithms",
+        "Predictive analytics for financial career success"
       ],
-      stat: "50% reduction in compliance-related delays",
-      cta: "View Financial Solutions"
+      stat: "60% reduction in compliance-related delays",
+      cta: "View Financial AI Solutions"
     },
     {
       title: "Manufacturing & Industrial",
       icon: Gear,
-      challenge: "Finding skilled trades and technical workers in tight labor markets",
+      challenge: "Identifying skilled trades workers and technical specialists in competitive labor markets",
       highlights: [
-        "Blue-collar recruitment expertise",
-        "Safety-focused messaging",
-        "Geographic targeting",
-        "Multi-generational workforce strategies"
+        "AI-powered skills assessment for trades and technical roles",
+        "Automated safety certification verification",
+        "Geographic optimization algorithms for multi-site operations",
+        "Predictive modeling for retention in manufacturing roles"
       ],
-      stat: "45% increase in skilled trades applications",
-      cta: "View Manufacturing Solutions"
+      stat: "55% increase in qualified trades candidate identification",
+      cta: "View Manufacturing AI Solutions"
     },
     {
       title: "Professional Services",
       icon: Briefcase,
-      challenge: "Attracting consultants and advisors who represent your firm's reputation",
+      challenge: "Finding consultants and advisors with specific expertise and client-facing capabilities",
       highlights: [
-        "High-touch candidate experience",
-        "Thought leadership integration",
-        "Client-facing role expertise",
-        "Partnership development focus"
+        "AI-powered expertise matching and validation",
+        "Client experience pattern recognition",
+        "Automated soft skills assessment for client-facing roles",
+        "Predictive modeling for consultant success and retention"
       ],
-      stat: "60% higher consultant retention rates",
-      cta: "View Professional Services Solutions"
+      stat: "70% improvement in consultant-client fit scores",
+      cta: "View Professional Services AI Solutions"
     },
     {
       title: "Retail & Hospitality",
       icon: Storefront,
-      challenge: "High-volume hiring with consistent quality and cultural fit",
+      challenge: "High-volume hiring with consistent quality and cultural fit assessment",
       highlights: [
-        "Seasonal workforce planning",
-        "Multi-location coordination",
-        "Customer service excellence focus",
-        "Fast-track hiring processes"
+        "AI-powered cultural fit scoring at scale",
+        "Automated seasonal workforce demand forecasting",
+        "Multi-location performance pattern analysis",
+        "Predictive modeling for customer service aptitude"
       ],
-      stat: "70% faster seasonal staffing completion",
-      cta: "View Retail Solutions"
+      stat: "80% faster high-volume hiring with improved quality scores",
+      cta: "View Retail AI Solutions"
     }
   ]
 
   const comprehensiveComponents = [
     {
-      title: "Industry Research & Strategy",
+      title: "AI-Powered Industry Analysis",
       icon: MagnifyingGlass,
-      description: "Deep market analysis, competitor benchmarking, and industry-specific talent mapping",
+      description: "Machine learning algorithms analyze industry-specific talent patterns, market dynamics, and competitive landscapes",
       includes: [
-        "Market research",
-        "Competitor analysis", 
-        "Talent landscape mapping",
-        "Industry trend analysis"
+        "AI market intelligence",
+        "Automated competitor analysis", 
+        "Predictive talent mapping",
+        "Industry trend forecasting"
       ]
     },
     {
-      title: "Targeted Campaign Development", 
+      title: "Intelligent Campaign Automation", 
       icon: Target,
-      description: "Multi-channel campaigns designed around industry-specific candidate behaviors and preferences",
+      description: "AI-driven campaigns that automatically optimize targeting, messaging, and timing based on industry-specific data",
       includes: [
-        "Channel strategy",
-        "Creative development",
-        "Messaging optimization", 
-        "Audience segmentation"
+        "Smart channel selection",
+        "AI-generated personalization",
+        "Automated A/B testing", 
+        "Dynamic audience optimization"
       ]
     },
     {
-      title: "Compliance & Best Practices",
+      title: "Automated Compliance & Risk Management",
       icon: Shield, 
-      description: "Industry regulation awareness and recruitment best practices specific to your sector",
+      description: "AI-powered compliance monitoring and risk assessment specific to your industry regulations",
       includes: [
-        "Regulatory compliance",
-        "Industry standards",
-        "Best practice implementation",
-        "Risk mitigation"
+        "Automated regulatory checking",
+        "Real-time compliance monitoring",
+        "AI-driven risk assessment",
+        "Predictive compliance modeling"
       ]
     },
     {
-      title: "Technology Integration",
+      title: "Smart Technology Integration",
       icon: Gear,
-      description: "Seamless integration with industry-standard tools and assessment platforms", 
+      description: "Seamless AI integration with industry-standard tools and intelligent workflow automation", 
       includes: [
-        "ATS integration",
-        "Assessment tools",
-        "Industry platforms",
-        "Custom dashboards"
+        "Intelligent ATS integration",
+        "AI assessment tools",
+        "Smart platform connections",
+        "Predictive analytics dashboards"
       ]
     },
     {
-      title: "Performance Optimization",
+      title: "Continuous AI Optimization",
       icon: ChartLine,
-      description: "Continuous improvement based on industry benchmarks and performance data",
+      description: "Machine learning continuously improves performance based on industry benchmarks and real-time data",
       includes: [
-        "Performance tracking",
-        "Industry benchmarking", 
-        "Optimization recommendations",
-        "ROI analysis"
+        "Automated performance tracking",
+        "AI benchmarking analysis", 
+        "Self-optimizing algorithms",
+        "Predictive ROI modeling"
       ]
     }
   ]
@@ -214,19 +214,19 @@ export function SolutionsPage() {
               <div className="lg:w-2/3 space-y-8">
                 <div className="space-y-6">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                    Industry-Tailored Recruitment Marketing Solutions
+                    AI-Powered Solutions Tailored to Your Industry
                   </h1>
                   <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                    Deep expertise in the unique talent challenges facing your industry
+                    Industry-specific AI algorithms trained on unique talent patterns and requirements
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                    Every industry has distinct talent acquisition challenges. Our solutions are specifically designed around the compliance requirements, candidate behaviors, and market dynamics that define success in your sector.
+                    Every industry has distinct talent acquisition challenges. Our AI solutions are specifically trained on industry data, compliance requirements, candidate behaviors, and market dynamics that define success in your sector.
                   </p>
                 </div>
                 
                 <div className="pt-4">
                   <Button size="lg" className="text-lg px-8 py-6">
-                    Explore Your Industry Solution
+                    Explore Your AI Industry Solution
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </div>
@@ -299,10 +299,10 @@ export function SolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Industry Solutions
+              AI Industry Solutions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Specialized recruitment marketing strategies tailored to the unique challenges and opportunities in your sector
+              Specialized AI algorithms and machine learning models tailored to the unique talent patterns and challenges in your sector
             </p>
           </div>
 
@@ -369,10 +369,10 @@ export function SolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Comprehensive Solutions Tailored to Your Industry
+              Complete AI Solutions Tailored to Your Industry
             </h2>
             <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Every industry solution includes these core components, customized for your specific market dynamics
+              Every AI industry solution includes these intelligent components, customized and trained for your specific market dynamics
             </p>
           </div>
 

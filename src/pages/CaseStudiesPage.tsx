@@ -9,13 +9,13 @@ export function CaseStudiesPage() {
       <section className="pt-24 pb-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Proven Results Across Industries
+            AI-Powered Results Across Industries
           </h1>
           <p className="text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
-            Real transformations from our recruitment marketing solutions
+            Real transformations from our AI-powered talent acquisition solutions
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            See how we've helped companies like yours solve their biggest talent acquisition challenges. From reducing time-to-fill to improving candidate quality, these stories showcase the measurable impact of strategic recruitment marketing.
+            See how we've helped companies like yours solve their biggest talent acquisition challenges with AI. From intelligent candidate matching to automated screening, these stories showcase the measurable impact of AI-powered recruitment.
           </p>
         </div>
       </section>
@@ -28,7 +28,7 @@ export function CaseStudiesPage() {
               Featured Success Story
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              How a fast-growing technology company reduced time-to-fill by 60% while scaling their engineering team
+              How a fast-growing technology company reduced time-to-fill by 70% using AI-powered candidate matching and automated screening
             </p>
           </div>
 
@@ -39,10 +39,10 @@ export function CaseStudiesPage() {
                   Technology • Series B SaaS
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                  From 25 to 60 Engineers in 18 Months
+                  AI-Powered Engineering Team Scaling: From 25 to 60 Engineers in 18 Months
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  A rapidly growing SaaS company needed to triple their engineering team while maintaining high hiring standards and cultural fit. Traditional recruiting methods weren't scaling with their growth demands.
+                  A rapidly growing SaaS company needed to triple their engineering team while maintaining high hiring standards and cultural fit. Traditional recruiting methods weren't scaling with their growth demands, so they implemented our AI-powered talent acquisition platform.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -54,7 +54,7 @@ export function CaseStudiesPage() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-foreground">
-                      <strong>Solution:</strong> Developer community engagement strategy with technical assessment integration
+                      <strong>AI Solution:</strong> Machine learning candidate matching with automated technical assessment and GitHub analysis
                     </p>
                   </div>
                 </div>

@@ -39,28 +39,28 @@ function FlowVisualization() {
   const stages = [
     {
       icon: Buildings,
-      title: "Brand Amplification",
-      description: "Your employer brand reaches the right audiences"
+      title: "AI Candidate Discovery",
+      description: "Machine learning identifies and profiles ideal candidates from millions of data points"
     },
     {
       icon: Target,
-      title: "Targeted Reach", 
-      description: "Precise targeting finds qualified candidates"
+      title: "Intelligent Targeting", 
+      description: "AI algorithms precisely target and engage the most qualified passive candidates"
     },
     {
       icon: DeviceMobile,
-      title: "Seamless Application",
-      description: "Frictionless process converts interest to action"
+      title: "Automated Outreach",
+      description: "Personalized messaging at scale through AI-powered engagement sequences"
     },
     {
       icon: Lightning,
-      title: "Smart Automation",
-      description: "AI matches and engages top candidates"
+      title: "Smart Matching",
+      description: "Advanced AI matches candidates to roles based on skills, culture, and career trajectory"
     },
     {
       icon: Handshake,
-      title: "Interview Ready",
-      description: "Qualified candidates scheduled and prepared"
+      title: "Predictive Hiring",
+      description: "AI analytics predict candidate success and optimize the entire hiring funnel"
     }
   ]
 
@@ -280,10 +280,10 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
           {/* Left Side - Content */}
           <div className="text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Ready to Transform Your Recruitment Strategy?
+              Ready to Transform Your Talent Acquisition with AI?
             </h2>
             <p className="text-xl text-white/80 mb-12 leading-relaxed">
-              Let's discuss how we can help you build a talent acquisition engine that delivers measurable results
+              Discover how AI-powered solutions can revolutionize your recruitment process and deliver qualified candidates faster than ever before
             </p>
             
             {/* Contact Options */}
@@ -293,9 +293,9 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
                   <Phone size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">Schedule a Strategy Call</h3>
+                  <h3 className="text-2xl font-semibold mb-3">Schedule an AI Strategy Call</h3>
                   <p className="text-white/80 leading-relaxed">
-                    Get personalized recommendations for your recruitment challenges
+                    Get personalized AI recommendations for your talent acquisition challenges
                   </p>
                 </div>
               </div>
@@ -305,9 +305,9 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
                   <FileText size={24} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">Request a Custom Proposal</h3>
+                  <h3 className="text-2xl font-semibold mb-3">Request AI-Powered Solution Demo</h3>
                   <p className="text-white/80 leading-relaxed">
-                    Tailored solutions based on your specific industry and goals
+                    See how our AI platform transforms your specific industry and hiring goals
                   </p>
                 </div>
               </div>
@@ -352,11 +352,11 @@ function IndustrySolutionsSection() {
   const industries = [
     {
       title: "Technology & Software",
-      description: "Attract top engineering and technical talent in competitive markets with specialized campaigns and technical assessment integration",
+      description: "AI-powered talent discovery that understands technical skills, coding languages, and developer communities to find top engineering talent",
       bulletPoints: [
-        "Developer-focused content marketing",
-        "Technical skills assessment workflows", 
-        "Startup to enterprise scaling strategies"
+        "Technical skill assessment through AI code analysis",
+        "GitHub and open-source contribution tracking", 
+        "Developer community engagement and passive candidate identification"
       ],
       icon: Code
     }
@@ -367,10 +367,10 @@ function IndustrySolutionsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Tailored Solutions Across Industries
+            AI Solutions Tailored to Your Industry
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Deep expertise in the unique challenges facing different sectors
+            Industry-specific AI algorithms trained on unique talent patterns and requirements
           </p>
         </div>
         
@@ -394,24 +394,24 @@ function IndustrySolutionsSection() {
 function CapabilitiesSection() {
   const capabilities = [
     {
-      icon: Palette,
-      title: "Employer Brand Strategy",
-      description: "Develop compelling brand narratives that resonate with top talent across all touchpoints"
+      icon: Robot,
+      title: "AI Candidate Sourcing",
+      description: "Machine learning identifies and ranks top candidates from millions of profiles and data sources"
     },
     {
       icon: Globe,
-      title: "Digital Recruitment Campaigns",
-      description: "Multi-channel campaigns that reach candidates where they are most engaged"
+      title: "Intelligent Campaign Automation",
+      description: "AI-optimized outreach campaigns that personalize messaging and timing for maximum engagement"
     },
     {
-      icon: Robot,
-      title: "Automation & AI Matching",
-      description: "Intelligent systems that streamline candidate engagement and interview scheduling"
+      icon: Lightning,
+      title: "Smart Matching & Screening",
+      description: "Advanced algorithms match candidates to roles and automate initial screening processes"
     },
     {
       icon: ChartLine,
-      title: "Performance Analytics",
-      description: "Real-time insights and optimization recommendations for continuous improvement"
+      title: "Predictive Analytics",
+      description: "AI-powered insights predict hiring success and optimize recruitment strategies in real-time"
     }
   ]
 
@@ -420,10 +420,10 @@ function CapabilitiesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Full-Spectrum Recruitment Marketing
+            AI-Powered Talent Acquisition Platform
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            End-to-end solutions that transform how you attract, engage, and hire talent
+            Complete AI solutions that transform how you discover, engage, and hire talent
           </p>
         </div>
         
@@ -445,28 +445,28 @@ function CapabilitiesSection() {
 function MetricsSection() {
   const metrics = [
     {
-      number: 73,
+      number: 85,
       suffix: "%",
-      title: "Faster Time-to-Fill",
-      description: "Reduce hiring cycles with targeted candidate pipelines"
+      title: "Faster Candidate Sourcing",
+      description: "AI automation accelerates candidate identification and initial screening"
     },
     {
-      number: 2.8,
+      number: 3.2,
       suffix: "X",
-      title: "Higher Quality of Hire", 
-      description: "Better candidate matching improves retention rates"
+      title: "Better Match Accuracy", 
+      description: "Machine learning improves candidate-role fit and reduces turnover"
     },
     {
-      number: 45,
+      number: 60,
       suffix: "%",
-      title: "Lower Cost-per-Hire",
-      description: "Efficient marketing reduces dependency on agencies"
+      title: "Reduced Manual Work",
+      description: "Intelligent automation handles repetitive tasks and workflows"
     },
     {
-      number: 89,
+      number: 92,
       suffix: "%",
-      title: "Candidate Satisfaction",
-      description: "Exceptional experience builds employer brand equity"
+      title: "Candidate Engagement Rate",
+      description: "AI-personalized outreach achieves higher response and conversion rates"
     }
   ]
   
@@ -475,10 +475,10 @@ function MetricsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Metrics That Matter to Talent Acquisition Leaders
+            AI-Driven Results That Transform Talent Acquisition
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We focus on the KPIs that drive real business impact
+            Measurable improvements through intelligent automation and machine learning
           </p>
         </div>
         
@@ -523,14 +523,14 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Left Side - Content */}
             <div className="text-left">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                Connect the Right Talent with the Right Opportunity
+                AI-Powered Talent Acquisition
                 <span className="block text-white/90 mt-4">
-                  at the Right Moment
+                  That Finds and Engages Top Candidates
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-2xl">
-                Transform your recruitment strategy with sophisticated marketing that attracts, 
-                engages, and converts top talent through every stage of their journey.
+                Transform your recruitment with intelligent AI solutions that automate candidate sourcing, 
+                optimize engagement, and deliver qualified talent faster than ever before.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

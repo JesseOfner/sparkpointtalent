@@ -19,26 +19,26 @@ export function InsightsPage() {
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Strategic Insights for Talent Acquisition Leaders
+              AI-Powered Insights for Talent Acquisition Leaders
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Data-driven research, proven strategies, and actionable guidance to transform your recruitment marketing
+              AI-driven research, machine learning insights, and actionable guidance to revolutionize your talent acquisition strategy
             </p>
             
             <div className="mb-10">
               <p className="text-lg text-foreground/80 leading-relaxed mb-8">
-                Stay ahead of recruitment marketing trends with our latest research, case studies, and strategic insights. 
-                From industry benchmarks to innovative campaign strategies, get the intelligence you need to outperform your competition.
+                Stay ahead of AI talent acquisition trends with our latest research, algorithm insights, and strategic AI implementations. 
+                From predictive analytics to automated workflows, get the intelligence you need to outperform with AI-powered recruitment.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
-                  Subscribe to Updates
+                  Subscribe to AI Updates
                 </Button>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <ChartBar className="w-4 h-4" />
-                  <span>New insights published weekly</span>
+                  <span>New AI insights published weekly</span>
                 </div>
               </div>
             </div>
@@ -60,10 +60,10 @@ export function InsightsPage() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Latest Strategic Insights
+              Latest AI-Powered Insights
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our newest research and analysis on recruitment marketing trends
+              Our newest AI research and analysis on talent acquisition transformation
             </p>
           </div>
 
@@ -82,12 +82,12 @@ export function InsightsPage() {
                 </div>
                 
                 <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
-                  2025 Recruitment Marketing Benchmark Report
+                  2025 AI Talent Acquisition Benchmark Report
                 </h3>
                 
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  Comprehensive analysis of recruitment marketing performance across 15 industries, featuring 
-                  time-to-fill benchmarks, cost-per-hire data, and campaign ROI insights.
+                  Comprehensive analysis of AI-powered recruitment performance across 15 industries, featuring 
+                  automation ROI data, AI matching accuracy metrics, and predictive analytics insights.
                 </p>
                 
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-8">
@@ -122,12 +122,12 @@ export function InsightsPage() {
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  The ROI of Employer Brand Investment
+                  The ROI of AI-Powered Recruitment Investment
                 </h3>
                 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  How leading companies are measuring and maximizing the return on their employer 
-                  branding initiatives.
+                  How leading companies are measuring and maximizing the return on their AI recruitment 
+                  technology investments.
                 </p>
                 
                 <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">
@@ -159,11 +159,11 @@ export function InsightsPage() {
                 </div>
                 
                 <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  Healthcare Recruitment: Solving the Talent Crisis
+                  Healthcare AI Recruitment: Solving the Talent Crisis with Machine Learning
                 </h3>
                 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Proven strategies for attracting healthcare professionals in today's competitive market.
+                  How AI-powered candidate matching and automated screening is revolutionizing healthcare talent acquisition.
                 </p>
                 
                 <div className="flex items-center gap-3 text-sm text-muted-foreground mb-6">

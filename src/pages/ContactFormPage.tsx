@@ -60,10 +60,10 @@ export function ContactFormPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Get Started with Keloh
+            Get Started with SparkPoint Talent
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to transform your recruitment strategy? Fill out the form below and our team will reach out to discuss how we can help you attract and hire top talent.
+            Ready to transform your talent acquisition with AI? Fill out the form below and our team will reach out to discuss how we can help you leverage AI to find and hire top talent faster.
           </p>
         </div>
         
@@ -82,10 +82,10 @@ export function ContactFormPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="mailto:hello@keloh.com" 
+              href="mailto:hello@sparkpointtalent.com" 
               className="text-primary hover:text-primary/80 font-medium"
             >
-              hello@keloh.com
+              hello@sparkpointtalent.com
             </a>
             <span className="hidden sm:block text-muted-foreground">•</span>
             <a 
