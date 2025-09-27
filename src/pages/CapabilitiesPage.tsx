@@ -117,134 +117,134 @@ export function CapabilitiesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Candidate Sourcing */}
+            {/* AI Candidate Sourcing & Discovery */}
             <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
               <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">AI Candidate Sourcing</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">AI Candidate Sourcing & Discovery</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Advanced machine learning algorithms identify and rank top candidates from millions of profiles across platforms. AI analyzes skills, experience, and career patterns to find perfect matches.
+                Advanced AI algorithms search beyond traditional databases to discover passive candidates, analyze social profiles, and identify talent through predictive modeling and skills assessment.
               </p>
               <div className="space-y-2 mb-6">
                 <div className="text-sm text-muted-foreground">Key services:</div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Profile analysis</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Skill matching</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Passive candidate identification</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Predictive scoring</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Passive candidate discovery</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Social profile analysis</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Predictive modeling</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Skills assessment</span>
                 </div>
               </div>
             </div>
 
-            {/* Intelligent Campaign Automation */}
+            {/* Machine Learning Candidate Matching */}
             <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
               <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
                 <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Intelligent Campaign Automation</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                AI-powered campaigns that optimize outreach timing, personalize messaging, and automatically adjust targeting based on performance data in real-time.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="text-sm text-muted-foreground">Key services:</div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Automated personalization</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Smart timing optimization</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Dynamic audience targeting</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Performance auto-optimization</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Smart Matching & Screening */}
-            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v6a2 2 0 002 2h2m0-8V7a2 2 0 012-2h6a2 2 0 012 2v2m-6 12a2 2 0 100-4 2 2 0 000 4zm0 0V9a2 2 0 00-2-2M3 5a2 2 0 012-2h1.586a1 1 0 01.707.293l1.414 1.414a1 1 0 00.707.293H10a2 2 0 012 2v.5" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Smart Matching & Screening</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">Machine Learning Candidate Matching</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Advanced algorithms analyze candidate profiles, skills, and career patterns to identify the best matches for each role and automate initial screening processes.
+                Intelligent matching technology that learns from your hiring patterns, analyzes candidate success factors, and continuously improves recommendation accuracy.
               </p>
               <div className="space-y-2 mb-6">
                 <div className="text-sm text-muted-foreground">Key services:</div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">AI skill assessment</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Automated screening</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Cultural fit analysis</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Career trajectory matching</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Pattern learning</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Success factor analysis</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Smart recommendations</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Accuracy optimization</span>
                 </div>
               </div>
             </div>
 
-            {/* AI Workflow Automation */}
-            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">AI Workflow Automation</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Intelligent automation that handles repetitive tasks, schedules interviews, sends follow-ups, and manages candidate pipelines without manual intervention.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="text-sm text-muted-foreground">Key services:</div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Interview scheduling</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Follow-up automation</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Pipeline management</span>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Task automation</span>
-                </div>
-              </div>
-            </div>
-
-            {/* AI-Driven Candidate Engagement */}
-            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
-              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
-                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">AI-Driven Candidate Engagement</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Intelligent chatbots and automated engagement sequences that nurture candidate relationships and provide personalized communication at scale.
-              </p>
-              <div className="space-y-2 mb-6">
-                <div className="text-sm text-muted-foreground">Key services:</div>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">AI chatbots</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Personalized messaging</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Engagement scoring</span>
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Relationship nurturing</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Predictive Analytics & AI Insights */}
+            {/* Automated Engagement & Nurturing */}
             <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
               <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                 <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">Predictive Analytics & AI Insights</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">Automated Engagement & Nurturing</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Machine learning algorithms predict hiring success, identify bottlenecks, and provide actionable insights to continuously optimize your talent acquisition strategy.
+                AI-powered communication sequences that personalize outreach, maintain candidate relationships, and optimize engagement timing based on behavioral data.
               </p>
               <div className="space-y-2 mb-6">
                 <div className="text-sm text-muted-foreground">Key services:</div>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Success prediction</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Performance forecasting</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Bottleneck identification</span>
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Strategy optimization</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Personalized outreach</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Relationship nurturing</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Behavioral optimization</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Engagement timing</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Predictive Analytics & Insights */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Predictive Analytics & Insights</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Data science tools that forecast hiring needs, predict candidate success, analyze market trends, and provide actionable insights for strategic talent planning.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Hiring forecasts</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Success prediction</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Market analysis</span>
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full">Strategic insights</span>
+                </div>
+              </div>
+            </div>
+
+            {/* AI-Enhanced Interview Intelligence */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+                <svg className="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">AI-Enhanced Interview Intelligence</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Smart interview scheduling, candidate evaluation tools, bias detection, and predictive assessment technology that streamlines your interview process.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Smart scheduling</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Evaluation tools</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Bias detection</span>
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs rounded-full">Predictive assessment</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Recruitment Marketing Automation */}
+            <div className="group p-8 bg-card rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-border">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
+                <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-4">Recruitment Marketing Automation</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                AI-driven content optimization, dynamic job posting, social media automation, and employer brand amplification powered by machine learning algorithms.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="text-sm text-muted-foreground">Key services:</div>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Content optimization</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Dynamic job posting</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Social automation</span>
+                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded-full">Brand amplification</span>
                 </div>
               </div>
             </div>
@@ -256,10 +256,10 @@ export function CapabilitiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-              How We Implement AI Solutions
+              Our AI Implementation Framework
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our systematic approach ensures seamless AI integration and measurable improvements in your talent acquisition outcomes
+              Our systematic approach ensures seamless AI integration, comprehensive team training, and measurable improvements in your talent acquisition outcomes
             </p>
           </div>
 
@@ -287,10 +287,10 @@ export function CapabilitiesPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-3">AI Assessment & Strategy</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI Readiness Assessment</h3>
                   <div className="text-sm text-primary font-semibold mb-4">Week 1-2</div>
                   <p className="text-muted-foreground mb-6">
-                    Analyze your current processes, identify AI opportunities, and develop comprehensive AI implementation strategy
+                    Analyze your current processes, identify AI opportunities, assess data quality, and develop comprehensive AI implementation strategy tailored to your goals
                   </p>
 
                   {/* Progress indicator for mobile */}
@@ -315,10 +315,10 @@ export function CapabilitiesPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-3">AI Platform Deployment</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI Platform Integration</h3>
                   <div className="text-sm text-secondary font-semibold mb-4">Week 3-4</div>
                   <p className="text-muted-foreground mb-6">
-                    Deploy AI tools, integrate systems, launch automated workflows
+                    Deploy AI tools, integrate with existing systems, configure automated workflows, and train your team on new AI capabilities
                   </p>
 
                   {/* Progress indicator for mobile */}
@@ -343,10 +343,10 @@ export function CapabilitiesPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-3">AI Learning & Optimization</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">AI Model Training & Optimization</h3>
                   <div className="text-sm text-accent font-semibold mb-4">Ongoing</div>
                   <p className="text-muted-foreground mb-6">
-                    Continuously train AI models, optimize performance, refine algorithms based on data
+                    Continuously train AI models on your data, monitor performance metrics, refine algorithms, and optimize results based on real-world feedback
                   </p>
 
                   {/* Progress indicator for mobile */}
@@ -371,10 +371,10 @@ export function CapabilitiesPage() {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-foreground mb-3">Scale AI Capabilities</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3">Scale & Advanced AI Features</h3>
                   <div className="text-sm text-primary font-semibold mb-4">Month 3+</div>
                   <p className="text-muted-foreground mb-6">
-                    Expand AI features, add new capabilities, scale successful automations across departments
+                    Expand AI capabilities across departments, add advanced features like predictive analytics, and scale successful automations company-wide
                   </p>
 
                   {/* Progress indicator for mobile */}
@@ -397,7 +397,7 @@ export function CapabilitiesPage() {
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2">
-              See Our Process in Action
+              See Our AI Framework in Action
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h6m2 5H7a2 2 0 01-2-2V7a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2z" />
               </svg>
@@ -411,35 +411,35 @@ export function CapabilitiesPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                Strategy & Brand
+                AI Strategy & Branding
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Employer Brand Strategy
+                AI-Powered Employer Brand Strategy
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Transform your organization into a talent magnet with compelling brand narratives that resonate across all touchpoints.
+                Transform your organization into a talent magnet with AI-driven brand narratives that resonate across all touchpoints and attract top-tier candidates.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Brand Positioning & Messaging</h3>
-                    <p className="text-muted-foreground">Develop authentic employer value propositions that differentiate you from competitors and attract your ideal candidates.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Driven Brand Positioning & Messaging</h3>
+                    <p className="text-muted-foreground">Develop authentic employer value propositions using AI insights that differentiate you from competitors and attract your ideal candidates.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Multi-Channel Brand Experience</h3>
-                    <p className="text-muted-foreground">Ensure consistent brand experience across career sites, social media, job descriptions, and candidate touchpoints.</p>
+                    <h3 className="font-semibold text-foreground mb-2">Intelligent Multi-Channel Brand Experience</h3>
+                    <p className="text-muted-foreground">Ensure consistent brand experience across career sites, social media, job descriptions using AI-powered content optimization and personalization.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Employee Advocacy Programs</h3>
-                    <p className="text-muted-foreground">Activate your workforce as brand ambassadors with structured programs that amplify authentic employee voices.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Enhanced Employee Advocacy Programs</h3>
+                    <p className="text-muted-foreground">Activate your workforce as brand ambassadors with AI-powered programs that identify top advocates and amplify authentic employee voices automatically.</p>
                   </div>
                 </div>
               </div>
@@ -526,35 +526,35 @@ export function CapabilitiesPage() {
 
             <div className="order-1 lg:order-2">
               <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-6">
-                Digital Marketing
+                AI-Powered Marketing
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Digital Recruitment Campaigns
+                AI-Driven Recruitment Campaigns
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Multi-channel campaigns that reach candidates where they are most engaged, with precision targeting and compelling creative.
+                Multi-channel campaigns powered by AI that reach candidates where they are most engaged, with intelligent targeting, predictive optimization, and compelling creative.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Programmatic Job Advertising</h3>
-                    <p className="text-muted-foreground">Automated job distribution across 100+ job boards with real-time bid optimization and budget allocation.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Powered Programmatic Job Advertising</h3>
+                    <p className="text-muted-foreground">Automated job distribution across 100+ job boards with AI-driven bid optimization, budget allocation, and performance learning algorithms.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Social Media Recruitment</h3>
-                    <p className="text-muted-foreground">Targeted campaigns on LinkedIn, Facebook, Instagram, and emerging platforms to reach passive candidates.</p>
+                    <h3 className="font-semibold text-foreground mb-2">Intelligent Social Media Recruitment</h3>
+                    <p className="text-muted-foreground">AI-targeted campaigns on LinkedIn, Facebook, Instagram, and emerging platforms that identify and reach passive candidates with personalized messaging.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Content Marketing & SEO</h3>
-                    <p className="text-muted-foreground">Strategic content that improves search visibility and positions your company as an employer of choice.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Optimized Content Marketing & SEO</h3>
+                    <p className="text-muted-foreground">Strategic content powered by AI insights that improves search visibility and positions your company as an employer of choice through data-driven optimization.</p>
                   </div>
                 </div>
               </div>
@@ -580,32 +580,32 @@ export function CapabilitiesPage() {
                 AI & Automation
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Automation & AI Matching
+                Advanced AI Automation & Intelligent Matching
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Intelligent systems that streamline candidate engagement, automate repetitive tasks, and optimize interview scheduling.
+                Next-generation intelligent systems that streamline candidate engagement, automate complex workflows, and optimize interview processes using machine learning algorithms.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Smart Candidate Matching</h3>
-                    <p className="text-muted-foreground">AI-powered algorithms analyze resumes, skills, and experience to identify the best-fit candidates automatically.</p>
+                    <h3 className="font-semibold text-foreground mb-2">Deep Learning Candidate Matching</h3>
+                    <p className="text-muted-foreground">Advanced AI algorithms analyze resumes, skills, experience, and behavioral patterns to identify the best-fit candidates with unprecedented accuracy.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Automated Engagement Workflows</h3>
-                    <p className="text-muted-foreground">Personalized email sequences, chatbot interactions, and follow-up campaigns that nurture candidates through the funnel.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Driven Engagement Workflows</h3>
+                    <p className="text-muted-foreground">Intelligent email sequences, chatbot interactions, and follow-up campaigns that adapt based on candidate behavior and optimize conversion rates automatically.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-accent rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Interview Scheduling & Coordination</h3>
-                    <p className="text-muted-foreground">Seamless calendar integration and automated scheduling that eliminates back-and-forth communication.</p>
+                    <h3 className="font-semibold text-foreground mb-2">Intelligent Interview Scheduling & Coordination</h3>
+                    <p className="text-muted-foreground">AI-powered calendar integration and automated scheduling that learns preferences, optimizes timing, and eliminates coordination overhead completely.</p>
                   </div>
                 </div>
               </div>
@@ -706,35 +706,35 @@ export function CapabilitiesPage() {
 
             <div className="order-1 lg:order-2">
               <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
-                Analytics & Insights
+                AI Analytics & Insights
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Performance Analytics
+                AI-Powered Performance Analytics
               </h2>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Real-time insights and optimization recommendations for continuous improvement of your recruitment marketing efforts.
+                Real-time insights powered by machine learning algorithms that provide predictive recommendations and continuous optimization for your recruitment marketing efforts.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Real-Time Performance Dashboards</h3>
-                    <p className="text-muted-foreground">Comprehensive dashboards showing campaign performance, candidate pipeline health, and ROI metrics in real-time.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Enhanced Performance Dashboards</h3>
+                    <p className="text-muted-foreground">Intelligent dashboards powered by machine learning that show campaign performance, candidate pipeline health, and ROI metrics with predictive insights.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Predictive Analytics & Forecasting</h3>
-                    <p className="text-muted-foreground">AI-powered predictions for hiring demand, optimal posting times, and budget allocation recommendations.</p>
+                    <h3 className="font-semibold text-foreground mb-2">Advanced Predictive Analytics & AI Forecasting</h3>
+                    <p className="text-muted-foreground">Deep learning algorithms predict hiring demand, optimal posting times, budget allocation, and market trends with advanced forecasting models.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-primary rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-2">Custom Reporting & Insights</h3>
-                    <p className="text-muted-foreground">Tailored reports for executives, hiring managers, and HR teams with actionable insights and strategic recommendations.</p>
+                    <h3 className="font-semibold text-foreground mb-2">AI-Generated Custom Reporting & Insights</h3>
+                    <p className="text-muted-foreground">Intelligent reports automatically generated for executives, hiring managers, and HR teams with AI-powered insights and strategic recommendations.</p>
                   </div>
                 </div>
               </div>
