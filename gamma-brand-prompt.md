@@ -1,7 +1,7 @@
-# Keloh Brand Design System for Gamma AI
+# SparkPoint Brand Design System for Gamma AI
 
 ## Brand Overview
-Create presentations that maintain the sophisticated, professional aesthetic of Keloh - a strategic recruitment marketing agency that serves enterprise clients. The design should feel like Harvard Business Review meets modern tech startup: authoritative yet approachable, data-driven yet human-centered.
+Create presentations that maintain the sophisticated, professional aesthetic of SparkPoint - a strategic recruitment marketing agency that serves enterprise clients. The design should feel like Harvard Business Review meets modern tech startup: authoritative yet approachable, data-driven yet human-centered.
 
 ## Typography Guidelines
 

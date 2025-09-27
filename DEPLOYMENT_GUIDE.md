@@ -1,6 +1,6 @@
-# Keloh Website Deployment Guide
+# SparkPoint Website Deployment Guide
 
-This guide covers multiple ways to deploy your Keloh strategic recruitment marketing website to make it accessible online.
+This guide covers multiple ways to deploy your SparkPoint strategic recruitment marketing website to make it accessible online.
 
 ## Quick Start - Build Your Site
 
@@ -121,10 +121,10 @@ Consider adding:
 ## Custom Domain Examples
 
 Once deployed, your site could be accessible at:
-- `keloh.com` (your custom domain)
-- `www.keloh.com`
-- `keloh-marketing.vercel.app` (Vercel subdomain)
-- `keloh-agency.netlify.app` (Netlify subdomain)
+- `sparkpoint.com` (your custom domain)
+- `www.sparkpoint.com`
+- `sparkpoint-marketing.vercel.app` (Vercel subdomain)
+- `sparkpoint-agency.netlify.app` (Netlify subdomain)
 
 ## Next Steps After Deployment
 

@@ -1,6 +1,6 @@
-# Keloh Recruitment Marketing Agency Website
+# SparkPoint Recruitment Marketing Agency Website
 
-Modern recruitment marketing agency website that establishes Keloh as a premium, strategic partner for talent acquisition through sophisticated brand presence and clear value proposition communication.
+Modern recruitment marketing agency website that establishes SparkPoint as a premium, strategic partner for talent acquisition through sophisticated brand presence and clear value proposition communication.
 
 **Experience Qualities:**
 1. **Professional** - Clean, authoritative design that builds immediate trust and credibility with executive-level prospects

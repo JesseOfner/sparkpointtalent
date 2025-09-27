@@ -1,7 +1,7 @@
-# Keloh Brand Style Guide for Gamma AI
+# SparkPoint Brand Style Guide for Gamma AI
 
 ## Brand Overview
-Keloh is a strategic recruitment marketing agency that helps organizations transform their talent acquisition through sophisticated marketing approaches. The brand embodies professionalism, innovation, and strategic thinking in the HR/recruiting space.
+SparkPoint is a strategic recruitment marketing agency that helps organizations transform their talent acquisition through sophisticated marketing approaches. The brand embodies professionalism, innovation, and strategic thinking in the HR/recruiting space.
 
 ## Visual Identity
 
@@ -73,7 +73,7 @@ Use for: Borders, separators, subtle backgrounds
 
 ## Design Guidelines for Gamma AI
 
-When creating presentations or materials for Keloh, please use:
+When creating presentations or materials for SparkPoint, please use:
 
 1. **Color Combinations:**
    - White backgrounds with dark charcoal text
@@ -105,4 +105,4 @@ When creating presentations or materials for Keloh, please use:
    - Professional services industry language
    - Results-driven messaging
 
-This style guide ensures consistent brand representation across all materials while maintaining the sophisticated, strategic positioning that defines Keloh's market presence.
+This style guide ensures consistent brand representation across all materials while maintaining the sophisticated, strategic positioning that defines SparkPoint's market presence.

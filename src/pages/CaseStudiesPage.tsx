@@ -228,7 +228,7 @@ export function CaseStudiesPage() {
                   Automated Programmatic Job Distribution Platform
                 </h4>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                  Implemented Keloh's programmatic recruitment platform to automate job distribution, optimize spending in real-time, and provide complete transparency into performance across all locations and job types.
+                  Implemented SparkPoint's programmatic recruitment platform to automate job distribution, optimize spending in real-time, and provide complete transparency into performance across all locations and job types.
                 </p>
               </div>
               
