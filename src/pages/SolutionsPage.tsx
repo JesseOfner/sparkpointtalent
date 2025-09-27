@@ -35,10 +35,10 @@ export function SolutionsPage() {
       icon: Code,
       challenge: "Finding top engineering talent with specific technical skills in highly competitive markets",
       highlights: [
-        "AI-powered technical skill matching from GitHub and coding platforms",
-        "Automated technical assessment scoring and ranking", 
-        "Machine learning candidate similarity analysis",
-        "Predictive modeling for developer career trajectories"
+        "AI algorithms that understand technical skill requirements and identify engineers through code analysis and project contributions",
+        "Automated GitHub portfolio analysis and technical competency scoring", 
+        "Machine learning candidate similarity matching based on project history",
+        "Predictive modeling for developer career trajectories and role fit"
       ],
       stat: "75% faster technical talent identification",
       cta: "View Tech AI Solutions"
@@ -48,10 +48,10 @@ export function SolutionsPage() {
       icon: Heart,
       challenge: "Identifying qualified healthcare professionals with valid certifications and specializations",
       highlights: [
-        "AI-powered license and certification verification",
-        "Clinical experience pattern recognition",
-        "Predictive modeling for healthcare career paths", 
-        "Automated compliance and credentialing workflows"
+        "Intelligent credentialing verification, automated compliance checking, and AI-powered matching for specialized medical roles",
+        "Clinical experience pattern recognition across diverse healthcare settings",
+        "Predictive modeling for healthcare career progression and specialty matching", 
+        "Automated medical license verification and compliance monitoring"
       ],
       stat: "50% reduction in credentialing time",
       cta: "View Healthcare AI Solutions"
@@ -61,10 +61,10 @@ export function SolutionsPage() {
       icon: CurrencyDollar,
       challenge: "Finding qualified financial professionals while maintaining strict regulatory compliance",
       highlights: [
-        "AI-powered regulatory compliance checking",
-        "Automated background verification workflows",
-        "Risk assessment and scoring algorithms",
-        "Predictive analytics for financial career success"
+        "Risk-aware AI screening, regulatory compliance automation, and intelligent candidate assessment for finance professionals",
+        "Automated FINRA and regulatory background verification workflows",
+        "AI-powered risk assessment scoring for financial roles",
+        "Predictive analytics for financial career success and compliance history"
       ],
       stat: "60% reduction in compliance-related delays",
       cta: "View Financial AI Solutions"
@@ -74,10 +74,10 @@ export function SolutionsPage() {
       icon: Gear,
       challenge: "Identifying skilled trades workers and technical specialists in competitive labor markets",
       highlights: [
-        "AI-powered skills assessment for trades and technical roles",
-        "Automated safety certification verification",
-        "Geographic optimization algorithms for multi-site operations",
-        "Predictive modeling for retention in manufacturing roles"
+        "Skills-based AI matching for trades, predictive analytics for workforce planning, and automated safety protocol evaluation",
+        "Automated safety certification verification and compliance tracking",
+        "Geographic optimization algorithms for multi-site workforce planning",
+        "Predictive modeling for retention and career progression in manufacturing roles"
       ],
       stat: "55% increase in qualified trades candidate identification",
       cta: "View Manufacturing AI Solutions"
@@ -87,10 +87,10 @@ export function SolutionsPage() {
       icon: Briefcase,
       challenge: "Finding consultants and advisors with specific expertise and client-facing capabilities",
       highlights: [
-        "AI-powered expertise matching and validation",
-        "Client experience pattern recognition",
-        "Automated soft skills assessment for client-facing roles",
-        "Predictive modeling for consultant success and retention"
+        "AI-powered cultural fit analysis, consultant performance prediction, and intelligent project-to-talent matching",
+        "Client experience pattern recognition and success prediction",
+        "Automated soft skills assessment for client-facing consulting roles",
+        "Predictive modeling for consultant-client compatibility and project success"
       ],
       stat: "70% improvement in consultant-client fit scores",
       cta: "View Professional Services AI Solutions"
@@ -100,10 +100,10 @@ export function SolutionsPage() {
       icon: Storefront,
       challenge: "High-volume hiring with consistent quality and cultural fit assessment",
       highlights: [
-        "AI-powered cultural fit scoring at scale",
-        "Automated seasonal workforce demand forecasting",
-        "Multi-location performance pattern analysis",
-        "Predictive modeling for customer service aptitude"
+        "Seasonal demand forecasting, AI-driven volume hiring optimization, and customer service aptitude assessment",
+        "Automated cultural fit scoring for high-volume hiring processes",
+        "Multi-location performance pattern analysis and optimization",
+        "Predictive modeling for customer service excellence and retention"
       ],
       stat: "80% faster high-volume hiring with improved quality scores",
       cta: "View Retail AI Solutions"
@@ -170,28 +170,28 @@ export function SolutionsPage() {
 
   const solutionComponents = [
     {
-      title: 'Industry-Specific Brand Positioning',
-      description: 'Tailored employer branding that speaks the language of your industry and resonates with sector-specific talent pools.'
+      title: 'AI-Powered Industry Brand Positioning',
+      description: 'Machine learning algorithms analyze industry sentiment and candidate preferences to craft employer branding that resonates with sector-specific talent pools.'
     },
     {
-      title: 'Specialized Job Board Networks',
-      description: 'Targeted posting strategies across industry-specific platforms where your ideal candidates are actively searching.'
+      title: 'Intelligent Job Board Networks',
+      description: 'AI-driven targeting strategies that automatically optimize job posting distribution across industry-specific platforms where your ideal candidates are most active.'
     },
     {
-      title: 'Compliance & Regulatory Integration',
-      description: 'Built-in compliance workflows that meet industry standards for background checks, certifications, and regulatory requirements.'
+      title: 'Automated Compliance & Regulatory Integration',
+      description: 'Built-in AI compliance workflows that automatically verify industry standards, background checks, certifications, and regulatory requirements.'
     },
     {
-      title: 'Skills Assessment Frameworks',
-      description: 'Industry-validated assessment tools that evaluate technical competencies and cultural fit for sector-specific roles.'
+      title: 'ML-Enhanced Skills Assessment Frameworks',
+      description: 'Industry-validated assessment tools powered by machine learning that evaluate technical competencies, predict performance, and assess cultural fit for sector-specific roles.'
     },
     {
-      title: 'Competitive Intelligence',
-      description: 'Market insights and salary benchmarking specific to your industry to ensure competitive positioning.'
+      title: 'AI Competitive Intelligence',
+      description: 'Automated market insights and salary benchmarking specific to your industry using AI to ensure competitive positioning and strategic advantage.'
     },
     {
-      title: 'Performance Analytics Dashboard',
-      description: 'Industry-benchmarked KPIs and reporting that track performance against sector-specific recruitment metrics.'
+      title: 'Predictive Analytics Dashboard',
+      description: 'Industry-benchmarked KPIs and reporting with predictive modeling that tracks performance against sector-specific recruitment metrics and forecasts outcomes.'
     }
   ]
 
@@ -480,7 +480,7 @@ export function SolutionsPage() {
                     <Code className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Technology Company</h3>
+                    <h3 className="text-lg font-semibold text-card-foreground">AI-Powered Tech Recruiting</h3>
                     <p className="text-sm text-muted-foreground">Series B SaaS company (200+ employees)</p>
                   </div>
                 </div>
@@ -489,23 +489,23 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Scaling engineering team from 25 to 60 developers in 18 months while maintaining quality
+                      Scaling engineering team from 25 to 60 developers while maintaining high technical standards
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">AI Solution</h4>
                     <p className="text-sm text-muted-foreground">
-                      Developer community engagement strategy with technical assessment integration and referral program
+                      Code analysis AI engine that evaluates GitHub contributions, technical assessments automated with ML scoring, and predictive matching for team fit
                     </p>
                   </div>
                   
                   <div className="p-4 bg-primary/5 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Senior engineer time-to-fill: 95 days → 60 days</li>
-                      <li>• Cost-per-hire reduction: 40%</li>
-                      <li>• Offer acceptance rate: 78%</li>
+                      <li>• AI-driven candidate screening: 90% time reduction</li>
+                      <li>• Technical skill matching accuracy: 95%</li>
+                      <li>• Quality hire rate: 88% (vs 65% manual)</li>
                     </ul>
                   </div>
                 </div>
@@ -520,7 +520,7 @@ export function SolutionsPage() {
                     <Heart className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-card-foreground">Healthcare System</h3>
+                    <h3 className="text-lg font-semibold text-card-foreground">Intelligent Healthcare Staffing</h3>
                     <p className="text-sm text-muted-foreground">Regional healthcare network (5 hospitals)</p>
                   </div>
                 </div>
@@ -529,23 +529,23 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Critical shortage of nurses and specialized technicians across multiple locations
+                      Critical shortage of specialized nurses with complex credentialing requirements across multiple locations
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">AI Solution</h4>
                     <p className="text-sm text-muted-foreground">
-                      Multi-location digital campaigns with compliance-focused messaging and career progression highlighting
+                      Automated credentialing verification AI, compliance checking algorithms, and specialized role matching based on clinical experience patterns
                     </p>
                   </div>
                   
                   <div className="p-4 bg-secondary/5 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• RN time-to-fill: 90 days → 55 days</li>
-                      <li>• Cost-per-application: $30 → $15</li>
-                      <li>• Quality of hire scores: +35%</li>
+                      <li>• Credentialing time: 85% reduction</li>
+                      <li>• Specialized role matching: 92% accuracy</li>
+                      <li>• Compliance error rate: Near zero</li>
                     </ul>
                   </div>
                 </div>
@@ -560,7 +560,7 @@ export function SolutionsPage() {
                     <Gear className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-card-foreground">Manufacturing Company</h3>
+                    <h3 className="font-semibold text-card-foreground">Smart Manufacturing Hiring</h3>
                     <p className="text-sm text-muted-foreground">Automotive parts manufacturer (500+ employees)</p>
                   </div>
                 </div>
@@ -569,23 +569,23 @@ export function SolutionsPage() {
                   <div className="p-4 bg-muted/50 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Challenge</h4>
                     <p className="text-sm text-muted-foreground">
-                      Finding experienced machinists and quality control technicians in tight labor market
+                      Finding skilled trades workers with specific safety certifications and predictable workforce planning
                     </p>
                   </div>
                   
                   <div className="p-4 bg-muted/50 rounded-lg">
-                    <h4 className="font-medium text-card-foreground mb-2">Solution</h4>
+                    <h4 className="font-medium text-card-foreground mb-2">AI Solution</h4>
                     <p className="text-sm text-muted-foreground">
-                      Geographic targeting with safety-focused employer branding and apprenticeship program promotion
+                      Skills-based AI matching algorithms, automated safety protocol evaluation, and predictive analytics for workforce demand forecasting
                     </p>
                   </div>
                   
                   <div className="p-4 bg-accent/5 rounded-lg">
                     <h4 className="font-medium text-card-foreground mb-2">Results</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Machinist applications: +60%</li>
-                      <li>• Time-to-fill: 75 days → 50 days</li>
-                      <li>• 90-day retention: 88%</li>
+                      <li>• Skills matching accuracy: 94%</li>
+                      <li>• Safety compliance: 100% automated verification</li>
+                      <li>• Workforce planning precision: 89%</li>
                     </ul>
                   </div>
                 </div>
