@@ -28,7 +28,7 @@ export function CaseStudiesPage() {
               Featured Success Story
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              How a fast-growing technology company reduced time-to-fill by 70% using AI-powered candidate matching and automated screening
+              How a fast-growing technology company reduced time-to-fill by 70% using AI-powered candidate discovery and intelligent sourcing
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export function CaseStudiesPage() {
                   AI-Powered Engineering Team Scaling: From 25 to 60 Engineers in 18 Months
                 </h3>
                 <p className="text-lg text-muted-foreground mb-6">
-                  A rapidly growing SaaS company needed to triple their engineering team while maintaining high hiring standards and cultural fit. Traditional recruiting methods weren't scaling with their growth demands, so they implemented our AI-powered talent acquisition platform.
+                  A rapidly growing SaaS company needed to triple their engineering team while maintaining high hiring standards and cultural fit. Traditional recruiting methods weren't scaling with their growth demands, so they implemented our AI-powered candidate discovery platform.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -54,7 +54,7 @@ export function CaseStudiesPage() {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-foreground">
-                      <strong>AI Solution:</strong> Machine learning candidate matching with automated technical assessment and GitHub analysis
+                      <strong>AI Solution:</strong> AI-Powered Candidate Discovery Platform with machine learning algorithms
                     </p>
                   </div>
                 </div>
@@ -68,9 +68,9 @@ export function CaseStudiesPage() {
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-foreground">60 Days</div>
+                      <div className="text-2xl font-bold text-foreground">28 Days</div>
                       <div className="text-sm text-muted-foreground">Average time-to-fill</div>
-                      <div className="text-xs text-green-600 font-medium">37% improvement</div>
+                      <div className="text-xs text-green-600 font-medium">70% improvement</div>
                     </div>
                   </div>
                   
@@ -79,9 +79,9 @@ export function CaseStudiesPage() {
                       <TrendUp className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-foreground">78%</div>
-                      <div className="text-sm text-muted-foreground">Offer acceptance rate</div>
-                      <div className="text-xs text-green-600 font-medium">38pt increase</div>
+                      <div className="text-2xl font-bold text-foreground">300%</div>
+                      <div className="text-sm text-muted-foreground">More qualified candidates found</div>
+                      <div className="text-xs text-green-600 font-medium">AI identified hidden talent pools</div>
                     </div>
                   </div>
                   
@@ -90,9 +90,9 @@ export function CaseStudiesPage() {
                       <Users className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-foreground">40%</div>
+                      <div className="text-2xl font-bold text-foreground">50%</div>
                       <div className="text-sm text-muted-foreground">Cost-per-hire reduction</div>
-                      <div className="text-xs text-green-600 font-medium">$15K savings per hire</div>
+                      <div className="text-xs text-green-600 font-medium">$18K savings per hire</div>
                     </div>
                   </div>
                 </div>
@@ -104,19 +104,19 @@ export function CaseStudiesPage() {
                 <div>
                   <h5 className="font-semibold text-foreground mb-2">Strategy</h5>
                   <p className="text-sm text-muted-foreground">
-                    Built targeted campaigns across developer communities, implemented referral programs, and created technical content showcasing engineering culture.
+                    Deployed AI algorithms to analyze GitHub profiles, technical contributions, and coding patterns to identify high-potential engineers not actively job searching.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-semibold text-foreground mb-2">Execution</h5>
                   <p className="text-sm text-muted-foreground">
-                    Integrated technical assessments into application flow, optimized job descriptions for SEO, and automated candidate nurturing sequences.
+                    Implemented machine learning models for skill assessment, automated personalized outreach, and predictive analytics for candidate ranking.
                   </p>
                 </div>
                 <div>
                   <h5 className="font-semibold text-foreground mb-2">Impact</h5>
                   <p className="text-sm text-muted-foreground">
-                    Achieved aggressive hiring goals while improving candidate quality and reducing overall recruitment costs by $450K annually.
+                    Achieved aggressive hiring goals while discovering 300% more qualified candidates and reducing overall recruitment costs by $540K annually.
                   </p>
                 </div>
               </div>
@@ -150,10 +150,10 @@ export function CaseStudiesPage() {
                   The Challenge
                 </h3>
                 <h4 className="text-xl text-primary font-semibold mb-6">
-                  Manual Job Posting Consuming Resources with Poor Results
+                  AI-Powered Candidate Matching Consuming Resources with Manual Processes
                 </h4>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                  This 500-employee logistics company with 12 distribution centers was manually posting jobs across multiple job boards, spending significant time and budget with inconsistent results. They needed drivers, warehouse staff, and logistics coordinators but were getting low application volumes and poor candidate quality.
+                  This 500-employee logistics company with 12 distribution centers was struggling with manual candidate screening and matching processes, spending significant time with inconsistent results. They needed drivers, warehouse staff, and logistics coordinators but were getting poor candidate-job fit and high turnover.
                 </p>
               </div>
               
@@ -166,23 +166,23 @@ export function CaseStudiesPage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Manual job posting across 6+ job boards taking 12 hours/week</p>
+                      <p className="text-foreground">Manual candidate screening taking 8 hours/week per recruiter</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Inconsistent application volumes across locations</p>
+                      <p className="text-foreground">Poor candidate-job matching leading to 45% early turnover</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">No visibility into which job boards performed best for different roles</p>
+                      <p className="text-foreground">No predictive analytics for candidate success indicators</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">High cost-per-application with limited budget control</p>
+                      <p className="text-foreground">Inconsistent qualification standards across locations</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Geographic coverage gaps in rural markets</p>
+                      <p className="text-foreground">Limited engagement automation for candidate nurturing</p>
                     </div>
                   </div>
                 </div>
@@ -193,22 +193,22 @@ export function CaseStudiesPage() {
                     <div className="flex items-center gap-3">
                       <Clock className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">12 Hours/Week</div>
-                        <div className="text-sm text-muted-foreground">Manual posting time</div>
+                        <div className="font-semibold text-foreground">8 Hours/Week</div>
+                        <div className="text-sm text-muted-foreground">Manual screening time</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">Inconsistent Coverage</div>
-                        <div className="text-sm text-muted-foreground">Across 12 locations</div>
+                        <div className="font-semibold text-foreground">45% Turnover</div>
+                        <div className="text-sm text-muted-foreground">Poor job-candidate fit</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <TrendUp className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">High Cost/App</div>
-                        <div className="text-sm text-muted-foreground">No optimization</div>
+                        <div className="font-semibold text-foreground">No Predictive Data</div>
+                        <div className="text-sm text-muted-foreground">Success indicators missing</div>
                       </div>
                     </div>
                   </div>
@@ -225,10 +225,10 @@ export function CaseStudiesPage() {
                   The Solution
                 </h3>
                 <h4 className="text-xl text-primary font-semibold mb-6">
-                  Automated Programmatic Job Distribution Platform
+                  Machine Learning Matching with Automated Engagement
                 </h4>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                  Implemented SparkPoint's programmatic recruitment platform to automate job distribution, optimize spending in real-time, and provide complete transparency into performance across all locations and job types.
+                  Implemented SparkPoint's AI-powered matching system to automate candidate screening, provide predictive analytics for job fit, and deliver automated engagement sequences tailored to each candidate's profile and location.
                 </p>
               </div>
               
@@ -241,23 +241,23 @@ export function CaseStudiesPage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Automated job distribution across 50+ relevant job boards and sites</p>
+                      <p className="text-foreground">AI-powered candidate scoring based on skills, experience, and location fit</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Geographic targeting around each distribution center</p>
+                      <p className="text-foreground">Automated engagement sequences personalized by role and location</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Real-time budget optimization based on application performance</p>
+                      <p className="text-foreground">Predictive analytics for candidate success and retention likelihood</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Role-specific targeting for drivers vs. warehouse vs. office positions</p>
+                      <p className="text-foreground">Machine learning optimization of screening criteria across all locations</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Easy Apply integration to reduce application friction</p>
+                      <p className="text-foreground">Automated qualification assessments with intelligent routing</p>
                     </div>
                   </div>
                 </div>
@@ -270,8 +270,8 @@ export function CaseStudiesPage() {
                         <span className="text-primary font-bold text-sm">1</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Platform Integration</div>
-                        <div className="text-sm text-muted-foreground">Connect with existing ATS and HR systems</div>
+                        <div className="font-semibold text-foreground">AI Integration</div>
+                        <div className="text-sm text-muted-foreground">Connect machine learning models with existing ATS</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -279,8 +279,8 @@ export function CaseStudiesPage() {
                         <span className="text-primary font-bold text-sm">2</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Geographic Optimization</div>
-                        <div className="text-sm text-muted-foreground">Target candidates within commuting distance</div>
+                        <div className="font-semibold text-foreground">Predictive Matching</div>
+                        <div className="text-sm text-muted-foreground">Score candidates on success probability and fit</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -288,8 +288,8 @@ export function CaseStudiesPage() {
                         <span className="text-primary font-bold text-sm">3</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Performance Tracking</div>
-                        <div className="text-sm text-muted-foreground">Real-time analytics and optimization</div>
+                        <div className="font-semibold text-foreground">Automated Engagement</div>
+                        <div className="text-sm text-muted-foreground">Personalized outreach and qualification flows</div>
                       </div>
                     </div>
                   </div>
@@ -306,7 +306,7 @@ export function CaseStudiesPage() {
                   The Results
                 </h3>
                 <h4 className="text-xl text-primary font-semibold mb-6">
-                  360% Increase in Applicant Volume with Reduced Manual Work
+                  85% Improvement in Candidate Quality Scores with Automated Matching
                 </h4>
               </div>
               
@@ -315,27 +315,27 @@ export function CaseStudiesPage() {
                   <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <TrendUp className="w-8 h-8 text-green-600" />
                   </div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">+360%</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">Applicant Volume</div>
-                  <div className="text-xs text-muted-foreground">Massive increase in qualified applications</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">+85%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Quality Score Improvement</div>
+                  <div className="text-xs text-muted-foreground">AI matching improved candidate quality scores</div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg text-center">
                   <div className="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Clock className="w-8 h-8 text-blue-600" />
                   </div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">83%</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">Time Reduction</div>
-                  <div className="text-xs text-muted-foreground">From 12 hours/week to 2 hours/week</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">90%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Screening Time Reduction</div>
+                  <div className="text-xs text-muted-foreground">From 8 hours/week to 48 minutes/week</div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg text-center">
                   <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-8 h-8 text-purple-600" />
                   </div>
-                  <div className="text-3xl font-bold text-purple-600 mb-2">15+</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">New Markets</div>
-                  <div className="text-xs text-muted-foreground">Previously unreachable geographic areas</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">65%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Turnover Reduction</div>
+                  <div className="text-xs text-muted-foreground">Better job-candidate fit through AI</div>
                 </div>
               </div>
               
@@ -346,8 +346,8 @@ export function CaseStudiesPage() {
                       <Target className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-foreground">35% Cost Reduction</div>
-                      <div className="text-sm text-muted-foreground">Real-time bidding optimization reduced waste</div>
+                      <div className="text-xl font-bold text-foreground">62% Engagement Increase</div>
+                      <div className="text-sm text-muted-foreground">Automated personalized outreach improved response rates</div>
                     </div>
                   </div>
                   
@@ -356,8 +356,8 @@ export function CaseStudiesPage() {
                       <Truck className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-foreground">68% → 89%</div>
-                      <div className="text-sm text-muted-foreground">Driver position fill rate improvement</div>
+                      <div className="text-xl font-bold text-foreground">78% → 92%</div>
+                      <div className="text-sm text-muted-foreground">Driver position fill rate with predictive matching</div>
                     </div>
                   </div>
                 </div>
@@ -392,10 +392,10 @@ export function CaseStudiesPage() {
                   The Challenge
                 </h3>
                 <h4 className="text-xl text-secondary font-semibold mb-6">
-                  Critical Nursing Shortage Impacting Patient Care
+                  Outdated Employer Brand and Marketing Approach
                 </h4>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                  A healthcare organization with multiple facilities faced severe challenges attracting qualified nursing and clinical support staff. Traditional recruitment methods were failing to reach passive candidates, and competition from travel nursing agencies was driving up costs.
+                  A healthcare organization with multiple facilities faced challenges attracting qualified nursing and clinical support staff due to poor employer brand visibility and ineffective recruitment marketing. Traditional marketing approaches weren't reaching the right candidates at the right time.
                 </p>
               </div>
               
@@ -408,49 +408,49 @@ export function CaseStudiesPage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Severe shortage of registered nurses and clinical support staff</p>
+                      <p className="text-foreground">Poor employer brand visibility among target healthcare professionals</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Limited reach to passive candidates not actively job searching</p>
+                      <p className="text-foreground">Generic recruitment marketing not resonating with different nursing specialties</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">High dependency on expensive travel nurses and agencies</p>
+                      <p className="text-foreground">No targeted messaging based on career stage or specialty interests</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Lengthy recruitment process losing qualified candidates</p>
+                      <p className="text-foreground">Limited digital presence where healthcare professionals engage</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Geographic competition from larger health systems</p>
+                      <p className="text-foreground">Weak value proposition messaging competing against travel agencies</p>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-destructive/5 to-destructive/10 p-6 rounded-lg">
-                  <h5 className="text-lg font-semibold text-foreground mb-4">Impact on Patient Care</h5>
+                  <h5 className="text-lg font-semibold text-foreground mb-4">Impact on Recruitment Marketing</h5>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Users className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">Staff Shortages</div>
-                        <div className="text-sm text-muted-foreground">Multiple facilities affected</div>
+                        <div className="font-semibold text-foreground">Low Brand Awareness</div>
+                        <div className="text-sm text-muted-foreground">Poor recognition among target nurses</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <Clock className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">85 Days</div>
-                        <div className="text-sm text-muted-foreground">Average time-to-fill nursing positions</div>
+                        <div className="font-semibold text-foreground">12% Application Rate</div>
+                        <div className="text-sm text-muted-foreground">Low conversion from job ad views</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
                       <TrendUp className="w-5 h-5 text-destructive" />
                       <div>
-                        <div className="font-semibold text-foreground">45% Travel Nurse</div>
-                        <div className="text-sm text-muted-foreground">Expensive agency dependency</div>
+                        <div className="font-semibold text-foreground">Generic Messaging</div>
+                        <div className="text-sm text-muted-foreground">No specialty-based targeting</div>
                       </div>
                     </div>
                   </div>
@@ -467,10 +467,10 @@ export function CaseStudiesPage() {
                   The Solution
                 </h3>
                 <h4 className="text-xl text-secondary font-semibold mb-6">
-                  Comprehensive Programmatic and Digital Recruitment Strategy
+                  AI-Driven Employer Brand Optimization
                 </h4>
                 <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                  Implemented programmatic advertising combined with over-the-top (OTT) streaming campaigns to reach healthcare professionals across multiple touchpoints, including those not actively job searching.
+                  Implemented AI-powered content optimization and intelligent targeting to transform the healthcare organization's employer brand presence and dramatically improve recruitment marketing effectiveness across digital channels.
                 </p>
               </div>
               
@@ -483,23 +483,23 @@ export function CaseStudiesPage() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Programmatic job advertising across healthcare-specific job boards</p>
+                      <p className="text-foreground">AI-powered content creation optimized for different nursing specialties</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">OTT streaming ads targeting healthcare professionals during off-hours</p>
+                      <p className="text-foreground">Intelligent audience targeting based on career stage and interests</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Retargeting campaigns for website visitors who didn't apply</p>
+                      <p className="text-foreground">Automated A/B testing and optimization of messaging and creative</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Mobile-optimized application process for busy healthcare workers</p>
+                      <p className="text-foreground">Predictive analytics for optimal posting times and channel selection</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                      <p className="text-foreground">Geographic expansion to reach commutable markets</p>
+                      <p className="text-foreground">Dynamic value proposition messaging based on competitive analysis</p>
                     </div>
                   </div>
                 </div>
@@ -512,8 +512,8 @@ export function CaseStudiesPage() {
                         <span className="text-secondary font-bold text-sm">1</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Multi-Channel Targeting</div>
-                        <div className="text-sm text-muted-foreground">Reach passive candidates through OTT and programmatic ads</div>
+                        <div className="font-semibold text-foreground">AI Content Optimization</div>
+                        <div className="text-sm text-muted-foreground">Generate specialty-specific messaging and creative</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -521,8 +521,8 @@ export function CaseStudiesPage() {
                         <span className="text-secondary font-bold text-sm">2</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Mobile Optimization</div>
-                        <div className="text-sm text-muted-foreground">Streamlined application for busy healthcare professionals</div>
+                        <div className="font-semibold text-foreground">Intelligent Targeting</div>
+                        <div className="text-sm text-muted-foreground">Reach nurses based on career preferences and stage</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -530,8 +530,8 @@ export function CaseStudiesPage() {
                         <span className="text-secondary font-bold text-sm">3</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-foreground">Retargeting Strategy</div>
-                        <div className="text-sm text-muted-foreground">Re-engage interested but unconverted candidates</div>
+                        <div className="font-semibold text-foreground">Automated Optimization</div>
+                        <div className="text-sm text-muted-foreground">Continuous testing and improvement of campaigns</div>
                       </div>
                     </div>
                   </div>
@@ -548,7 +548,7 @@ export function CaseStudiesPage() {
                   The Results
                 </h3>
                 <h4 className="text-xl text-secondary font-semibold mb-6">
-                  166% Growth in Qualified Candidates with 58% More Conversions
+                  180% Increase in Application Rates Through AI Content Optimization
                 </h4>
               </div>
               
@@ -557,27 +557,27 @@ export function CaseStudiesPage() {
                   <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-8 h-8 text-emerald-600" />
                   </div>
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">+166%</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">Website Users</div>
-                  <div className="text-xs text-muted-foreground">Healthcare professionals at 6-month mark</div>
+                  <div className="text-3xl font-bold text-emerald-600 mb-2">+180%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Application Rate Increase</div>
+                  <div className="text-xs text-muted-foreground">AI content optimization improved conversion</div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-lg text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <UserCheck className="w-8 h-8 text-cyan-600" />
                   </div>
-                  <div className="text-3xl font-bold text-cyan-600 mb-2">+58%</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">Overall Conversions</div>
-                  <div className="text-xs text-muted-foreground">Applications and inquiries increase</div>
+                  <div className="text-3xl font-bold text-cyan-600 mb-2">+95%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Brand Engagement</div>
+                  <div className="text-xs text-muted-foreground">Social media and content interaction increase</div>
                 </div>
                 
                 <div className="bg-gradient-to-br from-rose-50 to-rose-100 p-6 rounded-lg text-center">
                   <div className="w-16 h-16 bg-rose-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Clock className="w-8 h-8 text-rose-600" />
                   </div>
-                  <div className="text-3xl font-bold text-rose-600 mb-2">39%</div>
-                  <div className="text-sm font-semibold text-foreground mb-1">Faster Hiring</div>
-                  <div className="text-xs text-muted-foreground">85 days → 52 days time-to-fill</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">78%</div>
+                  <div className="text-sm font-semibold text-foreground mb-1">Faster Campaign ROI</div>
+                  <div className="text-xs text-muted-foreground">AI optimization accelerated results</div>
                 </div>
               </div>
               
@@ -588,8 +588,8 @@ export function CaseStudiesPage() {
                       <ShieldCheck className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-foreground">45% → 25%</div>
-                      <div className="text-sm text-muted-foreground">Travel nurse dependency reduction</div>
+                      <div className="text-xl font-bold text-foreground">67% Quality Improvement</div>
+                      <div className="text-sm text-muted-foreground">AI targeting reached more qualified candidates</div>
                     </div>
                   </div>
                   
@@ -598,8 +598,8 @@ export function CaseStudiesPage() {
                       <TrendUp className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-foreground">3-Month Results</div>
-                      <div className="text-sm text-muted-foreground">+89% users, +12% conversions early milestone</div>
+                      <div className="text-xl font-bold text-foreground">4x Content Performance</div>
+                      <div className="text-sm text-muted-foreground">AI-optimized posts outperformed manual content</div>
                     </div>
                   </div>
                 </div>
