@@ -578,7 +578,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent/6 rounded-full blur-3xl ember-glow" style={{animationDelay: '2.5s'}}></div>
           
           {/* Floating spark particles */}
-          <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-accent rounded-full spark-particle"></div>
           <div className="absolute top-3/4 left-1/4 w-2 h-2 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
           <div className="absolute top-1/3 right-1/4 w-2.5 h-2.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '1.2s'}}></div>
           <div className="absolute bottom-1/4 right-1/3 w-4 h-4 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '0.4s'}}></div>
@@ -590,23 +589,18 @@ export function HomePage({ onNavigate }: HomePageProps) {
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-            {/* Left Side - Content */}
             <div className="text-left relative">
               {/* Content spark effects */}
               <div className="absolute -top-6 -left-6 w-3 h-3 bg-accent rounded-full spark-particle"></div>
               <div className="absolute top-1/4 -right-8 w-2 h-2 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
               <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '1.1s'}}></div>
-              
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                Ignite Your Talent Acquisition 
+                Ignite Your Talent Acquisition{" "}
                 <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent flame-flicker">
-                  {" "}Success
+                  Success
                 </span>
               </h1>
-              <h2 className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed font-medium">
-                SparkPoint provides the catalyst to light the fire of AI-powered recruiting that transforms your business growth
-              </h2>
-              <p className="text-lg text-white/80 mb-12 leading-relaxed max-w-2xl">
+              <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl">
                 From the first spark of candidate discovery to the blazing success of your hires, we fuel your talent acquisition with cutting-edge AI technology that ignites results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -620,7 +614,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </Button>
                 <Button 
                   size="lg" 
-                  variant="outline" 
+                  variant="outline"
                   onClick={() => onNavigate?.('case-studies')}
                   className="border-2 border-white/40 hover:bg-white/10 hover:border-accent/60 font-semibold px-10 py-4 text-lg text-white hover:text-accent transition-all duration-300 relative group overflow-hidden"
                 >
@@ -630,10 +624,9 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
             </div>
 
-            {/* Right Side - Flow Visualization */}
+
             <div className="hidden lg:block relative">
               {/* Additional spark particles around visualization */}
-              <div className="absolute -top-8 left-1/4 w-2 h-2 bg-accent rounded-full spark-particle"></div>
               <div className="absolute top-1/3 -right-4 w-3 h-3 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '1s'}}></div>
               <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '1.4s'}}></div>
               
@@ -642,7 +635,6 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
       </section>
-      {/* Metrics Section */}
       {/* Metrics Section */}
       <SparkDivider />
       {/* Capabilities Section */}
