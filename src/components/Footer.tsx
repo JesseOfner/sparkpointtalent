@@ -1,4 +1,4 @@
-import { Flame } from '@phosphor-icons/react'
+import { SparkPointLogo } from '@/components/SparkPointLogo'
 
 export function Footer() {
   return (
@@ -14,18 +14,8 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 text-white">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-6 group">
-              <div className="relative">
-                <Flame 
-                  size={32} 
-                  weight="fill" 
-                  className="text-accent flame-flicker group-hover:ember-glow" 
-                />
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full spark-particle"></div>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">
-                SparkPoint Talent
-              </span>
+            <div className="mb-6">
+              <SparkPointLogo height={36} className="filter brightness-0 invert" />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
               Igniting success in talent acquisition through cutting-edge AI technology. 

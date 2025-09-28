@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { List, X, Flame } from '@phosphor-icons/react'
+import { List, X } from '@phosphor-icons/react'
+import { SparkPointLogo } from '@/components/SparkPointLogo'
 
 interface NavigationProps {
   currentPage: string
@@ -29,19 +30,9 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           <div className="flex items-center">
             <button 
               onClick={() => handleNavigate('home')} 
-              className="flex items-center space-x-2 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
+              className="hover:opacity-80 transition-opacity"
             >
-              <div className="relative">
-                <Flame 
-                  size={28} 
-                  weight="fill" 
-                  className="text-primary flame-flicker group-hover:ember-glow" 
-                />
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full spark-particle"></div>
-              </div>
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                SparkPoint Talent
-              </span>
+              <SparkPointLogo height={32} />
             </button>
           </div>
 
