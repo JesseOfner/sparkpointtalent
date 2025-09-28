@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { Footer } from '@/components/Footer'
+import { SparkDivider } from '@/components/SparkDivider'
 import { Buildings, Target, DeviceMobile, Lightning, Handshake, Palette, Globe, Robot, ChartLine, ArrowRight, Code, CheckCircle, Phone, FileText } from '@phosphor-icons/react'
 import getStartedIllustration from '@/assets/images/get-started-illustration.svg'
 
@@ -19,15 +21,24 @@ function FlowStage({
 }) {
   return (
     <div className={`relative transition-all duration-700 ${isActive ? 'scale-105' : 'scale-100'}`}>
-      <div className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transition-all duration-500 ${
-        isActive ? 'bg-white/20 border-white/40 shadow-lg shadow-white/10' : ''
+      <div className={`bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 transition-all duration-500 relative overflow-hidden ${
+        isActive ? 'bg-white/20 border-accent/40 shadow-lg shadow-accent/10 ember-glow' : ''
       }`}>
-        <div className={`w-12 h-12 bg-gradient-to-r from-white/20 to-white/30 rounded-lg flex items-center justify-center mb-4 transition-all duration-500 ${
-          isActive ? 'animate-pulse scale-110' : ''
+        {/* Spark particles inside active cards */}
+        {isActive && (
+          <>
+            <div className="absolute top-2 right-2 w-1 h-1 bg-accent rounded-full spark-particle"></div>
+            <div className="absolute bottom-3 left-3 w-1.5 h-1.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.5s'}}></div>
+          </>
+        )}
+        
+        <div className={`w-12 h-12 bg-gradient-to-r from-white/20 to-white/30 rounded-lg flex items-center justify-center mb-4 transition-all duration-500 relative ${
+          isActive ? 'bg-gradient-to-r from-accent/30 to-accent/20 ember-glow scale-110' : ''
         }`}>
-          <Icon size={24} className="text-white" />
+          <Icon size={24} className={`text-white ${isActive ? 'flame-flicker' : ''}`} />
+          {isActive && <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full spark-particle"></div>}
         </div>
-        <h3 className="font-semibold text-white mb-2">{title}</h3>
+        <h3 className={`font-semibold text-white mb-2 ${isActive ? 'text-accent' : ''}`}>{title}</h3>
         <p className="text-white/80 text-sm leading-relaxed">{description}</p>
       </div>
     </div>
@@ -83,13 +94,20 @@ function FlowVisualization() {
             delay={index * 0.2}
           />
           
-          {/* Connecting line with animated dots */}
+          {/* Connecting line with animated spark dots */}
           {index < stages.length - 1 && (
-            <div className="absolute left-6 -bottom-4 w-0.5 h-8 bg-gradient-to-b from-white/40 to-white/20">
+            <div className="absolute left-6 -bottom-4 w-0.5 h-8 bg-gradient-to-b from-accent/60 to-accent/20">
               <div 
-                className={`absolute w-2 h-2 bg-white rounded-full -left-0.75 transition-all duration-1000 ${
-                  activeStage === index ? 'animate-bounce top-0' : 'top-4 opacity-50'
+                className={`absolute w-2 h-2 bg-accent rounded-full -left-0.75 transition-all duration-1000 spark-particle ${
+                  activeStage === index ? 'top-0' : 'top-4 opacity-50'
                 }`}
+              />
+              {/* Additional flowing spark */}
+              <div 
+                className={`absolute w-1 h-1 bg-accent/70 rounded-full -left-0.5 transition-all duration-1500 spark-particle ${
+                  activeStage === index ? 'top-2' : 'top-6 opacity-30'
+                }`}
+                style={{animationDelay: '0.3s'}}
               />
             </div>
           )}
@@ -177,9 +195,13 @@ function MetricCard({ number, suffix, title, description }: {
   return (
     <div 
       ref={ref}
-      className="bg-white rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+      className="bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
     >
-      <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
+      {/* Subtle spark particles on hover */}
+      <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
+      <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/60 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.4s'}}></div>
+      
+      <div className="text-4xl md:text-5xl font-bold fire-gradient bg-clip-text text-transparent mb-4 group-hover:ember-glow transition-all duration-300">
         {animatedNumber}{suffix}
       </div>
       <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -198,9 +220,14 @@ function CapabilityCard({ icon: Icon, title, description }: {
   description: string
 }) {
   return (
-    <div className="bg-white rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
-      <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-        <Icon size={32} className="text-white" />
+    <div className="bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+      {/* Spark particles on hover */}
+      <div className="absolute top-3 right-3 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
+      <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
+      
+      <div className="w-16 h-16 fire-gradient rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 group-hover:ember-glow transition-all duration-300 relative">
+        <Icon size={32} className="text-white group-hover:flame-flicker" />
+        <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
       </div>
       <h3 className="text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">
         {title}
@@ -252,14 +279,20 @@ function IndustrySolutionCard({
       {/* Visual Element */}
       <div className={`flex justify-center ${isReversed ? 'lg:col-start-1' : ''}`}>
         <div className="relative">
-          <div className="w-64 h-64 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl flex items-center justify-center">
-            <div className="w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg">
-              <Icon size={64} className="text-white" />
+          <div className="w-64 h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl flex items-center justify-center relative overflow-hidden">
+            {/* Background spark effects */}
+            <div className="absolute top-4 right-4 w-2 h-2 bg-accent/40 rounded-full spark-particle"></div>
+            <div className="absolute bottom-8 left-8 w-1.5 h-1.5 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
+            
+            <div className="w-32 h-32 fire-gradient rounded-2xl flex items-center justify-center shadow-lg hover:ember-glow transition-all duration-300 relative">
+              <Icon size={64} className="text-white flame-flicker" />
+              <div className="absolute -top-2 -right-2 w-3 h-3 bg-accent rounded-full spark-particle"></div>
             </div>
           </div>
-          {/* Decorative elements */}
-          <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full animate-pulse"></div>
-          <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary/20 rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+          {/* Enhanced decorative spark elements */}
+          <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent/30 rounded-full spark-particle"></div>
+          <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary/30 rounded-full spark-particle" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/4 -left-2 w-3 h-3 bg-accent/20 rounded-full spark-particle" style={{animationDelay: '1.5s'}}></div>
         </div>
       </div>
     </div>
@@ -268,19 +301,33 @@ function IndustrySolutionCard({
 
 function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }) {
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-primary via-primary to-secondary relative overflow-hidden">
-      {/* Background elements */}
+    <section id="contact" className="py-24 ember-gradient relative overflow-hidden">
+      {/* Enhanced spark and ember background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl ember-glow"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl ember-glow" style={{animationDelay: '1s'}}></div>
+        
+        {/* Floating spark particles */}
+        <div className="absolute top-1/6 left-1/5 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+        <div className="absolute top-2/3 left-1/3 w-3 h-3 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '1.2s'}}></div>
+        <div className="absolute bottom-1/3 right-1/3 w-1.5 h-1.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.3s'}}></div>
+        <div className="absolute top-1/3 right-1/5 w-2.5 h-2.5 bg-accent/90 rounded-full spark-particle" style={{animationDelay: '1.8s'}}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
-          <div className="text-white">
+          <div className="text-white relative">
+            {/* Content spark effects */}
+            <div className="absolute -top-4 -left-4 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+            <div className="absolute top-1/3 -right-6 w-1.5 h-1.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.9s'}}></div>
+            
             <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-              Ready to Transform Your Talent Acquisition with AI?
+              Ready to Transform Your Talent Acquisition with 
+              <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent flame-flicker">
+                {" "}AI?
+              </span>
             </h2>
             <p className="text-xl text-white/80 mb-12 leading-relaxed">
               Discover how AI-powered solutions can revolutionize your recruitment process and deliver qualified candidates faster than ever before
@@ -288,24 +335,26 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
             
             {/* Contact Options */}
             <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
-                  <Phone size={24} className="text-white" />
+              <div className="flex items-start group">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0 group-hover:ember-glow transition-all duration-300 relative">
+                  <Phone size={24} className="text-white group-hover:flame-flicker" />
+                  <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">Schedule an AI Strategy Call</h3>
+                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-accent transition-colors">Schedule an AI Strategy Call</h3>
                   <p className="text-white/80 leading-relaxed">
                     Get personalized AI recommendations for your talent acquisition challenges
                   </p>
                 </div>
               </div>
               
-              <div className="flex items-start">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
-                  <FileText size={24} className="text-white" />
+              <div className="flex items-start group">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center mr-6 flex-shrink-0 group-hover:ember-glow transition-all duration-300 relative">
+                  <FileText size={24} className="text-white group-hover:flame-flicker" />
+                  <div className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">Request AI-Powered Solution Demo</h3>
+                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-accent transition-colors">Request AI-Powered Solution Demo</h3>
                   <p className="text-white/80 leading-relaxed">
                     See how our AI platform transforms your specific industry and hiring goals
                   </p>
@@ -315,8 +364,17 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
           </div>
 
           {/* Right Side - Get Started Illustration */}
-          <div className="flex flex-col items-center">
-            <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center">
+          <div className="flex flex-col items-center relative">
+            {/* Additional spark effects around the card */}
+            <div className="absolute -top-6 left-1/4 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+            <div className="absolute top-1/3 -right-4 w-1.5 h-1.5 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.7s'}}></div>
+            <div className="absolute bottom-1/4 left-1/2 w-2.5 h-2.5 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '1.3s'}}></div>
+            
+            <Card className="bg-white/10 backdrop-blur-md border-white/20 p-8 text-center hover:ember-glow transition-all duration-300 relative overflow-hidden">
+              {/* Card spark particles */}
+              <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full spark-particle"></div>
+              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.5s'}}></div>
+              
               <div className="mb-8">
                 <img 
                   src={getStartedIllustration} 
@@ -336,7 +394,7 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
                 type="button"
                 size="lg"
                 onClick={onGetStartedClick}
-                className="w-full bg-white text-primary hover:bg-white/90 font-semibold py-4 text-lg"
+                className="w-full bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold py-4 text-lg hover:ember-glow transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
               </Button>
@@ -511,19 +569,34 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen bg-gradient-to-br from-primary via-primary to-secondary overflow-hidden">
-        {/* Animated background elements */}
+      <section id="hero" className="relative min-h-screen fire-gradient overflow-hidden">
+        {/* Spark particle background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          {/* Large ember glows */}
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl ember-glow"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl ember-glow" style={{animationDelay: '1s'}}></div>
+          
+          {/* Floating spark particles */}
+          <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+          <div className="absolute top-2/3 left-1/3 w-3 h-3 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
+          <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '1.2s'}}></div>
+          <div className="absolute bottom-1/3 right-1/3 w-4 h-4 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.4s'}}></div>
+          <div className="absolute top-1/6 right-1/5 w-2 h-2 bg-accent/90 rounded-full spark-particle" style={{animationDelay: '1.6s'}}></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
             {/* Left Side - Content */}
-            <div className="text-left">
+            <div className="text-left relative">
+              {/* Content spark effects */}
+              <div className="absolute -top-4 -left-4 w-3 h-3 bg-accent rounded-full spark-particle"></div>
+              <div className="absolute top-1/4 -right-8 w-2 h-2 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
+              
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                AI-Powered Talent Acquisition That Delivers Results
+                AI-Powered Talent Acquisition That 
+                <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent flame-flicker">
+                  {" "}Ignites Results
+                </span>
               </h1>
               <h2 className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed font-medium">
                 Transform your recruiting with cutting-edge AI technology that finds, engages, and converts top talent faster than ever before
@@ -535,7 +608,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button 
                   size="lg" 
                   onClick={handleGetStartedClick}
-                  className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-4 text-lg"
+                  className="bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:ember-glow transition-all duration-300"
                 >
                   Discover AI Solutions
                 </Button>
@@ -543,7 +616,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   size="lg" 
                   variant="outline" 
                   onClick={() => onNavigate?.('case-studies')}
-                  className="border-2 border-white/40 hover:bg-white/10 hover:border-white/60 font-semibold px-8 py-4 text-lg text-white"
+                  className="border-2 border-white/40 hover:bg-white/10 hover:border-accent/60 font-semibold px-8 py-4 text-lg text-white hover:text-accent transition-all duration-300"
                 >
                   See AI in Action
                 </Button>
@@ -551,20 +624,30 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             {/* Right Side - Flow Visualization */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block relative">
+              {/* Additional spark particles around visualization */}
+              <div className="absolute -top-8 left-1/4 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+              <div className="absolute top-1/3 -right-4 w-3 h-3 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '1s'}}></div>
+              <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '1.4s'}}></div>
+              
               <FlowVisualization />
             </div>
           </div>
         </div>
       </section>
+      <SparkDivider />
       {/* Metrics Section */}
       <MetricsSection />
+      <SparkDivider />
       {/* Capabilities Section */}
       <CapabilitiesSection />
+      <SparkDivider />
       {/* Industry Solutions Section */}
       <IndustrySolutionsSection />
+      <SparkDivider />
       {/* Contact Section */}
       <ContactSection onGetStartedClick={handleGetStartedClick} />
+      <SparkDivider />
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -574,40 +657,55 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               In today's competitive talent landscape, traditional recruiting isn't enough. 
-              We help you build magnetic employer brands that attract the best candidates before they even apply.
+              Our AI-powered platform ignites the spark that transforms how you attract, engage, and hire the best candidates.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 bg-card group relative overflow-hidden hover:-translate-y-1 hover:shadow-lg">
+              {/* Spark particles on hover */}
+              <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
+              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
+              
+              <div className="w-16 h-16 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center group-hover:ember-glow transition-all duration-300 relative">
+                <div className="w-8 h-8 bg-white rounded-full group-hover:flame-flicker"></div>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
               </div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Strategic Brand Building</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">AI-Powered Brand Strategy</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We craft compelling employer value propositions that differentiate your organization 
+                We use artificial intelligence to craft compelling employer value propositions that differentiate your organization 
                 and create authentic connections with top-tier talent.
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 bg-card group relative overflow-hidden hover:-translate-y-1 hover:shadow-lg">
+              {/* Spark particles on hover */}
+              <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
+              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
+              
+              <div className="w-16 h-16 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center group-hover:ember-glow transition-all duration-300 relative">
+                <div className="w-8 h-8 bg-white rounded-full group-hover:flame-flicker"></div>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
               </div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Multi-Channel Campaigns</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">Intelligent Multi-Channel Campaigns</h3>
               <p className="text-muted-foreground leading-relaxed">
-                From LinkedIn to industry publications, we orchestrate sophisticated campaigns 
+                From LinkedIn to industry publications, we orchestrate AI-driven campaigns 
                 that reach candidates where they are, when they're ready to move.
               </p>
             </div>
 
-            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-colors bg-card">
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
-                <div className="w-8 h-8 bg-white rounded-full"></div>
+            <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 bg-card group relative overflow-hidden hover:-translate-y-1 hover:shadow-lg">
+              {/* Spark particles on hover */}
+              <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
+              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
+              
+              <div className="w-16 h-16 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center group-hover:ember-glow transition-all duration-300 relative">
+                <div className="w-8 h-8 bg-white rounded-full group-hover:flame-flicker"></div>
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
               </div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Data-Driven Results</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors">Predictive Analytics & Results</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Every campaign is measured, optimized, and refined using advanced analytics 
+                Every campaign is measured, optimized, and refined using advanced AI analytics 
                 to ensure maximum ROI and continuous improvement.
               </p>
             </div>
@@ -615,23 +713,32 @@ export function HomePage({ onNavigate }: HomePageProps) {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-24 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-24 bg-muted/30 relative overflow-hidden">
+        {/* Subtle spark particles */}
+        <div className="absolute top-1/4 left-1/5 w-1.5 h-1.5 bg-accent/40 rounded-full spark-particle"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-2 h-2 bg-accent/30 rounded-full spark-particle" style={{animationDelay: '0.7s'}}></div>
+        
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Ready to Write Your Success Story?
+            Ready to 
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              {" "}Ignite{" "}
+            </span>
+            Your Success Story?
           </h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-            Every company's recruitment challenges are unique. Let's discuss how we can create a custom solution that delivers measurable results for your organization.
+            Every company's recruitment challenges are unique. Let's discuss how our AI-powered solutions can create measurable results for your organization.
           </p>
           <Button 
             size="lg" 
             onClick={handleGetStartedClick}
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-4 text-lg"
+            className="fire-gradient text-white hover:ember-glow font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Schedule a Consultation
           </Button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

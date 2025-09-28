@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { List, X } from '@phosphor-icons/react'
+import { List, X, Flame } from '@phosphor-icons/react'
 
 interface NavigationProps {
   currentPage: string
@@ -23,72 +23,87 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-border z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <button 
               onClick={() => handleNavigate('home')} 
-              className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+              className="flex items-center space-x-2 text-2xl font-bold text-foreground hover:text-primary transition-colors group"
             >
-              SparkPoint Talent
+              <div className="relative">
+                <Flame 
+                  size={28} 
+                  weight="fill" 
+                  className="text-primary flame-flicker group-hover:ember-glow" 
+                />
+                <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full spark-particle"></div>
+              </div>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                SparkPoint Talent
+              </span>
             </button>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => handleNavigate('home')}
-              className={`transition-colors font-medium ${
+              className={`transition-colors font-medium relative ${
                 isActive('home') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Home
+              {isActive('home') && <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></div>}
             </button>
             <button 
               onClick={() => handleNavigate('capabilities')}
-              className={`transition-colors font-medium ${
+              className={`transition-colors font-medium relative ${
                 isActive('capabilities') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Capabilities
+              {isActive('capabilities') && <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></div>}
             </button>
             <button 
               onClick={() => handleNavigate('solutions')}
-              className={`transition-colors font-medium ${
+              className={`transition-colors font-medium relative ${
                 isActive('solutions') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Solutions
+              {isActive('solutions') && <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></div>}
             </button>
             <button 
               onClick={() => handleNavigate('insights')}
-              className={`transition-colors font-medium ${
+              className={`transition-colors font-medium relative ${
                 isActive('insights') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Insights
+              {isActive('insights') && <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></div>}
             </button>
             <button 
               onClick={() => handleNavigate('case-studies')}
-              className={`transition-colors font-medium ${
+              className={`transition-colors font-medium relative ${
                 isActive('case-studies') 
                   ? 'text-primary' 
                   : 'text-foreground hover:text-primary'
               }`}
             >
               Case Studies
+              {isActive('case-studies') && <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></div>}
             </button>
             <Button 
               onClick={() => handleNavigate('contact')}
-              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold px-6"
+              className="fire-gradient hover:ember-glow text-white font-semibold px-6 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Get Started
             </Button>
@@ -106,7 +121,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden border-t border-border bg-white">
+          <div className="md:hidden border-t border-border bg-background">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button 
                 onClick={() => handleNavigate('home')}
@@ -160,7 +175,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               </button>
               <Button 
                 onClick={() => handleNavigate('contact')}
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-semibold mt-2"
+                className="w-full fire-gradient hover:ember-glow text-white font-semibold mt-2 shadow-lg"
               >
                 Get Started
               </Button>
