@@ -601,7 +601,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed max-w-2xl">
-                From the first spark of candidate discovery to the blazing success of your hires, we fuel your talent acquisition with cutting-edge AI technology that ignites results.
+                Where talent acquisition catches fire. Our AI-powered platform transforms recruiting from routine to remarkable, igniting connections that blaze the trail to your next great hire.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

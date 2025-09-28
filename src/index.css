@@ -45,6 +45,8 @@
   --fire-gradient: linear-gradient(135deg, oklch(0.62 0.25 35) 0%, oklch(0.55 0.22 15) 50%, oklch(0.78 0.18 85) 100%);
   --ember-gradient: linear-gradient(45deg, oklch(0.25 0.05 15) 0%, oklch(0.62 0.25 35) 100%);
   --spark-gradient: radial-gradient(circle, oklch(0.78 0.18 85) 0%, transparent 70%);
+  --ignition-gradient: linear-gradient(90deg, oklch(0.55 0.22 15) 0%, oklch(0.62 0.25 35) 25%, oklch(0.78 0.18 85) 50%, oklch(0.62 0.25 35) 75%, oklch(0.55 0.22 15) 100%);
+  --blaze-gradient: conic-gradient(from 0deg, oklch(0.62 0.25 35), oklch(0.78 0.18 85), oklch(0.55 0.22 15), oklch(0.62 0.25 35));
 }
 
 @theme {
@@ -82,20 +84,92 @@ body {
 
 /* Fire/Spark Animation Effects */
 @keyframes sparkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.8); }
-  50% { opacity: 1; transform: scale(1.2); }
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(0.8) rotate(0deg); 
+  }
+  25% { 
+    opacity: 0.8; 
+    transform: scale(1.1) rotate(90deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2) rotate(180deg); 
+  }
+  75% { 
+    opacity: 0.6; 
+    transform: scale(0.9) rotate(270deg); 
+  }
 }
 
 @keyframes ember-glow {
-  0%, 100% { box-shadow: 0 0 5px oklch(0.62 0.25 35); }
-  50% { box-shadow: 0 0 20px oklch(0.78 0.18 85), 0 0 30px oklch(0.62 0.25 35); }
+  0%, 100% { 
+    box-shadow: 0 0 5px oklch(0.62 0.25 35);
+    filter: brightness(1);
+  }
+  33% { 
+    box-shadow: 0 0 15px oklch(0.78 0.18 85), 0 0 25px oklch(0.62 0.25 35);
+    filter: brightness(1.2);
+  }
+  66% { 
+    box-shadow: 0 0 20px oklch(0.78 0.18 85), 0 0 30px oklch(0.62 0.25 35), 0 0 40px oklch(0.55 0.22 15);
+    filter: brightness(1.1);
+  }
 }
 
 @keyframes flame-flicker {
-  0%, 100% { transform: scaleY(1) rotate(0deg); opacity: 0.8; }
-  25% { transform: scaleY(1.1) rotate(1deg); opacity: 1; }
-  50% { transform: scaleY(0.95) rotate(-1deg); opacity: 0.9; }
-  75% { transform: scaleY(1.05) rotate(0.5deg); opacity: 1; }
+  0%, 100% { 
+    transform: scaleY(1) rotate(0deg) scaleX(1); 
+    opacity: 0.8;
+    filter: hue-rotate(0deg);
+  }
+  15% { 
+    transform: scaleY(1.08) rotate(1deg) scaleX(0.98); 
+    opacity: 1;
+    filter: hue-rotate(5deg);
+  }
+  30% { 
+    transform: scaleY(0.95) rotate(-1.2deg) scaleX(1.02); 
+    opacity: 0.9;
+    filter: hue-rotate(-3deg);
+  }
+  45% { 
+    transform: scaleY(1.12) rotate(0.8deg) scaleX(0.96); 
+    opacity: 1;
+    filter: hue-rotate(8deg);
+  }
+  60% { 
+    transform: scaleY(0.92) rotate(-0.6deg) scaleX(1.04); 
+    opacity: 0.85;
+    filter: hue-rotate(-5deg);
+  }
+  75% { 
+    transform: scaleY(1.05) rotate(0.5deg) scaleX(0.99); 
+    opacity: 1;
+    filter: hue-rotate(3deg);
+  }
+}
+
+@keyframes ignition-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes spark-trail {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.5);
+  }
 }
 
 .spark-particle {
@@ -110,6 +184,14 @@ body {
   animation: flame-flicker 2s ease-in-out infinite;
 }
 
+.ignition-pulse {
+  animation: ignition-pulse 2.5s ease-in-out infinite;
+}
+
+.spark-trail {
+  animation: spark-trail 1.5s linear infinite;
+}
+
 /* Fire Gradient Backgrounds */
 .fire-gradient {
   background: var(--fire-gradient);
@@ -117,6 +199,16 @@ body {
 
 .ember-gradient {
   background: var(--ember-gradient);
+}
+
+.ignition-gradient {
+  background: var(--ignition-gradient);
+  background-size: 200% 100%;
+  animation: ignition-pulse 3s ease-in-out infinite;
+}
+
+.blaze-gradient {
+  background: var(--blaze-gradient);
 }
 
 /* Spark Particles */

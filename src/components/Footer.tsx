@@ -15,11 +15,11 @@ export function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <SparkPointLogo height={36} className="filter brightness-0 invert" />
+              <SparkPointLogo height={36} className="filter brightness-0 invert" showTagline={true} />
             </div>
             <p className="text-white/80 mb-6 leading-relaxed max-w-md">
-              Igniting success in talent acquisition through cutting-edge AI technology. 
-              We help organizations transform their hiring processes and attract top talent faster than ever before.
+              Where talent acquisition catches fire. We transform recruiting through AI-powered innovation, 
+              helping organizations ignite connections and achieve blazing success in their hiring.
             </p>
             <div className="text-sm text-white/60">
               © 2024 SparkPoint Talent. All rights reserved.
@@ -56,7 +56,7 @@ export function Footer() {
           <div className="absolute left-1/4 -top-2 w-1 h-1 bg-accent rounded-full spark-particle"></div>
           <div className="absolute right-1/3 -top-2 w-1.5 h-1.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
           
-          Powered by AI. Driven by Results. Ignited by Innovation.
+          Powered by AI. Driven by Results. Where Talent Acquisition Catches Fire.
         </div>
       </div>
     </footer>
