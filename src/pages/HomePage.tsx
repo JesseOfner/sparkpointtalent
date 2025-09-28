@@ -635,38 +635,31 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
       </section>
-      <SparkDivider />
       {/* Metrics Section */}
-      <MetricsSection />
+      {/* Metrics Section */}
       <SparkDivider />
       {/* Capabilities Section */}
-      <CapabilitiesSection />
       <SparkDivider />
       {/* Industry Solutions Section */}
       <IndustrySolutionsSection />
-      <SparkDivider />
       {/* Contact Section */}
-      <ContactSection onGetStartedClick={handleGetStartedClick} />
       <SparkDivider />
       {/* Value Proposition Section */}
       <section className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Why Leading Organizations Choose SparkPoint
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               In today's competitive talent landscape, traditional recruiting isn't enough. 
-              Our AI-powered platform ignites the spark that transforms how you attract, engage, and hire the best candidates.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-8 rounded-lg border border-border hover:border-primary/30 transition-all duration-300 bg-card group relative overflow-hidden hover:-translate-y-1 hover:shadow-lg">
               {/* Spark particles on hover */}
-              <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
               <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
-              
               <div className="w-16 h-16 fire-gradient rounded-full mx-auto mb-6 flex items-center justify-center group-hover:ember-glow transition-all duration-300 relative">
                 <div className="w-8 h-8 bg-white rounded-full group-hover:flame-flicker"></div>
                 <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
