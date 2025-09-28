@@ -8,45 +8,56 @@
 }
 
 :root {
-  /* Fire/Spark Brand Colors */
-  --background: oklch(0.97 0.015 45);
-  --foreground: oklch(0.15 0.02 25);
-  --card: oklch(0.99 0.01 50);
-  --card-foreground: oklch(0.15 0.02 25);
-  --popover: oklch(0.99 0.01 50);
-  --popover-foreground: oklch(0.15 0.02 25);
+  /* Fire/Spark Brand Colors - Professional Warmth System */
   
-  /* Primary: Deep Orange (Main brand fire color) */
-  --primary: oklch(0.62 0.25 35);
-  --primary-foreground: oklch(0.98 0.01 50);
+  /* Backgrounds - Warm White base with subtle warmth */
+  --background: #FFFEF7; /* Warm White */
+  --foreground: #2D3748; /* Charcoal for text */
+  --card: #FFFEF7; /* Warm White for cards */
+  --card-foreground: #2D3748; /* Charcoal text on cards */
+  --popover: #FFFEF7; /* Warm White for popovers */
+  --popover-foreground: #2D3748; /* Charcoal text on popovers */
   
-  /* Secondary: Warm Red (Complementary fire color) */
-  --secondary: oklch(0.55 0.22 15);
-  --secondary-foreground: oklch(0.98 0.01 50);
+  /* Primary: Ember Orange - Main brand fire color */
+  --primary: #FF6B35; /* Ember Orange */
+  --primary-foreground: #FFFEF7; /* Warm White text on primary */
   
-  /* Accent: Golden Yellow (Spark highlight) */
-  --accent: oklch(0.78 0.18 85);
-  --accent-foreground: oklch(0.15 0.02 25);
+  /* Secondary: Flame Red - Accents and active states */
+  --secondary: #E63946; /* Flame Red */
+  --secondary-foreground: #FFFEF7; /* Warm White text on secondary */
   
-  /* Muted: Warm neutral */
-  --muted: oklch(0.94 0.02 45);
-  --muted-foreground: oklch(0.45 0.02 25);
+  /* Accent: Spark Gold - Secondary highlights and success */
+  --accent: #F77F00; /* Spark Gold */
+  --accent-foreground: #FFFEF7; /* Warm White text on accent */
   
-  /* Dark Charcoal Accent */
-  --destructive: oklch(0.25 0.05 15);
-  --destructive-foreground: oklch(0.98 0.01 50);
+  /* Muted: Warm neutral grays */
+  --muted: #F7F5F3; /* Very light warm gray */
+  --muted-foreground: #6B7280; /* Medium gray for muted text */
   
-  --border: oklch(0.88 0.02 45);
-  --input: oklch(0.88 0.02 45);
-  --ring: oklch(0.62 0.25 35);
+  /* Destructive: Flame Red for warnings */
+  --destructive: #E63946; /* Flame Red for destructive actions */
+  --destructive-foreground: #FFFEF7; /* Warm White text on destructive */
+  
+  /* UI Elements */
+  --border: #E5E7EB; /* Light gray borders */
+  --input: #E5E7EB; /* Light gray input borders */
+  --ring: #FF6B35; /* Ember Orange focus rings */
   --radius: 0.5rem;
   
-  /* Fire Gradient Variables */
-  --fire-gradient: linear-gradient(135deg, oklch(0.62 0.25 35) 0%, oklch(0.55 0.22 15) 50%, oklch(0.78 0.18 85) 100%);
-  --ember-gradient: linear-gradient(45deg, oklch(0.25 0.05 15) 0%, oklch(0.62 0.25 35) 100%);
-  --spark-gradient: radial-gradient(circle, oklch(0.78 0.18 85) 0%, transparent 70%);
-  --ignition-gradient: linear-gradient(90deg, oklch(0.55 0.22 15) 0%, oklch(0.62 0.25 35) 25%, oklch(0.78 0.18 85) 50%, oklch(0.62 0.25 35) 75%, oklch(0.55 0.22 15) 100%);
-  --blaze-gradient: conic-gradient(from 0deg, oklch(0.62 0.25 35), oklch(0.78 0.18 85), oklch(0.55 0.22 15), oklch(0.62 0.25 35));
+  /* Fire Gradient System */
+  --hero-gradient: linear-gradient(135deg, #2D3748 0%, #FF6B35 100%); /* Charcoal to Ember Orange */
+  --button-hover-gradient: linear-gradient(135deg, #FF6B35 0%, #E63946 100%); /* Ember Orange to Flame Red */
+  --divider-gradient: linear-gradient(90deg, #F77F00 0%, #FF6B35 100%); /* Spark Gold to Ember Orange */
+  --ember-glow: 0 0 20px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.1); /* Ember Orange glow */
+  --spark-glow: 0 0 15px rgba(247, 127, 0, 0.4), 0 0 30px rgba(247, 127, 0, 0.2); /* Spark Gold glow */
+  --flame-glow: 0 0 25px rgba(230, 57, 70, 0.3), 0 0 50px rgba(230, 57, 70, 0.1); /* Flame Red glow */
+  
+  /* Specialized Gradients */
+  --fire-gradient: linear-gradient(135deg, #FF6B35 0%, #E63946 50%, #F77F00 100%);
+  --ember-gradient: linear-gradient(45deg, #2D3748 0%, #FF6B35 100%);
+  --spark-gradient: radial-gradient(circle, #F77F00 0%, transparent 70%);
+  --ignition-gradient: linear-gradient(90deg, #E63946 0%, #FF6B35 25%, #F77F00 50%, #FF6B35 75%, #E63946 100%);
+  --blaze-gradient: conic-gradient(from 0deg, #FF6B35, #F77F00, #E63946, #FF6B35);
 }
 
 @theme {
@@ -104,15 +115,15 @@ body {
 
 @keyframes ember-glow {
   0%, 100% { 
-    box-shadow: 0 0 5px oklch(0.62 0.25 35);
+    box-shadow: 0 0 5px #FF6B35;
     filter: brightness(1);
   }
   33% { 
-    box-shadow: 0 0 15px oklch(0.78 0.18 85), 0 0 25px oklch(0.62 0.25 35);
+    box-shadow: 0 0 15px #F77F00, 0 0 25px #FF6B35;
     filter: brightness(1.2);
   }
   66% { 
-    box-shadow: 0 0 20px oklch(0.78 0.18 85), 0 0 30px oklch(0.62 0.25 35), 0 0 40px oklch(0.55 0.22 15);
+    box-shadow: 0 0 20px #F77F00, 0 0 30px #FF6B35, 0 0 40px #E63946;
     filter: brightness(1.1);
   }
 }
@@ -172,6 +183,47 @@ body {
   }
 }
 
+@keyframes button-fire-hover {
+  0% {
+    background: var(--primary);
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2);
+  }
+  100% {
+    background: var(--button-hover-gradient);
+    box-shadow: var(--ember-glow);
+  }
+}
+
+@keyframes card-ember-hover {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    transform: translateY(-2px);
+    box-shadow: var(--ember-glow);
+  }
+}
+
+@keyframes loading-spark {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes form-focus-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+  }
+}
+
+/* Animation Classes */
 .spark-particle {
   animation: sparkle 2s ease-in-out infinite;
 }
@@ -192,6 +244,96 @@ body {
   animation: spark-trail 1.5s linear infinite;
 }
 
+/* Interactive Element Styles */
+.fire-button {
+  background: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.fire-button:hover {
+  background: var(--button-hover-gradient);
+  box-shadow: var(--ember-glow);
+  transform: translateY(-1px);
+}
+
+.fire-button:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+}
+
+.ember-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.ember-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ember-glow);
+  border-color: var(--primary);
+}
+
+.spark-input {
+  transition: all 0.2s ease;
+  border: 2px solid var(--input);
+}
+
+.spark-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+  outline: none;
+}
+
+.flame-link {
+  color: var(--primary);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.flame-link:hover {
+  color: var(--secondary);
+  text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+.flame-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--divider-gradient);
+  transition: width 0.3s ease;
+}
+
+.flame-link:hover::after {
+  width: 100%;
+}
+
+.loading-spark {
+  background: var(--ignition-gradient);
+  background-size: 200% 100%;
+  animation: loading-spark 2s ease-in-out infinite;
+}
+
+/* Section Dividers */
+.fire-divider {
+  height: 2px;
+  background: var(--divider-gradient);
+  position: relative;
+  overflow: hidden;
+}
+
+.fire-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: spark-trail 2s ease-in-out infinite;
+}
+
 /* Fire Gradient Backgrounds */
 .fire-gradient {
   background: var(--fire-gradient);
@@ -199,6 +341,18 @@ body {
 
 .ember-gradient {
   background: var(--ember-gradient);
+}
+
+.hero-gradient {
+  background: var(--hero-gradient);
+}
+
+.button-hover-gradient {
+  background: var(--button-hover-gradient);
+}
+
+.divider-gradient {
+  background: var(--divider-gradient);
 }
 
 .ignition-gradient {
@@ -209,6 +363,89 @@ body {
 
 .blaze-gradient {
   background: var(--blaze-gradient);
+}
+
+/* Professional Fire Effects */
+.professional-ember {
+  background: var(--primary);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
+  transition: all 0.3s ease;
+}
+
+.professional-ember:hover {
+  background: var(--secondary);
+  box-shadow: var(--ember-glow);
+  transform: translateY(-1px);
+}
+
+.warm-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 107, 53, 0.1);
+  transition: all 0.3s ease;
+}
+
+.warm-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.1);
+  transform: translateY(-2px);
+}
+
+/* HubSpot Form Fire Styling */
+.hs-form .hs-input {
+  border: 2px solid #E5E7EB !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem !important;
+  transition: all 0.2s ease !important;
+  background: #FFFEF7 !important;
+  color: #2D3748 !important;
+}
+
+.hs-form .hs-input:focus {
+  border-color: #FF6B35 !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2) !important;
+  outline: none !important;
+}
+
+.hs-form .hs-button {
+  background: linear-gradient(135deg, #FF6B35 0%, #E63946 100%) !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  color: #FFFEF7 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.2) !important;
+}
+
+.hs-form .hs-button:hover {
+  background: linear-gradient(135deg, #E63946 0%, #FF6B35 100%) !important;
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.1) !important;
+  transform: translateY(-1px) !important;
+}
+
+.hs-form .hs-button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 0 10px rgba(255, 107, 53, 0.4) !important;
+}
+
+.hs-form label {
+  color: #2D3748 !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.hs-form .hs-error-msg {
+  color: #E63946 !important;
+  font-size: 0.875rem !important;
+}
+
+.hs-form textarea.hs-input {
+  min-height: 100px !important;
+  resize: vertical !important;
+}
+
+.hs-form select.hs-input {
+  cursor: pointer !important;
 }
 
 /* Spark Particles */
@@ -227,7 +464,7 @@ body {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: oklch(0.78 0.18 85);
+  background: #F77F00;
   border-radius: 50%;
   right: 20%;
   top: 30%;

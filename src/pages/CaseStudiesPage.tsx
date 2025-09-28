@@ -32,7 +32,11 @@ export function CaseStudiesPage() {
             </p>
           </div>
 
-          <Card className="p-8 md:p-12 shadow-lg">
+          <Card className="ember-card p-8 md:p-12 shadow-lg relative overflow-hidden">
+            {/* Card spark particles */}
+            <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full spark-particle"></div>
+            <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-primary/70 rounded-full spark-particle" style={{animationDelay: '0.5s'}}></div>
+            
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="text-sm font-semibold text-primary uppercase tracking-wide mb-2">
@@ -620,7 +624,7 @@ export function CaseStudiesPage() {
           </p>
           <Button 
             size="lg"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-12 py-6 text-lg"
+            className="fire-button bg-primary text-primary-foreground hover:bg-secondary font-semibold px-12 py-6 text-lg relative group overflow-hidden"
             onClick={() => {
               const hubspotFormElement = document.querySelector('.hs-form-frame') as HTMLElement;
               if (hubspotFormElement) {
@@ -628,8 +632,9 @@ export function CaseStudiesPage() {
               }
             }}
           >
-            Schedule a Consultation
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <span className="relative z-10">Schedule a Consultation</span>
+            <ArrowRight className="ml-2 w-5 h-5 relative z-10" />
+            <div className="absolute top-2 right-2 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
           </Button>
         </div>
       </section>

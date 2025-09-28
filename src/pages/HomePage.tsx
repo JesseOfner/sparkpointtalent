@@ -195,13 +195,13 @@ function MetricCard({ number, suffix, title, description }: {
   return (
     <div 
       ref={ref}
-      className="bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+      className="ember-card bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
     >
       {/* Subtle spark particles on hover */}
       <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
       <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent/60 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.4s'}}></div>
       
-      <div className="text-4xl md:text-5xl font-bold fire-gradient bg-clip-text text-transparent mb-4 group-hover:ember-glow transition-all duration-300">
+      <div className="text-4xl md:text-5xl font-bold fire-gradient bg-clip-text text-transparent mb-4 group-hover:scale-105 transition-all duration-300">
         {animatedNumber}{suffix}
       </div>
       <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -220,12 +220,12 @@ function CapabilityCard({ icon: Icon, title, description }: {
   description: string
 }) {
   return (
-    <div className="bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+    <div className="ember-card bg-card rounded-xl p-8 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
       {/* Spark particles on hover */}
       <div className="absolute top-3 right-3 w-1 h-1 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
       <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-accent/70 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity" style={{animationDelay: '0.3s'}}></div>
       
-      <div className="w-16 h-16 fire-gradient rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 group-hover:ember-glow transition-all duration-300 relative">
+      <div className="w-16 h-16 fire-gradient rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-300 relative">
         <Icon size={32} className="text-white group-hover:flame-flicker" />
         <div className="absolute -top-1 -right-1 w-2 h-2 bg-accent rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
       </div>
@@ -301,7 +301,7 @@ function IndustrySolutionCard({
 
 function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }) {
   return (
-    <section id="contact" className="py-24 ember-gradient relative overflow-hidden">
+    <section id="contact" className="py-24 hero-gradient relative overflow-hidden">
       {/* Enhanced spark and ember background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl ember-glow"></div>
@@ -394,7 +394,7 @@ function ContactSection({ onGetStartedClick }: { onGetStartedClick: () => void }
                 type="button"
                 size="lg"
                 onClick={onGetStartedClick}
-                className="w-full bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold py-4 text-lg hover:ember-glow transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="fire-button w-full bg-primary text-primary-foreground hover:bg-secondary font-semibold py-4 text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Get Started Today
               </Button>
@@ -569,7 +569,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen ember-gradient overflow-hidden">
+      <section id="hero" className="relative min-h-screen hero-gradient overflow-hidden">
         {/* Enhanced spark particle background */}
         <div className="absolute inset-0">
           {/* Large ember glows */}
@@ -607,7 +607,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <Button 
                   size="lg" 
                   onClick={handleGetStartedClick}
-                  className="bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold px-10 py-4 text-lg shadow-lg hover:shadow-xl hover:ember-glow transition-all duration-300 relative group overflow-hidden"
+                  className="fire-button bg-white text-charcoal hover:bg-accent hover:text-accent-foreground font-semibold px-10 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300 relative group overflow-hidden"
                 >
                   <span className="relative z-10">Ignite Your Success</span>
                   <div className="absolute top-2 right-2 w-1 h-1 bg-accent/60 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>

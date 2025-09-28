@@ -69,7 +69,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
             <div className="ml-4">
               <Button 
                 onClick={() => handleNavigate('contact')}
-                className="fire-gradient hover:ember-glow text-white font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
+                className="fire-button bg-primary hover:bg-secondary text-primary-foreground font-semibold px-6 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative overflow-hidden group"
               >
                 <span className="relative z-10">Ignite Your Success</span>
                 {/* Spark animation on hover */}
@@ -129,7 +129,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
               <div className="pt-2 relative z-10">
                 <Button 
                   onClick={() => handleNavigate('contact')}
-                  className="w-full fire-gradient hover:ember-glow text-white font-semibold py-3 shadow-lg transition-all duration-300"
+                  className="w-full fire-button bg-primary hover:bg-secondary text-primary-foreground font-semibold py-3 shadow-lg transition-all duration-300"
                 >
                   Ignite Your Success
                 </Button>

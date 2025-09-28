@@ -5,10 +5,14 @@ export function CapabilitiesPage() {
     <div className="pt-16 min-h-screen bg-background">
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-muted/30 to-background relative overflow-hidden">
-        {/* Subtle background elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+        {/* Enhanced fire background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl ember-glow"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-accent/10 rounded-full blur-3xl ember-glow" style={{animationDelay: '1s'}}></div>
+          
+          {/* Floating spark particles */}
+          <div className="absolute top-1/6 left-1/5 w-1.5 h-1.5 bg-accent/60 rounded-full spark-particle"></div>
+          <div className="absolute bottom-1/5 right-1/6 w-2 h-2 bg-primary/70 rounded-full spark-particle" style={{animationDelay: '0.7s'}}></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +27,7 @@ export function CapabilitiesPage() {
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 From intelligent candidate sourcing to predictive analytics, we provide the complete AI toolkit modern talent acquisition teams need to outperform in today's competitive market.
               </p>
-              <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2">
+              <button className="fire-button px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-secondary transition-colors inline-flex items-center gap-2">
                 Schedule an AI Assessment
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

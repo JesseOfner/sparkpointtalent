@@ -55,8 +55,19 @@ export function ContactFormPage() {
   }, [])
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-br from-primary/5 to-secondary/5">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="pt-16 min-h-screen bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
+      {/* Background fire effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl ember-glow"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-48 h-48 bg-accent/8 rounded-full blur-2xl ember-glow" style={{animationDelay: '1s'}}></div>
+        
+        {/* Floating spark particles */}
+        <div className="absolute top-1/5 left-1/6 w-1.5 h-1.5 bg-accent/60 rounded-full spark-particle"></div>
+        <div className="absolute bottom-1/4 right-1/5 w-2 h-2 bg-primary/70 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
+        <div className="absolute top-2/3 left-1/2 w-1 h-1 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '1.5s'}}></div>
+      </div>
+      
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -68,7 +79,11 @@ export function ContactFormPage() {
         </div>
         
         {/* Form Container */}
-        <div className="bg-white rounded-xl shadow-lg border border-border p-8">
+        <div className="ember-card bg-card rounded-xl shadow-lg border border-border p-8 relative overflow-hidden">
+          {/* Card spark particles */}
+          <div className="absolute top-4 right-4 w-1 h-1 bg-accent rounded-full spark-particle"></div>
+          <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-primary/70 rounded-full spark-particle" style={{animationDelay: '0.7s'}}></div>
+          
           <div 
             ref={formRef}
             className="min-h-[600px] w-full"
@@ -83,14 +98,14 @@ export function ContactFormPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="mailto:hello@sparkpointtalent.com" 
-              className="text-primary hover:text-primary/80 font-medium"
+              className="flame-link text-primary hover:text-secondary font-medium relative"
             >
               hello@sparkpointtalent.com
             </a>
             <span className="hidden sm:block text-muted-foreground">•</span>
             <a 
               href="tel:+1-555-0123" 
-              className="text-primary hover:text-primary/80 font-medium"
+              className="flame-link text-primary hover:text-secondary font-medium relative"
             >
               +1 (555) 012-3456
             </a>
