@@ -49,29 +49,29 @@ function FlowVisualization() {
   const [activeStage, setActiveStage] = useState(0)
   const stages = [
     {
-      icon: Robot,
-      title: "AI Candidate Discovery",
-      description: "Advanced algorithms identify hidden talent pools"
+      icon: Lightning,
+      title: "Ignition",
+      description: "AI sparks initial candidate discovery"
     },
     {
       icon: Target,
-      title: "Intelligent Matching", 
-      description: "Machine learning matches perfect-fit candidates"
+      title: "Combustion", 
+      description: "Intelligent matching creates the perfect reaction"
     },
     {
       icon: DeviceMobile,
-      title: "Automated Engagement",
-      description: "AI personalizes outreach at scale"
+      title: "Acceleration",
+      description: "Automated engagement fans the flames"
     },
     {
       icon: ChartLine,
-      title: "Predictive Analytics",
-      description: "Data science optimizes your hiring strategy"
+      title: "Amplification",
+      description: "Predictive analytics turns sparks into blazes"
     },
     {
-      icon: Lightning,
-      title: "Smart Interviews",
-      description: "AI streamlines candidate evaluation and scheduling"
+      icon: Handshake,
+      title: "Success",
+      description: "Your talent acquisition burns bright with results"
     }
   ]
 
@@ -569,19 +569,23 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen fire-gradient overflow-hidden">
-        {/* Spark particle background */}
+      <section id="hero" className="relative min-h-screen ember-gradient overflow-hidden">
+        {/* Enhanced spark particle background */}
         <div className="absolute inset-0">
           {/* Large ember glows */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl ember-glow"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl ember-glow" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/6 left-1/6 w-96 h-96 bg-accent/8 rounded-full blur-3xl ember-glow"></div>
+          <div className="absolute bottom-1/5 right-1/5 w-80 h-80 bg-primary/12 rounded-full blur-3xl ember-glow" style={{animationDelay: '1.5s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-accent/6 rounded-full blur-3xl ember-glow" style={{animationDelay: '2.5s'}}></div>
           
           {/* Floating spark particles */}
-          <div className="absolute top-1/3 left-1/5 w-2 h-2 bg-accent rounded-full spark-particle"></div>
-          <div className="absolute top-2/3 left-1/3 w-3 h-3 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
-          <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '1.2s'}}></div>
-          <div className="absolute bottom-1/3 right-1/3 w-4 h-4 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.4s'}}></div>
-          <div className="absolute top-1/6 right-1/5 w-2 h-2 bg-accent/90 rounded-full spark-particle" style={{animationDelay: '1.6s'}}></div>
+          <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-accent rounded-full spark-particle"></div>
+          <div className="absolute top-3/4 left-1/4 w-2 h-2 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '0.8s'}}></div>
+          <div className="absolute top-1/3 right-1/4 w-2.5 h-2.5 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '1.2s'}}></div>
+          <div className="absolute bottom-1/4 right-1/3 w-4 h-4 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '0.4s'}}></div>
+          <div className="absolute top-1/6 right-1/6 w-2 h-2 bg-accent/90 rounded-full spark-particle" style={{animationDelay: '1.8s'}}></div>
+          <div className="absolute top-2/3 left-1/6 w-1.5 h-1.5 bg-accent/85 rounded-full spark-particle" style={{animationDelay: '2.2s'}}></div>
+          <div className="absolute bottom-1/6 left-1/2 w-3 h-3 bg-accent/75 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
+          <div className="absolute top-1/8 left-2/3 w-2 h-2 bg-accent/95 rounded-full spark-particle" style={{animationDelay: '1.4s'}}></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
@@ -589,36 +593,39 @@ export function HomePage({ onNavigate }: HomePageProps) {
             {/* Left Side - Content */}
             <div className="text-left relative">
               {/* Content spark effects */}
-              <div className="absolute -top-4 -left-4 w-3 h-3 bg-accent rounded-full spark-particle"></div>
-              <div className="absolute top-1/4 -right-8 w-2 h-2 bg-accent/60 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
+              <div className="absolute -top-6 -left-6 w-3 h-3 bg-accent rounded-full spark-particle"></div>
+              <div className="absolute top-1/4 -right-8 w-2 h-2 bg-accent/70 rounded-full spark-particle" style={{animationDelay: '0.6s'}}></div>
+              <div className="absolute bottom-1/4 left-1/2 w-1.5 h-1.5 bg-accent/80 rounded-full spark-particle" style={{animationDelay: '1.1s'}}></div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                AI-Powered Talent Acquisition That 
+                Ignite Your Talent Acquisition 
                 <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent flame-flicker">
-                  {" "}Ignites Results
+                  {" "}Success
                 </span>
               </h1>
               <h2 className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed font-medium">
-                Transform your recruiting with cutting-edge AI technology that finds, engages, and converts top talent faster than ever before
+                SparkPoint provides the catalyst to light the fire of AI-powered recruiting that transforms your business growth
               </h2>
               <p className="text-lg text-white/80 mb-12 leading-relaxed max-w-2xl">
-                From AI-driven candidate matching to predictive analytics and automated engagement, we help modern talent acquisition teams leverage artificial intelligence to hire smarter, faster, and more effectively.
+                From the first spark of candidate discovery to the blazing success of your hires, we fuel your talent acquisition with cutting-edge AI technology that ignites results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
                   onClick={handleGetStartedClick}
-                  className="bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:ember-glow transition-all duration-300"
+                  className="bg-white text-primary hover:bg-accent hover:text-primary-foreground font-semibold px-10 py-4 text-lg shadow-lg hover:shadow-xl hover:ember-glow transition-all duration-300 relative group overflow-hidden"
                 >
-                  Discover AI Solutions
+                  <span className="relative z-10">Ignite Your Success</span>
+                  <div className="absolute top-2 right-2 w-1 h-1 bg-accent/60 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
                 </Button>
                 <Button 
                   size="lg" 
                   variant="outline" 
                   onClick={() => onNavigate?.('case-studies')}
-                  className="border-2 border-white/40 hover:bg-white/10 hover:border-accent/60 font-semibold px-8 py-4 text-lg text-white hover:text-accent transition-all duration-300"
+                  className="border-2 border-white/40 hover:bg-white/10 hover:border-accent/60 font-semibold px-10 py-4 text-lg text-white hover:text-accent transition-all duration-300 relative group overflow-hidden"
                 >
-                  See AI in Action
+                  <span className="relative z-10">See the Spark</span>
+                  <div className="absolute bottom-2 left-2 w-1 h-1 bg-accent/60 rounded-full opacity-0 group-hover:opacity-100 spark-particle transition-opacity"></div>
                 </Button>
               </div>
             </div>
